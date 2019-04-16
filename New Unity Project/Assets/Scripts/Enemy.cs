@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "playerSpell")
+        if (other.gameObject.tag == "playerSpell" || other.gameObject.tag == "Player")
         {
             Destroy(gameObject);
         }

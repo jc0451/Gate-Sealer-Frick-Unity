@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class PlayerInput : MonoBehaviour
+public class playerInput : MonoBehaviour
 {
 
     public GameObject[] spells;
-    private float shootingDelay = 0.55f;
-    private float cooldownTimer = 0.6f;
+    public float shootingDelay = 0.55f;
+    public static float cooldownTimer = 0.6f;
     public static int currentspell;
 
 
@@ -19,7 +19,7 @@ public class PlayerInput : MonoBehaviour
 
         cooldownTimer -= Time.deltaTime;
 
-        if (Input.GetButton("Fire2") && Input.GetButton("Fire3") && cooldownTimer <= 0)
+        if (Input.GetButton("Fire1") && Input.GetButton("Fire3") && cooldownTimer <= 0)
         {
             cooldownTimer = shootingDelay;
             currentspell = 0;

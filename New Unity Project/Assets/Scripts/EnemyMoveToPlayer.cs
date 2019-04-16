@@ -8,15 +8,10 @@ public class EnemyMoveToPlayer : MonoBehaviour {
     private Vector2 position;
     public float speed;
     public int health = 1;
-    private float direction;
+    //private float direction;
     private float time = 0;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-
-    // Update is called once per frame
+    
     void Update()
     {
         GameObject player = GameObject.Find("PlayerCharacter");
@@ -31,7 +26,7 @@ public class EnemyMoveToPlayer : MonoBehaviour {
         }
 
     }
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
 
         if (col.gameObject.tag == "PlayerSpell")

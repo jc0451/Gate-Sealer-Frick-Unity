@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4961510348807292}
   - component: {fileID: 212084868107171144}
+  - component: {fileID: 114436384867447222}
+  - component: {fileID: 114550679134275070}
   - component: {fileID: 114439694196965306}
   - component: {fileID: 61789750783960188}
   m_Layer: 0
@@ -67,7 +69,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.38, y: 1.55}
   m_EdgeRadius: 0
---- !u!114 &114439694196965306
+--- !u!114 &114436384867447222
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -75,12 +77,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 1075514082901514}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6537d2f727ed30144aa9067aaf5093e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spells: []
+--- !u!114 &114439694196965306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1075514082901514}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c30be3db9423c84a99fec71dcce5739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spells:
   - {fileID: 1869730740270362, guid: 86fa76b65038d4d4b9a532873b894642, type: 2}
   - {fileID: 1725058022185702, guid: cec0d460f39b43f4c84f27dfa6475987, type: 2}
+  shootingDelay: 0.55
+--- !u!114 &114550679134275070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1075514082901514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae09c2d63153284cb356b03a9d03b9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212084868107171144
 SpriteRenderer:
   m_ObjectHideFlags: 1

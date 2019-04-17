@@ -10,7 +10,7 @@ public class PlayerStun : MonoBehaviour
 
         if (col.gameObject.tag == "Enemy")
         {
-            playerInput.cooldownTimer = 4;
+            playerInput.cooldownTimer = 3;
 
 
         }

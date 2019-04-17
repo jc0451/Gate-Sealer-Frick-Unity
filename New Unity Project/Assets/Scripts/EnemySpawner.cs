@@ -11,14 +11,13 @@ public class EnemySpawner : MonoBehaviour {
     public float timeactual = 5.0f;
 
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         timeactual = spawndelay;
 
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
 

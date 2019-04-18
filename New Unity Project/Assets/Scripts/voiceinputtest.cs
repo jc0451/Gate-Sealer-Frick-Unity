@@ -14,9 +14,9 @@ public class voiceinputtest : MonoBehaviour
 
     void Start()
     {
-        keywords.Add("cast", Cast);
+        keywords.Add("Ürf", Cast);
         keywords.Add("attack", Cast2);
-        keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
+        keywordRecognizer  = new KeywordRecognizer(keywords.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += onKeywordsRecognized;
         keywordRecognizer.Start();
     }

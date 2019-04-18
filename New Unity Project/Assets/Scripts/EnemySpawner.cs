@@ -41,7 +41,8 @@ public class EnemySpawner : MonoBehaviour {
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(1, 0));
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(0, 1));
         GameObject anEnemy = (GameObject)Instantiate(Enemy);
-        anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x / 2), max.y);
+        anEnemy.transform.position = gameObject.transform.position;
+       // anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x / 2), max.y);
 
 
 

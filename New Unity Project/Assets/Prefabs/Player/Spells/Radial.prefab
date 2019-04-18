@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50755784271162910}
   - component: {fileID: 58022871270969588}
   - component: {fileID: 114131682537857356}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Radial
   m_TagString: PlayerSpell
   m_Icon: {fileID: 0}

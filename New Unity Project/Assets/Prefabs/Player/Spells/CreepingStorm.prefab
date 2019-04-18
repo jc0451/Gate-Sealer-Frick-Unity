@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 50880444896942730}
   - component: {fileID: 58949424671743042}
   - component: {fileID: 114847186160917358}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike3
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,9 +42,9 @@ GameObject:
   - component: {fileID: 50959056327612246}
   - component: {fileID: 58717921030344772}
   - component: {fileID: 114276083418370296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike1
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,9 +61,9 @@ GameObject:
   - component: {fileID: 50528851598747510}
   - component: {fileID: 58995764302943606}
   - component: {fileID: 114351024699115166}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike4
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,9 +80,9 @@ GameObject:
   - component: {fileID: 50257629181196240}
   - component: {fileID: 58061949815284680}
   - component: {fileID: 114149881946059164}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike5
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,9 +99,9 @@ GameObject:
   - component: {fileID: 50906357758465166}
   - component: {fileID: 58872945564962872}
   - component: {fileID: 114177140716701048}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike1
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,9 +118,9 @@ GameObject:
   - component: {fileID: 50979843826707646}
   - component: {fileID: 58736954202286560}
   - component: {fileID: 114841173444722520}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike1
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,9 +137,9 @@ GameObject:
   - component: {fileID: 50947492214414908}
   - component: {fileID: 58078700183093638}
   - component: {fileID: 114831737728945728}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike5
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,9 +152,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4698737753385112}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave3
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,9 +167,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4007214108078990}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave4
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,9 +186,9 @@ GameObject:
   - component: {fileID: 50602335807731830}
   - component: {fileID: 58138322364042318}
   - component: {fileID: 114417621328762468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike1
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,9 +205,9 @@ GameObject:
   - component: {fileID: 50855214841345022}
   - component: {fileID: 58515203714320348}
   - component: {fileID: 114503060789075990}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike3
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -222,9 +222,9 @@ GameObject:
   - component: {fileID: 4679432258722528}
   - component: {fileID: 212528470741463900}
   - component: {fileID: 114227784725708208}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CreepingStorm
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,9 +237,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4345770669451782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave1
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -256,9 +256,9 @@ GameObject:
   - component: {fileID: 50434897775002454}
   - component: {fileID: 58836634041722706}
   - component: {fileID: 114809048516913352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike2
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,9 +275,9 @@ GameObject:
   - component: {fileID: 50808382317962446}
   - component: {fileID: 58371691364987962}
   - component: {fileID: 114070428233273798}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike4
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,9 +294,9 @@ GameObject:
   - component: {fileID: 50380400844132926}
   - component: {fileID: 58463565539063756}
   - component: {fileID: 114935728844385584}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike5
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,9 +313,9 @@ GameObject:
   - component: {fileID: 50213255389133942}
   - component: {fileID: 58053866503821880}
   - component: {fileID: 114105445828620266}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike5
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -332,9 +332,9 @@ GameObject:
   - component: {fileID: 50612403840827878}
   - component: {fileID: 58969136943096772}
   - component: {fileID: 114447500779786386}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike2
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -351,9 +351,9 @@ GameObject:
   - component: {fileID: 50536445663897286}
   - component: {fileID: 58795085634515372}
   - component: {fileID: 114318673595338566}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike4
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -370,9 +370,9 @@ GameObject:
   - component: {fileID: 50872114562070078}
   - component: {fileID: 58145294950963128}
   - component: {fileID: 114496402046446378}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike2
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -385,9 +385,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4767698664125702}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wave2
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -404,9 +404,9 @@ GameObject:
   - component: {fileID: 50554489112210968}
   - component: {fileID: 58608061736343900}
   - component: {fileID: 114779051529798602}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike4
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -423,9 +423,9 @@ GameObject:
   - component: {fileID: 50136052103167362}
   - component: {fileID: 58658275632990812}
   - component: {fileID: 114593058066307106}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike3
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -442,9 +442,9 @@ GameObject:
   - component: {fileID: 50411416300025264}
   - component: {fileID: 58154702972402506}
   - component: {fileID: 114665823930155774}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike3
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -461,9 +461,9 @@ GameObject:
   - component: {fileID: 50616429542590448}
   - component: {fileID: 58944844987949914}
   - component: {fileID: 114664826852979132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike2
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

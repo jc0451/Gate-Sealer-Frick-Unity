@@ -39,7 +39,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4473221417863756}
   - component: {fileID: 212954751462656140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: penguin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ Transform:
   m_GameObject: {fileID: 1194803714724768}
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: -0.05, y: 7.06, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4473221417863756}
   m_Father: {fileID: 0}
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1194803714724768}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -132,7 +132,7 @@ MonoBehaviour:
   Bulletprefab: {fileID: 1725058022185702, guid: cec0d460f39b43f4c84f27dfa6475987,
     type: 2}
   maxHealth: 2
-  currentHealth: 0
+  currentHealth: 2
   positions:
   - {fileID: 1204949331957240, guid: 8baf0e2aa24d8a741934f4b70ad52ece, type: 2}
   - {fileID: 1469809224614076, guid: 896862cf80426314096b5f4f295c6400, type: 2}

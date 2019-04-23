@@ -74,9 +74,9 @@ public class PenguinScript : MonoBehaviour
 
     }
 
-    private void OntriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (other.gameObject.tag == "playerSpell" || other.gameObject.tag == "Player")
+        if (col.gameObject.tag == "PlayerSpell" || col.gameObject.tag == "Player")
         {
             currentHealth--;
         }

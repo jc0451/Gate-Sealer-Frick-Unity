@@ -13,8 +13,9 @@ public class PenguinScript : MonoBehaviour
     public GameObject[] positions;
     public float moveSpeed = 3;
     float roationspeed = 160f;
-     GameObject stopPositions;
-    int index;
+    GameObject stopPositions;
+   //public GameObject deathAnimation;
+    private int index;
 
 
 
@@ -27,8 +28,7 @@ public class PenguinScript : MonoBehaviour
         currentHealth = maxHealth;
         index = Random.Range(0, positions.Length);
         stopPositions = positions[index];
-        //System.Random rand = new System.Random();
-        //int index = rand.Next(positions.Length);
+       
     }
 
 
@@ -74,9 +74,13 @@ public class PenguinScript : MonoBehaviour
 
     }
 
-    private void OntriggerEnter2D()
+    private void OntriggerEnter2D(Collider2D other)
     {
-        currentHealth--;
+        if (other.gameObject.tag == "playerSpell" || other.gameObject.tag == "Player")
+        {
+            currentHealth--;
+        }
+
     }
 
 }

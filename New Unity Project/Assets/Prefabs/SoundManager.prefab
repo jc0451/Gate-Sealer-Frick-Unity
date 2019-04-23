@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1109101112764178}
+  m_IsPrefabParent: 1
+--- !u!1 &1109101112764178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4642147089205172}
+  - component: {fileID: 114226792133657904}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4642147089205172
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1109101112764178}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2982286, y: -0.11154243, z: -0.14278571}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114226792133657904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1109101112764178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2a92441d0f4fca4fba72099091fceab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioFiles:
+  - audioName: ButtonClap
+    audioClip: {fileID: 8300000, guid: b5f5c66f9c2dbfe4fa053a01d9c1749b, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: ExplosionSpell
+    audioClip: {fileID: 8300000, guid: 60a997eec723bfd419ac8a0d7a7e64c9, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: FireSpell
+    audioClip: {fileID: 8300000, guid: 965ff47cfc4afe24585825341308ac13, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: GhostBear
+    audioClip: {fileID: 8300000, guid: e9020a2b65b5c274abf1177cd9ba48bb, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: LightningSpell
+    audioClip: {fileID: 8300000, guid: 8cd379cd50c0a904ead329782b2574b1, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: MainMenu
+    audioClip: {fileID: 8300000, guid: a4ec2743377cc674d919788903cf28a3, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: PenguinGhost
+    audioClip: {fileID: 8300000, guid: 7eba355b170044846a0f1285af723058, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: SeagullShort
+    audioClip: {fileID: 8300000, guid: 94e84d0193ba7f64487ac9310402bf95, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: ' SealSpellCast'
+    audioClip: {fileID: 8300000, guid: 54c98a285891c784b9c42ea3a1ba1dcc, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: SealSpellCast1
+    audioClip: {fileID: 8300000, guid: 7c5821c620627bf40b72a8a77284c26c, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: SoundTrack
+    audioClip: {fileID: 8300000, guid: b6084f7cb4bb8f445a8db4879e6c9cfa, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    isLooping: 1
+    playOnAwake: 0
+  Mixer: {fileID: 24100000, guid: d3cad5922afb63c4bb39c307762ba73a, type: 2}

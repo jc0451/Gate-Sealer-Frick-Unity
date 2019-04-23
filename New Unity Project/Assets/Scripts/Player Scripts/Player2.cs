@@ -71,6 +71,7 @@ public class Player2 : MonoBehaviour
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1);
             SpellInstance.transform.position = transform.position;
+            FindObjectOfType<AudioManager>().Play("FireSpell");
             Key1 = 0;
             Key2 = 0;
             FirstKey = 0;
@@ -91,6 +92,7 @@ public class Player2 : MonoBehaviour
         }
         if (Key1 == 0 && Key2 == 2 && KeysPressed == 2)
         {
+            FindObjectOfType<AudioManager>().Play("ExplosionSpell");
             Explosion();
             Key1 = 0;
             Key2 = 0;

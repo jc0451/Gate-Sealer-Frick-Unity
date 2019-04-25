@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 50170157353473672}
   - component: {fileID: 61290201883054956}
   - component: {fileID: 114414239036606564}
+  - component: {fileID: 95157005254078636}
+  - component: {fileID: 111233091151993810}
   m_Layer: 8
   m_Name: penguin 1
   m_TagString: Enemy
@@ -39,6 +41,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4473221417863756}
   - component: {fileID: 212954751462656140}
+  - component: {fileID: 95445328749190690}
+  - component: {fileID: 111875112244485534}
   m_Layer: 8
   m_Name: penguin
   m_TagString: Untagged
@@ -118,6 +122,68 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4, y: 1.28}
   m_EdgeRadius: 0
+--- !u!95 &95157005254078636
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1194803714724768}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: abcfd71fbeb1358489559e59540259b0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95445328749190690
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1587102115092282}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: abcfd71fbeb1358489559e59540259b0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &111233091151993810
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1194803714724768}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2f8c6d8e6e749d342b4623ca1e2e536a, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!111 &111875112244485534
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1587102115092282}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2f8c6d8e6e749d342b4623ca1e2e536a, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114414239036606564
 MonoBehaviour:
   m_ObjectHideFlags: 1

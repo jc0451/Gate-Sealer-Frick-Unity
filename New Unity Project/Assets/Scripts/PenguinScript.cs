@@ -49,7 +49,7 @@ public class PenguinScript : MonoBehaviour
         if (currentHealth <= 0)
         {
             //Instantiate(deathAnimation, transform.position, transform.rotation);
-            ScoreScript.ScoreValue += 10;
+            
 
             Destroy(gameObject);
         }
@@ -81,7 +81,21 @@ public class PenguinScript : MonoBehaviour
     {
         if (col.gameObject.tag == "PlayerSpell" || col.gameObject.tag == "Player")
         {
+            if (currentHealth == 1)
+            {
+                ScoreScript.ScoreValue1 += 100;
+            }
             currentHealth--;
+           
+        }
+        if (col.gameObject.tag == "PlayerSpell2" || col.gameObject.tag == "Player")
+        {
+            if (currentHealth == 1)
+            {
+                ScoreScript2.ScoreValue2 += 100;
+            }
+            currentHealth--;
+
         }
 
     }

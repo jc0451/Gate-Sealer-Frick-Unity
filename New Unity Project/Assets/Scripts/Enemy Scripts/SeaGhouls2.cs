@@ -126,10 +126,7 @@ public class SeaGhouls2 : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "PlayerSpell" || col.gameObject.tag == "Player")
-        {
-            currentHealth--;
-        }
+       
         if(col.gameObject.tag == "GullNodes1")
         {
             row1 = false;
@@ -141,6 +138,24 @@ public class SeaGhouls2 : MonoBehaviour {
         {
             row2 = false;
             row3 = true;
+        }
+        if (col.gameObject.tag == "PlayerSpell" || col.gameObject.tag == "Player")
+        {
+            if (currentHealth == 1)
+            {
+                ScoreScript.ScoreValue1 += 50;
+            }
+            currentHealth--;
+
+        }
+        if (col.gameObject.tag == "PlayerSpell2" || col.gameObject.tag == "Player")
+        {
+            if (currentHealth == 1)
+            {
+                ScoreScript2.ScoreValue2 += 50;
+            }
+            currentHealth--;
+
         }
 
     }

@@ -7,7 +7,7 @@ public class bearScript : MonoBehaviour
 
     private float moveSpeed = 6f;
     public float maxHealth = 2;
-    public float currentHealth;
+    private float currentHealth=2;
     private Transform BearPoint;
     //public GameObject deathAnimation;
 
@@ -23,24 +23,30 @@ public class bearScript : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, BearPoint.position, moveSpeed * Time.deltaTime);
 
-        if (currentHealth <= 0)
-        {
-            //Instantiate(deathAnimation, transform.position, transform.rotation);
-            ScoreScript.ScoreValue += 20;
-            Destroy(gameObject);
-        }
+   
     }
 
-    private void OntriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (other.gameObject.tag == "PlayerSpell")
+        if (col.gameObject.tag == "PlayerSpell" || col.gameObject.tag == "Player")
         {
+            if (currentHealth == 1)
+            {
+                ScoreScript.ScoreValue1 += 150;
+            }
             currentHealth--;
+
         }
-        else if (other.gameObject.tag == "Player")
+        if (col.gameObject.tag == "PlayerSpell2" || col.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            if (currentHealth == 1)
+            {
+                ScoreScript2.ScoreValue2 += 150;
+            }
+            currentHealth--;
+
         }
-        
+
     }
+
 }

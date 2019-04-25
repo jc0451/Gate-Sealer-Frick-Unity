@@ -22,7 +22,7 @@ public class EnemyMoveToPlayer : MonoBehaviour {
         if (health <= 0)
         {
             Destroy(gameObject);
-            ScoreScript.ScoreValue += 1;
+            
         }
 
     }

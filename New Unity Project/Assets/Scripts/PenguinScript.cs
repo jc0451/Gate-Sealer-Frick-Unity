@@ -47,6 +47,7 @@ public class PenguinScript : MonoBehaviour
         if (currentHealth <= 0)
         {
             //Instantiate(deathAnimation, transform.position, transform.rotation);
+            ScoreScript.ScoreValue += 10;
 
             Destroy(gameObject);
         }

@@ -25,7 +25,7 @@ public class bearScript : MonoBehaviour
         if (currentHealth <= 0)
         {
             //Instantiate(deathAnimation, transform.position, transform.rotation);
-
+            ScoreScript.ScoreValue += 20;
             Destroy(gameObject);
         }
     }

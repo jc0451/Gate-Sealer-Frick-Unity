@@ -9,6 +9,8 @@ TagManager:
   - BearPoint
   - FireBall
   - Player2
+  - GullNodes2
+  - GullNodes1
   layers:
   - Default
   - TransparentFX

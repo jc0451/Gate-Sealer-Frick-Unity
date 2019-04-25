@@ -8,19 +8,19 @@ public class bearScript : MonoBehaviour
     private float moveSpeed = 6f;
     public float maxHealth = 2;
     public float currentHealth;
-    private Transform Player;
+    private Transform BearPoint;
     //public GameObject deathAnimation;
 
     void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        BearPoint = GameObject.FindGameObjectWithTag("BearPoint").GetComponent<Transform>();
         currentHealth = maxHealth;
     }
 
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, Player.position, moveSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, BearPoint.position, moveSpeed * Time.deltaTime);
 
         if (currentHealth <= 0)
         {
@@ -32,9 +32,13 @@ public class bearScript : MonoBehaviour
 
     private void OntriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "playerSpell" || other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "PlayerSpell")
         {
-          currentHealth--;
+            currentHealth--;
+        }
+        else if (other.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
         }
         
     }

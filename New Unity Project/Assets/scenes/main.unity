@@ -246,7 +246,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 5}
+    oldSize: {x: 3.47, y: 4.34}
     newSize: {x: 4, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -866,6 +866,23 @@ GameObject:
   m_PrefabParentObject: {fileID: 1217213678559852, guid: f86696099b13aed4fa6853ba7f30975c,
     type: 2}
   m_PrefabInternal: {fileID: 1831944829}
+--- !u!95 &1311916797
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1311916796}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!50 &1311916800
 Rigidbody2D:
   serializedVersion: 4
@@ -1319,7 +1336,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4506734ae0351d6429b6d1fe3e671fd4,
+      objectReference: {fileID: 21300000, guid: fe23d2323c1684b4c8e89695a0b6a64b,
         type: 3}
     - target: {fileID: 212350792804280082, guid: d8a972fae7715c446a84b66eb26049f2,
         type: 2}
@@ -1330,6 +1347,11 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212350792804280082, guid: d8a972fae7715c446a84b66eb26049f2,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8a972fae7715c446a84b66eb26049f2, type: 2}
@@ -1630,7 +1652,7 @@ Prefab:
         type: 2}
       propertyPath: audioFiles.Array.data[2].audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 57c973a5f63369d4b9f7ccfef6b7164e, type: 3}
+      objectReference: {fileID: 8300000, guid: a2002bb3fe6ca9a49b0dbb1ce6227e44, type: 3}
     - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
         type: 2}
       propertyPath: audioFiles.Array.data[2].volume
@@ -1754,7 +1776,7 @@ Prefab:
     - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
         type: 2}
       propertyPath: audioFiles.Array.data[10].volume
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
         type: 2}

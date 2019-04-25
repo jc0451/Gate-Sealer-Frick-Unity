@@ -1355,6 +1355,7 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: 1da0de389d48e7e47a3100adc812d713, type: 2}
   m_IsPrefabParent: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &1655906143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,6 +1442,8 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1655906143}
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!1001 &1669423003

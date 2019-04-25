@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e997f75e7fa352b4cb8564731725e48a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bulletprefab: {fileID: 1725058022185702, guid: cec0d460f39b43f4c84f27dfa6475987,
+  Bulletprefab: {fileID: 1721734652678828, guid: 9fc67a8811883264883a478d7e125b2b,
     type: 2}
   maxHealth: 2
   currentHealth: 2

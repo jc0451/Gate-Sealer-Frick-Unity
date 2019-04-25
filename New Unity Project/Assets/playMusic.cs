@@ -6,7 +6,7 @@ public class playMusic : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        FindObjectOfType<AudioManager>().Play("SoundTrack");
+        FindObjectOfType<AudioManager>().Play("BattleMusic");
     }
 	
 	// Update is called once per frame

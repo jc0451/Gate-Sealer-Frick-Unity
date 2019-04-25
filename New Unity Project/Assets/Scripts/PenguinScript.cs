@@ -24,6 +24,7 @@ public class PenguinScript : MonoBehaviour
 
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("Penguin");
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         currentHealth = maxHealth;
         index = Random.Range(0, positions.Length);
@@ -41,7 +42,8 @@ public class PenguinScript : MonoBehaviour
         {
             cooldownTimer = shootingDelay;
             GameObject bullet = (GameObject)Instantiate(Bulletprefab, transform.position, transform.rotation);
-            
+            FindObjectOfType<AudioManager>().Play("Penguin");
+
         }
         transform.position = Vector2.MoveTowards(transform.position, positions[index].transform.position, Time.deltaTime * moveSpeed);
         if (currentHealth <= 0)

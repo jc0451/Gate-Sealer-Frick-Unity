@@ -13,6 +13,7 @@ public class bearScript : MonoBehaviour
 
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("GhostBear");
         BearPoint = GameObject.FindGameObjectWithTag("BearPoint").GetComponent<Transform>();
         currentHealth = maxHealth;
     }

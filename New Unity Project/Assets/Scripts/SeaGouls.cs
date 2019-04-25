@@ -17,7 +17,7 @@ public class SeaGouls : MonoBehaviour
     {
         
         currentHealth = maxHealth;
-
+        FindObjectOfType<AudioManager>().Play("Seagull");
 
     }
    

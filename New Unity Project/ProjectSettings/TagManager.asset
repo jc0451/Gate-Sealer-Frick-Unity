@@ -8,6 +8,7 @@ TagManager:
   - PlayerSpell
   - BearPoint
   - FireBall
+  - Player2
   layers:
   - Default
   - TransparentFX

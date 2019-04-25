@@ -66,6 +66,7 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1);
             SpellInstance.transform.position = transform.position;
+            FindObjectOfType<AudioManager>().Play("SpellCast");
             FindObjectOfType<AudioManager>().Play("FireSpell");
             Key1 = 0;
             Key2 = 0;
@@ -76,6 +77,8 @@ public class Player1 : MonoBehaviour {
         }
         if (Key1 == 2 && Key2 == 0 && KeysPressed == 2)
         {
+            FindObjectOfType<AudioManager>().Play("SpellCast");
+            FindObjectOfType<AudioManager>().Play("EarthQuake");
             GameObject SpellInstance = (GameObject)Instantiate(Spell2);
             SpellInstance.transform.position = transform.position;
             Key1 = 0;
@@ -87,7 +90,8 @@ public class Player1 : MonoBehaviour {
         }
         if (Key1 == 0 && Key2 == 2 && KeysPressed == 2)
         {
-            FindObjectOfType<AudioManager>().Play("ExplosionSpell");
+            FindObjectOfType<AudioManager>().Play("SpellCast");
+            FindObjectOfType<AudioManager>().Play("Explosion");
             Explosion();
             Key1 = 0;
             Key2 = 0;
@@ -97,6 +101,8 @@ public class Player1 : MonoBehaviour {
         }
         if (Key1 == 1 && Key2 == 1 && KeysPressed == 2 &&FirstKey==2)
         {
+            FindObjectOfType<AudioManager>().Play("SpellCast");
+            FindObjectOfType<AudioManager>().Play("Lightning");
             Storm();
             Key1 = 0;
             Key2 = 0;

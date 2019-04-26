@@ -83,7 +83,7 @@ public class PenguinScript : MonoBehaviour
         {
             if (currentHealth == 1)
             {
-                ScoreScript.ScoreValue1 += 100;
+                ScoreScript.ScoreValue1 += 50;
             }
             currentHealth--;
            
@@ -92,7 +92,7 @@ public class PenguinScript : MonoBehaviour
         {
             if (currentHealth == 1)
             {
-                ScoreScript2.ScoreValue2 += 100;
+                ScoreScript2.ScoreValue2 += 50;
             }
             currentHealth--;
 

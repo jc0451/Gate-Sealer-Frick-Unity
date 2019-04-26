@@ -143,7 +143,7 @@ public class SeaGhouls2 : MonoBehaviour {
         {
             if (currentHealth == 1)
             {
-                ScoreScript.ScoreValue1 += 50;
+                ScoreScript.ScoreValue1 += 25;
             }
             currentHealth--;
 
@@ -152,7 +152,7 @@ public class SeaGhouls2 : MonoBehaviour {
         {
             if (currentHealth == 1)
             {
-                ScoreScript2.ScoreValue2 += 50;
+                ScoreScript2.ScoreValue2 += 25;
             }
             currentHealth--;
 

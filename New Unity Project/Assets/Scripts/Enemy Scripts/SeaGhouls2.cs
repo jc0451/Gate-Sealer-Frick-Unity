@@ -165,7 +165,7 @@ public class SeaGhouls2 : MonoBehaviour {
         }
         else if (col.gameObject.tag == "Player2")
         {
-            ScoreScript2.ScoreValue2 += 15;
+            ScoreScript2.ScoreValue2 -= 15;
             Destroy(gameObject);
         }
 

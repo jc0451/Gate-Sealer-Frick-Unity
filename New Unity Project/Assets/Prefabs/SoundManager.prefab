@@ -53,68 +53,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioFiles:
   - audioName: ButtonClap
-    audioClip: {fileID: 8300000, guid: b5f5c66f9c2dbfe4fa053a01d9c1749b, type: 3}
-    volume: 1
+    audioClip: {fileID: 8300000, guid: 77c47806fb6c569458fbc7692d612099, type: 3}
+    volume: 0.5
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: ExplosionSpell
-    audioClip: {fileID: 8300000, guid: 60a997eec723bfd419ac8a0d7a7e64c9, type: 3}
-    volume: 1
+  - audioName: EarthQuake
+    audioClip: {fileID: 8300000, guid: 91f9a47ad401e0a4ab1b9a50d77df36f, type: 3}
+    volume: 0.6
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: FireSpell
-    audioClip: {fileID: 8300000, guid: 965ff47cfc4afe24585825341308ac13, type: 3}
-    volume: 1
+  - audioName: Explosion
+    audioClip: {fileID: 8300000, guid: a2002bb3fe6ca9a49b0dbb1ce6227e44, type: 3}
+    volume: 0.6
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: IceBeam
+    audioClip: {fileID: 8300000, guid: c177c23172a54114496c1ecc23388c04, type: 3}
+    volume: 0.5
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
   - audioName: GhostBear
-    audioClip: {fileID: 8300000, guid: e9020a2b65b5c274abf1177cd9ba48bb, type: 3}
-    volume: 1
+    audioClip: {fileID: 8300000, guid: 8471cab5a3bb47046a0c792e61eb8a79, type: 3}
+    volume: 0.5
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: LightningSpell
-    audioClip: {fileID: 8300000, guid: 8cd379cd50c0a904ead329782b2574b1, type: 3}
-    volume: 1
+  - audioName: Lightning
+    audioClip: {fileID: 8300000, guid: f5f8f26a7a942e3459eb84d074ab93b8, type: 3}
+    volume: 0.5
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
   - audioName: MainMenu
-    audioClip: {fileID: 8300000, guid: a4ec2743377cc674d919788903cf28a3, type: 3}
-    volume: 1
+    audioClip: {fileID: 8300000, guid: a838394c4b7021e49944866e922aec72, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 1
+    playOnAwake: 0
+  - audioName: Penguin
+    audioClip: {fileID: 8300000, guid: 44b47dd1416bb9341bd5f74c28020719, type: 3}
+    volume: 0.5
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: PenguinGhost
-    audioClip: {fileID: 8300000, guid: 7eba355b170044846a0f1285af723058, type: 3}
-    volume: 1
+  - audioName: Seagull
+    audioClip: {fileID: 8300000, guid: 1c5d7fe28155ee449a217e9af9f938b9, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 1
+    playOnAwake: 0
+  - audioName: SpellCast
+    audioClip: {fileID: 8300000, guid: 214f8f18ea39c084b9387354ca6bf25f, type: 3}
+    volume: 0.5
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: SeagullShort
-    audioClip: {fileID: 8300000, guid: 94e84d0193ba7f64487ac9310402bf95, type: 3}
-    volume: 1
-    source: {fileID: 0}
-    isLooping: 0
-    playOnAwake: 0
-  - audioName: ' SealSpellCast'
-    audioClip: {fileID: 8300000, guid: 54c98a285891c784b9c42ea3a1ba1dcc, type: 3}
-    volume: 1
-    source: {fileID: 0}
-    isLooping: 0
-    playOnAwake: 0
-  - audioName: SealSpellCast1
-    audioClip: {fileID: 8300000, guid: 7c5821c620627bf40b72a8a77284c26c, type: 3}
-    volume: 1
-    source: {fileID: 0}
-    isLooping: 0
-    playOnAwake: 0
-  - audioName: SoundTrack
-    audioClip: {fileID: 8300000, guid: b6084f7cb4bb8f445a8db4879e6c9cfa, type: 3}
-    volume: 1
+  - audioName: BattleMusic
+    audioClip: {fileID: 8300000, guid: 21d4aa9f981a04c4ea432b53fa17ad6b, type: 3}
+    volume: 0.5
     source: {fileID: 0}
     isLooping: 1
     playOnAwake: 0

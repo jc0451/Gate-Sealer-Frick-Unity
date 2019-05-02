@@ -30,6 +30,7 @@ public class Bullet : MonoBehaviour
         if (other.gameObject.tag == "Player2")
         {
             ScoreScript2.ScoreValue2 -= 10;
+            Destroy(gameObject);
         }
 
 

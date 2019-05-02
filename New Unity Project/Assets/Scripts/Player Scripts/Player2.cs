@@ -102,7 +102,7 @@ public class Player2 : MonoBehaviour
             GameObject SpellInstance = (GameObject)Instantiate(Spell1);
             SpellInstance.transform.position = transform.position;
             FindObjectOfType<AudioManager>().Play("SpellCast");
-            FindObjectOfType<AudioManager>().Play("FireSpell");
+            FindObjectOfType<AudioManager>().Play("IceBeam");
             Key1 = 0;
             Key2 = 0;
             FirstKey = 0;

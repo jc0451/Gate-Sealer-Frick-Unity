@@ -72,16 +72,16 @@ public class PenguinScript : MonoBehaviour
 
         
 
-        Vector3 direction = Player.position - transform.position;
-        direction.Normalize();
-        float z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
+        //Vector3 direction = Player.position - transform.position;
+        //direction.Normalize();
+        //float z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
 
-        Quaternion rotation = Quaternion.Euler(0, 0, z);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, roationspeed * Time.deltaTime);
+        //Quaternion rotation = Quaternion.Euler(0, 0, z);
+        //transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, roationspeed * Time.deltaTime);
 
 
     }
-
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "PlayerSpell" || col.gameObject.tag == "Player")

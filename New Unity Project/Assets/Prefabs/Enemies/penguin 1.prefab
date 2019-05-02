@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 1587102115092282}
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 4777198444768122}
   m_RootOrder: 0
@@ -203,7 +203,6 @@ MonoBehaviour:
   - {fileID: 1204949331957240, guid: 8baf0e2aa24d8a741934f4b70ad52ece, type: 2}
   - {fileID: 1469809224614076, guid: 896862cf80426314096b5f4f295c6400, type: 2}
   - {fileID: 1413362935023558, guid: 4f8e2fe28758fe14b9237e60b6bb8849, type: 2}
-  - {fileID: 1207229846188240, guid: 9a25c9b2ebb29e843bc81623ac30ddb5, type: 2}
   moveSpeed: 3
 --- !u!212 &212696573310255752
 SpriteRenderer:
@@ -247,7 +246,7 @@ SpriteRenderer:
   m_Size: {x: 1.4, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212954751462656140
 SpriteRenderer:

@@ -150,6 +150,7 @@ public class SeaGhouls2 : MonoBehaviour {
         }
         else if (col.gameObject.tag == "Player")
         {
+            ScoreScript.ScoreValue1 -= 15;
             Destroy(gameObject);
         }
 
@@ -164,6 +165,7 @@ public class SeaGhouls2 : MonoBehaviour {
         }
         else if (col.gameObject.tag == "Player2")
         {
+            ScoreScript.ScoreValue1 += 15;
             Destroy(gameObject);
         }
 

@@ -46,6 +46,7 @@ public class bearScript : MonoBehaviour
         }
         else if (col.gameObject.tag == "Player")
         {
+            ScoreScript.ScoreValue1 -= 25;
             Destroy(gameObject);
         }
 
@@ -60,6 +61,7 @@ public class bearScript : MonoBehaviour
         }
         else if (col.gameObject.tag == "Player2")
         {
+            ScoreScript.ScoreValue1 -= 25;
             Destroy(gameObject);
         }
 

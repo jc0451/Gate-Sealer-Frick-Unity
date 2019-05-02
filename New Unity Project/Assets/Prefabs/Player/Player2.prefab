@@ -135,7 +135,7 @@ MonoBehaviour:
   FirstKey: 0
   Spell1: {fileID: 1283866054758384, guid: b07955ce0ea90c3489e9be99c94e8d48, type: 2}
   Spell2: {fileID: 1443104019185940, guid: c5114dd6c45a8834a807d856525b3f92, type: 2}
-  Spell3: {fileID: 1195514643248628, guid: c31ac5e845c543e40ae78519c87414df, type: 2}
+  Spell3: {fileID: 1282706313267312, guid: 142ccee0680cf5f47bf49001716eb202, type: 2}
   Spell4: {fileID: 1753355543346662, guid: 593044b358721d64089f1972b3616b27, type: 2}
 --- !u!212 &212350792804280082
 SpriteRenderer:

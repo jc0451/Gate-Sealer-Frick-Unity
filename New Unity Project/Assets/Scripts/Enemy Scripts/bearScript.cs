@@ -35,7 +35,7 @@ public class bearScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "PlayerSpell" || col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "PlayerSpell")
         {
             if (currentHealth == 1)
             {
@@ -44,7 +44,12 @@ public class bearScript : MonoBehaviour
             currentHealth--;
 
         }
-        if (col.gameObject.tag == "PlayerSpell2" || col.gameObject.tag == "Player")
+        else if (col.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+
+        if (col.gameObject.tag == "PlayerSpell2")
         {
             if (currentHealth == 1)
             {
@@ -52,6 +57,10 @@ public class bearScript : MonoBehaviour
             }
             currentHealth--;
 
+        }
+        else if (col.gameObject.tag == "Player2")
+        {
+            Destroy(gameObject);
         }
 
     }

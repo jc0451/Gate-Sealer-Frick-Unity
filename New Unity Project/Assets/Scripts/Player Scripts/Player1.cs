@@ -14,19 +14,33 @@ public class Player1 : MonoBehaviour {
     public static bool firstkey2 = false;
     public static bool secondkey1 = false;
     public static bool secondkey2 = false;
+    private bool urf = false;
 
 
     public GameObject Spell1;
     public GameObject Spell2;
     public GameObject Spell3;
     public GameObject Spell4;
+
+    private float time=1;
     // Use this for initialization
     void Start () {
+        urf = true;
+        time = 1;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        if (urf == true)
+        {
+            time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                urf = false;
+                time = 1;
+            }
+        }
         if (Input.GetKeyUp(KeyCode.W))
         {
             if (KeysPressed < 1)
@@ -40,6 +54,22 @@ public class Player1 : MonoBehaviour {
             Key1++;
             KeysPressed++;
             
+        }
+        if (Mike2.Mic2Loudness > 0.0001&&urf==false)
+        {
+            urf = true;
+            if (KeysPressed < 1)
+            {
+                FirstKey = 2;
+                firstkey2 = true;
+            }
+            if (KeysPressed == 1)
+            {
+                secondkey2 = true;
+            }
+            Key2++;
+            KeysPressed++;
+
         }
 
         if (Input.GetKeyUp(KeyCode.E))

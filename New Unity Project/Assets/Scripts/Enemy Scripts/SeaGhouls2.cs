@@ -139,7 +139,7 @@ public class SeaGhouls2 : MonoBehaviour {
             row2 = false;
             row3 = true;
         }
-        if (col.gameObject.tag == "PlayerSpell" || col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "PlayerSpell" )
         {
             if (currentHealth == 1)
             {
@@ -148,7 +148,12 @@ public class SeaGhouls2 : MonoBehaviour {
             currentHealth--;
 
         }
-        if (col.gameObject.tag == "PlayerSpell2" || col.gameObject.tag == "Player")
+        else if (col.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+
+        if (col.gameObject.tag == "PlayerSpell2")
         {
             if (currentHealth == 1)
             {
@@ -156,6 +161,10 @@ public class SeaGhouls2 : MonoBehaviour {
             }
             currentHealth--;
 
+        }
+        else if (col.gameObject.tag == "Player2")
+        {
+            Destroy(gameObject);
         }
 
     }

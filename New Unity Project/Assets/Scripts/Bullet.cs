@@ -9,9 +9,9 @@ public class Bullet : MonoBehaviour
     float moveSpeed = 8f;
     float deleteTime = 2f;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Player2")
         {
             Destroy(gameObject);
         }

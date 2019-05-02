@@ -37,22 +37,22 @@ public class bearScript : MonoBehaviour
     {
         if (col.gameObject.tag == "PlayerSpell" || col.gameObject.tag == "Player")
         {
-            //if (currentHealth == 1)
-            //{
-            //    ScoreScript.ScoreValue1 += 50;
-            //}
+            if (currentHealth == 1)
+            {
+                ScoreScript.ScoreValue1 += 50;
+            }
             currentHealth--;
 
         }
-        //if (col.gameObject.tag == "PlayerSpell2" || col.gameObject.tag == "Player")
-        //{
-        //    if (currentHealth == 1)
-        //    {
-        //        ScoreScript2.ScoreValue2 += 150;
-        //    }
-        //    currentHealth--;
+        if (col.gameObject.tag == "PlayerSpell2" || col.gameObject.tag == "Player")
+        {
+            if (currentHealth == 1)
+            {
+                ScoreScript2.ScoreValue2 += 150;
+            }
+            currentHealth--;
 
-        //}
+        }
 
     }
 

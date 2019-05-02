@@ -20,6 +20,7 @@ public class PenguinScript : MonoBehaviour
 
 
     private Transform Player;
+    private Transform Player2;
 
 
     void Start()
@@ -54,18 +55,22 @@ public class PenguinScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (Player == null)
+        if (Player == null && Player2 == null)
         {
             GameObject go = GameObject.FindGameObjectWithTag("Player");
+            GameObject go2 = GameObject.FindGameObjectWithTag("Player2");
 
-            if (go != null)
+            if (go != null && go2 !=null)
             {
-                Player = go.transform;
+                //Player = go.transform;
+                Player2 = go2.transform;
             }
         }
 
-        if (Player == null)
+        if (Player == null && Player2 == null)
             return;
+
+        
 
         Vector3 direction = Player.position - transform.position;
         direction.Normalize();

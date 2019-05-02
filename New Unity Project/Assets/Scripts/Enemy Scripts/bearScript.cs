@@ -61,7 +61,7 @@ public class bearScript : MonoBehaviour
         }
         else if (col.gameObject.tag == "Player2")
         {
-            ScoreScript.ScoreValue1 -= 25;
+            ScoreScript2.ScoreValue2 -= 25;
             Destroy(gameObject);
         }
 

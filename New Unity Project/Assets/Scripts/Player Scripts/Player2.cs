@@ -22,6 +22,9 @@ public class Player2 : MonoBehaviour
     public GameObject Spell3;
     public GameObject Spell4;
 
+    public Rigidbody2D rb;
+    public float speed;
+
     private float time = 1;
     // Use this for initialization
     void Start()
@@ -34,6 +37,18 @@ public class Player2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.J))
+        {
+            rb.velocity = new Vector2(-speed, 0.0f);
+
+        }
+
+        if (Input.GetKey(KeyCode.L))
+        {
+            rb.velocity = new Vector2(speed, 0.0f);
+
+
+        }
         if (urf == true)
         {
             time -= Time.deltaTime;
@@ -101,6 +116,7 @@ public class Player2 : MonoBehaviour
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1);
             SpellInstance.transform.position = transform.position;
+            SpellInstance.transform.parent = gameObject.transform;
             FindObjectOfType<AudioManager>().Play("SpellCast");
             FindObjectOfType<AudioManager>().Play("IceBeam");
             Key1 = 0;
@@ -151,9 +167,11 @@ public class Player2 : MonoBehaviour
     void Explosion()
     {
         GameObject SpellInstance = (GameObject)Instantiate(Spell3);
+        SpellInstance.transform.position = transform.position;
     }
     void Storm()
     {
         GameObject SpellInstance = (GameObject)Instantiate(Spell4);
+        SpellInstance.transform.position = transform.position;
     }
 }

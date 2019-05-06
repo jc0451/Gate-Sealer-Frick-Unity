@@ -58,7 +58,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -145,10 +145,12 @@ MonoBehaviour:
   Key2: 0
   KeysPressed: 0
   FirstKey: 0
-  Spell1: {fileID: 1435996718188526, guid: 71d660c451e9a1f4da9c16c6b0fe82f4, type: 2}
+  Spell1: {fileID: 1474610067455886, guid: 2d4da8a1474e03c489e8e4b3dfdce9f2, type: 2}
   Spell2: {fileID: 1695243458792496, guid: ab16bba0f8fa86d4799c3cf4f864dd1e, type: 2}
-  Spell3: {fileID: 1357580397395038, guid: 72bb39e435933a64db3a27767478a358, type: 2}
+  Spell3: {fileID: 1076023690675386, guid: 9f2f8266483730f44a09f850d12d66f2, type: 2}
   Spell4: {fileID: 1377979678175580, guid: 0cfaab0d8e6d39149b81d440ddbc80dc, type: 2}
+  rb: {fileID: 50804673694678218}
+  speed: 20
 --- !u!212 &212487409506748712
 SpriteRenderer:
   m_ObjectHideFlags: 1

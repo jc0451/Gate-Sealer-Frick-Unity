@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Windows.Speech;
 using UnityEngine.UI; 
 
@@ -17,34 +16,47 @@ public class Player1 : MonoBehaviour {
     public static bool secondkey1 = false;
     public static bool secondkey2 = false;
     private bool urf = false;
-<<<<<<< HEAD
-    public Slider spellsMeter;
-=======
     public Slider spellsMeter; 
 
->>>>>>> master
 
     public GameObject Spell1;
     public GameObject Spell2;
     public GameObject Spell3;
     public GameObject Spell4;
 
+    public Rigidbody2D rb;
+    public float speed;
+
+   
+
+
+
     private float time=1;
     // Use this for initialization
+
     void Start () {
         urf = true;
         time = 1;
-<<<<<<< HEAD
-        spellsMeter.value = 0;
-=======
         spellsMeter.value = 0; 
        
 
->>>>>>> master
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            rb.velocity = new Vector2(-speed, 0.0f);
+           
+        }
+ 
+        if (Input.GetKey(KeyCode.D))
+        {
+            rb.velocity = new Vector2(speed, 0.0f);
+          
+        
+        }
         if (urf == true)
         {
             time -= Time.deltaTime;
@@ -57,27 +69,17 @@ public class Player1 : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.W))
         {
             if (KeysPressed < 1)
-            {
-                FirstKey = 1;
+            { FirstKey = 1;
                 firstkey1 = true;
             }
-            if (KeysPressed == 1)
+            if(KeysPressed==1)
             {
                 secondkey1 = true;
             }
             Key1++;
             KeysPressed++;
-<<<<<<< HEAD
-            spellsMeter.value += 1;
-
-        }
-        else
-        {
-            spellsMeter.value -= 0.03f;
-=======
             spellsMeter.value += 1; 
             
->>>>>>> master
         }
         else 
         { 
@@ -120,22 +122,20 @@ public class Player1 : MonoBehaviour {
             FirstKey = 0;
             KeysPressed = 0;
         }
-        if (Key1 == 1 && Key2 == 1 && KeysPressed == 2 && FirstKey == 1)
+        if (Key1 == 1 && Key2 == 1 && KeysPressed == 2 && FirstKey==1)
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1);
             SpellInstance.transform.position = transform.position;
+            SpellInstance.transform.parent = gameObject.transform;
             FindObjectOfType<AudioManager>().Play("SpellCast");
             FindObjectOfType<AudioManager>().Play("IceBeam");
             Key1 = 0;
             Key2 = 0;
             FirstKey = 0;
             KeysPressed = 0;
-<<<<<<< HEAD
-            spellsMeter.value = 0;
-=======
             spellsMeter.value = 0; 
->>>>>>> master
 
+       
         }
         if (Key1 == 2 && Key2 == 0 && KeysPressed == 2)
         {
@@ -147,12 +147,9 @@ public class Player1 : MonoBehaviour {
             Key2 = 0;
             FirstKey = 0;
             KeysPressed = 0;
-<<<<<<< HEAD
-            
-=======
             spellsMeter.value = 0; 
->>>>>>> master
 
+   
         }
         if (Key1 == 0 && Key2 == 2 && KeysPressed == 2)
         {
@@ -163,12 +160,8 @@ public class Player1 : MonoBehaviour {
             Key2 = 0;
             FirstKey = 0;
             KeysPressed = 0;
-<<<<<<< HEAD
-            spellsMeter.value = 0;
-=======
             spellsMeter.value = 0; 
 
->>>>>>> master
         }
         if (Key1 == 1 && Key2 == 1 && KeysPressed == 2 &&FirstKey==2)
         {
@@ -179,12 +172,8 @@ public class Player1 : MonoBehaviour {
             Key2 = 0;
             FirstKey = 0;
             KeysPressed = 0;
-<<<<<<< HEAD
-            spellsMeter.value = 0;
-=======
             spellsMeter.value = 0; 
 
->>>>>>> master
         }
 
 
@@ -192,9 +181,11 @@ public class Player1 : MonoBehaviour {
     void Explosion()
     {
         GameObject SpellInstance = (GameObject)Instantiate(Spell3);
+        SpellInstance.transform.position = transform.position;
     }
     void Storm()
     {
         GameObject SpellInstance = (GameObject)Instantiate(Spell4);
+        SpellInstance.transform.position = transform.position;
     }
 }

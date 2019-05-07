@@ -1129,7 +1129,7 @@ Prefab:
         type: 2}
       propertyPath: Enemy
       value: 
-      objectReference: {fileID: 1194803714724768, guid: 89b2b570f7829e8449ea178d7b364775,
+      objectReference: {fileID: 1173030326191268, guid: 799a1bb2f4bcf614b82ffaa13020c971,
         type: 2}
     - target: {fileID: 114155803559656662, guid: 7d919dd34f17b704abc93e6432a7671a,
         type: 2}
@@ -1883,7 +1883,7 @@ Prefab:
         type: 2}
       propertyPath: Enemy
       value: 
-      objectReference: {fileID: 1618252380647716, guid: 05fab094b06255e4a9803ff256ea6ea3,
+      objectReference: {fileID: 1941412803401336, guid: aa9e2812032dd1443b0fda346a29d97e,
         type: 2}
     - target: {fileID: 114155803559656662, guid: 7d919dd34f17b704abc93e6432a7671a,
         type: 2}

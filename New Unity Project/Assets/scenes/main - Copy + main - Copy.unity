@@ -353,7 +353,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1274326421867150, guid: 7d919dd34f17b704abc93e6432a7671a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d919dd34f17b704abc93e6432a7671a, type: 2}
@@ -636,7 +636,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 977248157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.78, z: -0.0058962535}
+  m_LocalPosition: {x: 0, y: -5.96, z: -0.0058962535}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 1005472676}
   - component: {fileID: 1005472675}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: check devices
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -725,17 +725,17 @@ Prefab:
         type: 2}
       propertyPath: Enemy
       value: 
-      objectReference: {fileID: 1194803714724768, guid: 89b2b570f7829e8449ea178d7b364775,
+      objectReference: {fileID: 1173030326191268, guid: 799a1bb2f4bcf614b82ffaa13020c971,
         type: 2}
     - target: {fileID: 114155803559656662, guid: 7d919dd34f17b704abc93e6432a7671a,
         type: 2}
       propertyPath: spawndelay
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114155803559656662, guid: 7d919dd34f17b704abc93e6432a7671a,
         type: 2}
       propertyPath: timeactual
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1274326421867150, guid: 7d919dd34f17b704abc93e6432a7671a, type: 2}
       propertyPath: m_IsActive
@@ -744,7 +744,7 @@ Prefab:
     - target: {fileID: 114155803559656662, guid: 7d919dd34f17b704abc93e6432a7671a,
         type: 2}
       propertyPath: maxspawn
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d919dd34f17b704abc93e6432a7671a, type: 2}
@@ -947,7 +947,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1274326421867150, guid: 7d919dd34f17b704abc93e6432a7671a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d919dd34f17b704abc93e6432a7671a, type: 2}
@@ -1273,21 +1273,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114155803559656662, guid: 7d919dd34f17b704abc93e6432a7671a,
-        type: 2}
-      propertyPath: Enemy
-      value: 
-      objectReference: {fileID: 1618252380647716, guid: 05fab094b06255e4a9803ff256ea6ea3,
-        type: 2}
-    - target: {fileID: 114155803559656662, guid: 7d919dd34f17b704abc93e6432a7671a,
-        type: 2}
-      propertyPath: spawndelay
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114155803559656662, guid: 7d919dd34f17b704abc93e6432a7671a,
-        type: 2}
-      propertyPath: timeactual
-      value: 3
+    - target: {fileID: 1274326421867150, guid: 7d919dd34f17b704abc93e6432a7671a, type: 2}
+      propertyPath: m_Name
+      value: Spawner 2
       objectReference: {fileID: 0}
     - target: {fileID: 1274326421867150, guid: 7d919dd34f17b704abc93e6432a7671a, type: 2}
       propertyPath: m_IsActive
@@ -1295,12 +1283,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114155803559656662, guid: 7d919dd34f17b704abc93e6432a7671a,
         type: 2}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1941412803401336, guid: aa9e2812032dd1443b0fda346a29d97e,
+        type: 2}
+    - target: {fileID: 114155803559656662, guid: 7d919dd34f17b704abc93e6432a7671a,
+        type: 2}
       propertyPath: maxspawn
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1274326421867150, guid: 7d919dd34f17b704abc93e6432a7671a, type: 2}
-      propertyPath: m_Name
-      value: Spawner 2
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d919dd34f17b704abc93e6432a7671a, type: 2}

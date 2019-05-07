@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour {
         timeactual = spawndelay;
 
     }
-    
+
     void Update()
     {
 
@@ -33,6 +33,10 @@ public class EnemySpawner : MonoBehaviour {
             }
         }
 
+        if (GameObject.FindGameObjectWithTag("Enemy") == null)
+        {
+            spawned = 0;
+        }
 
 
     }

@@ -17,13 +17,6 @@ public class SpellsMeterp1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Player1.firstkey1 == true)
-        {
-            spellsMeter.value += 1;
-        }
-        else
-        {
-            spellsMeter.value -= 1;
-        }
+    
 	}
 }

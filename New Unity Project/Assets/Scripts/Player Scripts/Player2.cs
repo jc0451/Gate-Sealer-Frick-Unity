@@ -7,17 +7,9 @@ using UnityEngine.UI;
 
 public class Player2 : MonoBehaviour
 {
-    public int Key1 = 0;
-    public int Key2 = 0;
-    public int KeysPressed = 0;
-    public int FirstKey = 0;
+    public bool urf = false;
+    public Slider spellsMeter;
 
-    public static bool firstkey1 = false;
-    public static bool firstkey2 = false;
-    public static bool secondkey1 = false;
-    public static bool secondkey2 = false;
-    private bool urf = false;
-    public Slider spellsMeter; 
 
     public GameObject Spell1;
     public GameObject Spell2;
@@ -26,20 +18,60 @@ public class Player2 : MonoBehaviour
 
     public Rigidbody2D rb;
     public float speed;
+    public static bool stun2;
+    private bool shield = false;
+    private float stuntime;
+    private float shieldtime;
+    public float Stuntime;
+    public float Shieldtime;
 
-    private float time = 1;
+
     // Use this for initialization
+
     void Start()
     {
-        urf = true;
-        time = 1;
-        spellsMeter.value = 0; 
+
+        spellsMeter.value = 0;
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (stun2 == true && shield == false)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+            spellsMeter.value = 0;
+            stuntime -= Time.deltaTime;
+            if (stuntime <= 0)
+            {
+                rb.constraints = RigidbodyConstraints2D.None;
+                stun2 = false;
+                stuntime = Stuntime;
+            }
+        }
+        if (stun2 == true && shield == true)
+        {
+            stun2 = false;
+        }
+        if (Input.GetKey(KeyCode.U))
+        {
+            Player1.stun1 = true;
+            spellsMeter.value = 0;
+        }
+        if (Input.GetKey(KeyCode.I))
+        {
+            shield = true;
+            spellsMeter.value = 0;
+            shieldtime -= Time.deltaTime;
+            if (shieldtime <= 0)
+            {
+                shield = false;
+                shieldtime = Shieldtime;
+            }
+        }
+
         if (Input.GetKey(KeyCode.J))
         {
             rb.velocity = new Vector2(-speed, 0.0f);
@@ -52,125 +84,73 @@ public class Player2 : MonoBehaviour
 
 
         }
-        if (urf == true)
-        {
-            time -= Time.deltaTime;
-            if (time <= 0)
-            {
-                urf = false;
-                time = 1;
-            }
-        }
+
         if (Input.GetKeyUp(KeyCode.O))
         {
-            if (KeysPressed < 1)
-            {
-                FirstKey = 1;
-                firstkey1 = true;
-            }
-            if (KeysPressed == 1)
-            {
-                secondkey1 = true;
-            }
-            Key1++;
-            KeysPressed++;
-            spellsMeter.value += 1; 
+
+            spellsMeter.value += 1;
 
         }
-           else 
-        { 
-            spellsMeter.value -= 0.03f; 
-        } 
-        if (Mike.Mic1Loudness > 0.001 && urf == false)
+        else
+        {
+            spellsMeter.value -= 0.03f;
+        }
+        if (Mike2.Mic2Loudness > 0.0001 && urf == false)
         {
             urf = true;
-            if (KeysPressed < 1)
-            {
-                FirstKey = 2;
-                firstkey2 = true;
-            }
-            if (KeysPressed == 1)
-            {
-                secondkey2 = true;
-            }
-            Key2++;
-            KeysPressed++;
 
         }
-
         if (Input.GetKeyUp(KeyCode.P))
         {
-            if (KeysPressed < 1)
-            {
-                FirstKey = 2;
-                firstkey2 = true;
-            }
-            if (KeysPressed == 1)
-            {
-                secondkey2 = true;
-            }
-            Key2++;
-            KeysPressed++;
-        }
-        if (KeysPressed > 2)
-        {
 
-            Key1 = 0;
-            Key2 = 0;
-            FirstKey = 0;
-            KeysPressed = 0;
+            urf = true;
+
         }
-        if (Key1 == 1 && Key2 == 1 && KeysPressed == 2 && FirstKey == 1)
+        if (spellsMeter.value == 0)
+        {
+            urf = false;
+        }
+      
+
+        if (spellsMeter.value < 7 && spellsMeter.value >= 4 && urf == true)
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1);
             SpellInstance.transform.position = transform.position;
             SpellInstance.transform.parent = gameObject.transform;
             FindObjectOfType<AudioManager>().Play("SpellCast");
             FindObjectOfType<AudioManager>().Play("IceBeam");
-            Key1 = 0;
-            Key2 = 0;
-            FirstKey = 0;
-            KeysPressed = 0;
-            spellsMeter.value = 0; 
+            urf = false;
+            spellsMeter.value = 0;
 
 
         }
-        if (Key1 == 2 && Key2 == 0 && KeysPressed == 2)
+        if (spellsMeter.value < 4 && spellsMeter.value > 0 && urf == true)
         {
             FindObjectOfType<AudioManager>().Play("SpellCast");
             FindObjectOfType<AudioManager>().Play("EarthQuake");
             GameObject SpellInstance = (GameObject)Instantiate(Spell2);
             SpellInstance.transform.position = transform.position;
-            Key1 = 0;
-            Key2 = 0;
-            FirstKey = 0;
-            KeysPressed = 0;
-            spellsMeter.value = 0; 
+            urf = false;
+            spellsMeter.value = 0;
 
 
         }
-        if (Key1 == 0 && Key2 == 2 && KeysPressed == 2)
+        if (spellsMeter.value < 10 && spellsMeter.value >= 7 && urf == true)
         {
             FindObjectOfType<AudioManager>().Play("SpellCast");
             FindObjectOfType<AudioManager>().Play("Explosion");
             Explosion();
-            Key1 = 0;
-            Key2 = 0;
-            FirstKey = 0;
-            KeysPressed = 0;
-            spellsMeter.value = 0; 
+            urf = false;
+            spellsMeter.value = 0;
 
         }
-        if (Key1 == 1 && Key2 == 1 && KeysPressed == 2 && FirstKey == 2)
+        if (spellsMeter.value >= 10 && urf == true)
         {
             FindObjectOfType<AudioManager>().Play("SpellCast");
             FindObjectOfType<AudioManager>().Play("Lightning");
             Storm();
-            Key1 = 0;
-            Key2 = 0;
-            FirstKey = 0;
-            KeysPressed = 0;
-            spellsMeter.value = 0; 
+            urf = false;
+            spellsMeter.value = 0;
 
         }
 

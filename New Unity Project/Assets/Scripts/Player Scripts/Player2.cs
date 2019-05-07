@@ -1,8 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
+using UnityEngine.UI; 
 
 public class Player2 : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Player2 : MonoBehaviour
     public static bool secondkey1 = false;
     public static bool secondkey2 = false;
     private bool urf = false;
+    public Slider spellsMeter; 
 
     public GameObject Spell1;
     public GameObject Spell2;
@@ -31,6 +33,7 @@ public class Player2 : MonoBehaviour
     {
         urf = true;
         time = 1;
+        spellsMeter.value = 0; 
 
     }
 
@@ -71,8 +74,13 @@ public class Player2 : MonoBehaviour
             }
             Key1++;
             KeysPressed++;
+            spellsMeter.value += 1; 
 
         }
+           else 
+        { 
+            spellsMeter.value -= 0.03f; 
+        } 
         if (Mike.Mic1Loudness > 0.001 && urf == false)
         {
             urf = true;
@@ -123,6 +131,7 @@ public class Player2 : MonoBehaviour
             Key2 = 0;
             FirstKey = 0;
             KeysPressed = 0;
+            spellsMeter.value = 0; 
 
 
         }
@@ -136,6 +145,7 @@ public class Player2 : MonoBehaviour
             Key2 = 0;
             FirstKey = 0;
             KeysPressed = 0;
+            spellsMeter.value = 0; 
 
 
         }
@@ -148,6 +158,7 @@ public class Player2 : MonoBehaviour
             Key2 = 0;
             FirstKey = 0;
             KeysPressed = 0;
+            spellsMeter.value = 0; 
 
         }
         if (Key1 == 1 && Key2 == 1 && KeysPressed == 2 && FirstKey == 2)
@@ -159,6 +170,7 @@ public class Player2 : MonoBehaviour
             Key2 = 0;
             FirstKey = 0;
             KeysPressed = 0;
+            spellsMeter.value = 0; 
 
         }
 

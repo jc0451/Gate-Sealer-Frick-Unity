@@ -30,8 +30,12 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
+<<<<<<< Updated upstream
   m_MinSize: {x: 950, y: 392}
 >>>>>>> master
+=======
+  m_MinSize: {x: 950, y: 371}
+>>>>>>> Stashed changes
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -62,7 +66,7 @@ MonoBehaviour:
     y: 0
     width: 1904
     height: 975
-  m_MinSize: {x: 950, y: 392}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 >>>>>>> master
 --- !u!114 &3
@@ -162,11 +166,15 @@ MonoBehaviour:
     y: 30
     width: 1904
     height: 925
-  m_MinSize: {x: 917, y: 342}
-  m_MaxSize: {x: 22012, y: 10021}
+  m_MinSize: {x: 913, y: 321}
+  m_MaxSize: {x: 22008, y: 10021}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 18115
 >>>>>>> master
+=======
+  controlID: 674
+>>>>>>> Stashed changes
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -194,11 +202,15 @@ MonoBehaviour:
 =======
     width: 1392
     height: 925
-  m_MinSize: {x: 406, y: 342}
-  m_MaxSize: {x: 8006, y: 8042}
+  m_MinSize: {x: 402, y: 321}
+  m_MaxSize: {x: 8002, y: 8021}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 18116
 >>>>>>> master
+=======
+  controlID: 675
+>>>>>>> Stashed changes
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,11 +236,15 @@ MonoBehaviour:
 =======
     width: 1392
     height: 707
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 18117
 >>>>>>> master
+=======
+  controlID: 676
+>>>>>>> Stashed changes
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -283,8 +299,8 @@ MonoBehaviour:
     y: 0
     width: 700
     height: 707
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -308,8 +324,8 @@ MonoBehaviour:
     y: 707
     width: 1392
     height: 218
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -346,10 +362,10 @@ MonoBehaviour:
 =======
     width: 280
     height: 925
-  m_MinSize: {x: 279, y: 292}
-  m_MaxSize: {x: 4004, y: 8042}
+  m_MinSize: {x: 279, y: 271}
+  m_MaxSize: {x: 4004, y: 8021}
   vertical: 1
-  controlID: 18094
+  controlID: 845
 --- !u!114 &12
 >>>>>>> master
 MonoBehaviour:
@@ -380,8 +396,8 @@ MonoBehaviour:
 =======
     width: 280
     height: 511
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -405,8 +421,8 @@ MonoBehaviour:
     y: 511
     width: 280
     height: 414
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -483,7 +499,7 @@ MonoBehaviour:
     width: 696
     height: 686
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_MaximizeOnPlay: 1
+  m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -856,10 +872,16 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 52d0f6ff0e80f7ff0681f7ffec84f7ffd285f7ff0287f7ff7488f7ff5e89f7ff668af7fff868f9ff9804faff400ffaffe42afaffde3cfaff423efaff64b8faffc6d8faff6436fbff7859fbffee85fbff32b2fbff94b5fbff54b9fbff544ffcffde77fcffc6a9fcff78acfcffba13fdff241ffdff6e49fdffc25dfdff2e91fdff4a91fdff80a1fdffa4a1fdffdab9fdfff6b9fdfff8b9fdffdedefdff02dffdff6403feff20d3feff2cd3feffc04fffffcc4fffffb0d8ffffeafaffff9cfbffff000000006438000024390000b63a0000363c0000
 >>>>>>> master
+=======
+    m_SelectedIDs: 0a2c0000
+    m_LastClickedID: 11274
+    m_ExpandedIDs: 96fbffff00000000cc2b0000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1110,7 +1132,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 182a0000
     m_LastClickedID: 10776
-    m_ExpandedIDs: 00000000c4270000dc270000302800004428000086280000a4280000a8280000e4280000fe28000036290000402a0000622a00006a2a00009c2a0000c62a00003a2b0000
+    m_ExpandedIDs: 00000000cc270000e42700003a2800004e280000ae280000f02800000a290000422900004e2a0000702a0000782a0000a82a0000d22a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1138,7 +1160,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c4270000dc2700003028000044280000a4280000e4280000fe28000036290000402a0000622a00006a2a00009c2a0000c62a0000
+    m_ExpandedIDs: 00000000cc270000e42700003a2800004e280000ae280000f02800000a290000422900004e2a0000702a0000782a0000a82a0000d22a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

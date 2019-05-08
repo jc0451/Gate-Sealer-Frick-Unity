@@ -24,6 +24,9 @@ public class Player1 : MonoBehaviour {
     private float shieldtime;
     public float Stuntime;
     public float Shieldtime;
+
+    public float Decaydelay;
+    private float decaydelay;
  
     // Use this for initialization
 
@@ -32,6 +35,7 @@ public class Player1 : MonoBehaviour {
         spellsMeter.value = 0;
         stuntime = Stuntime;
         shieldtime = Shieldtime;
+        decaydelay = Decaydelay;
        
     }
 	
@@ -86,12 +90,17 @@ public class Player1 : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.W))
         {
             
-            spellsMeter.value += 1; 
+            spellsMeter.value += 1;
+            decaydelay = Decaydelay;
             
         }
         else 
-        { 
-            spellsMeter.value -= 0.03f; 
+        {
+            decaydelay -= Time.deltaTime;
+            if (decaydelay <= 0)
+            {
+                spellsMeter.value -= 0.03f;
+            }
         } 
         if (Mike2.Mic2Loudness > 0.0001&&urf==false)
         {

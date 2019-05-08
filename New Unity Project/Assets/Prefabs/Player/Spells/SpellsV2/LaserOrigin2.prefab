@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4047782783391994}
   - component: {fileID: 114052498472559290}
   - component: {fileID: 50134291227464730}
+  - component: {fileID: 114717769788788314}
   m_Layer: 0
   m_Name: LaserOrigin2
   m_TagString: PlayerSpell2
@@ -125,7 +126,7 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.022205776, y: -0.13150948}
   m_Size: {x: 0.4569592, y: 5.206983}
@@ -158,6 +159,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47eda91fef7657b44aaf95dbd9c694f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114717769788788314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1111082966611532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2189eaa9c6626549a0f20cd39f6665d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 2
 --- !u!114 &114883313461922962
 MonoBehaviour:
   m_ObjectHideFlags: 1

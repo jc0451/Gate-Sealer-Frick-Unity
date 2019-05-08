@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4986409951908822}
   - component: {fileID: 114658804385315154}
+  - component: {fileID: 114748382873064590}
   - component: {fileID: 50013198472125272}
   m_Layer: 0
   m_Name: LaserOrigin
@@ -125,7 +126,7 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.022205776, y: -0.13150948}
   m_Size: {x: 0.4569592, y: 5.206983}
@@ -158,6 +159,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47eda91fef7657b44aaf95dbd9c694f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114748382873064590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1474610067455886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2189eaa9c6626549a0f20cd39f6665d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 2
 --- !u!114 &114769853013437286
 MonoBehaviour:
   m_ObjectHideFlags: 1

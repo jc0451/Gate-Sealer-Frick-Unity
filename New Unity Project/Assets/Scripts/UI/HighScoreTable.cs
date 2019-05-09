@@ -7,7 +7,7 @@ public class HighScoreTable : MonoBehaviour {
 
     private Transform HSSlot;
     private Transform HSTamplate;
-    private List<HighScoreSlot> highScoreSlotList;
+    
     private List<Transform> highScoreSlotTransformList;
 
     private void Awake()
@@ -17,41 +17,31 @@ public class HighScoreTable : MonoBehaviour {
 
         HSTamplate.gameObject.SetActive(false);
 
-        //highScoreSlotList = new List<HighScoreSlot>()
-        //{
-        //    new HighScoreSlot { score = 521854, name = "bfbfb"},
-        //    new HighScoreSlot { score = 27272, name = "sxcx"},
-        //    new HighScoreSlot { score = 22231, name = "erere"},
-        //    new HighScoreSlot { score = 578547, name = "dfsdf"},
-        //    new HighScoreSlot { score = 837463, name = "df"},
-        //}; 
-        string json = PlayerPrefs.GetString("HighScoreTable");
-        HighScores highScores = JsonUtility.FromJson<HighScores>(json);
+        //AddHSSlot(10000, "CMK");
 
-        for (int i = 0; i < highScoreSlotList.Count; i ++)
+        string jsonstring = PlayerPrefs.GetString("HighScoreTable");
+        HighScores highScores = JsonUtility.FromJson<HighScores>(jsonstring);
+
+        for (int i = 0; i < highScores.highScoreSlotList.Count; i++)
         {
-            for (int j = i + 1; j < highScoreSlotList.Count; j++)
+            for (int j = i + 1; j < highScores.highScoreSlotList.Count; j++)
             {
-                if (highScoreSlotList[j].score > highScoreSlotList[i].score)
+                if (highScores.highScoreSlotList[j].score > highScores.highScoreSlotList[i].score)
                 {
-                    HighScoreSlot tmp = highScoreSlotList[i];
-                    highScoreSlotList[i] = highScoreSlotList[j];
-                    highScoreSlotList[j] = tmp;
+                    HighScoreSlot tmp = highScores.highScoreSlotList[i];
+                    highScores.highScoreSlotList[i] = highScores.highScoreSlotList[j];
+                    highScores.highScoreSlotList[j] = tmp;
                 }
             }
         }
 
         highScoreSlotTransformList = new List<Transform>();
 
-        foreach (HighScoreSlot highScoreSlot in highScoreSlotList)
+        foreach (HighScoreSlot highScoreSlot in highScores.highScoreSlotList)
         {
             CreateHSSlotTransform(highScoreSlot, HSSlot, highScoreSlotTransformList);
         }
-        //HighScores highscores = new HighScores { highScoreSlotList = highScoreSlotList };
-        //string json = JsonUtility.ToJson(highscores);
-        //PlayerPrefs.SetString("HighScoreTable", json);
-        //PlayerPrefs.Save();
-        //Debug.Log(PlayerPrefs.GetString("HighScoreTable"));
+        
         
     }
 
@@ -84,9 +74,29 @@ public class HighScoreTable : MonoBehaviour {
         string name = highScoreSlot.name;
         slotTransform.Find("NameText").GetComponent<Text>().text = name;
 
+        slotTransform.Find("background").gameObject.SetActive(rank % 2 == 1);
+
+        //if (rank == 1)
+        //{
+        //    slotTransform.Find("nameText").GetComponent<Text>().color == Color.green;
+        //}
+
         transformsList.Add(slotTransform);
     }
 
+    private void AddHSSlot (int score, string name)
+    {
+        HighScoreSlot highScoreSlot = new HighScoreSlot { score = score, name = name };
+
+        string jsonstring = PlayerPrefs.GetString("HighScoreTable");
+        HighScores highScores = JsonUtility.FromJson<HighScores>(jsonstring);
+
+        highScores.highScoreSlotList.Add(highScoreSlot);
+
+        string json = JsonUtility.ToJson(highScores);
+        PlayerPrefs.SetString("HighScoreTable", json);
+        PlayerPrefs.Save();
+    }
     private class HighScores
     {
         public List<HighScoreSlot> highScoreSlotList;

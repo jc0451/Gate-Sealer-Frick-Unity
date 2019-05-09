@@ -8,7 +8,7 @@ public class PenguinScript : MonoBehaviour
     public GameObject Bulletprefab;
     private float shootingDelay = 2f;
     private float cooldownTimer = 2.5f;
-    public float maxHealth = 2;
+    public float maxHealth = 20;
     public float currentHealth;
     public GameObject[] positions;
     public float moveSpeed = 3;
@@ -16,7 +16,9 @@ public class PenguinScript : MonoBehaviour
     GameObject stopPositions;
    //public GameObject deathAnimation;
     private int index;
-
+    private Material matRed;
+    private Material matDefault;
+    SpriteRenderer sr;
 
 
     private Transform Player;
@@ -26,11 +28,16 @@ public class PenguinScript : MonoBehaviour
     void Start()
     {
         FindObjectOfType<AudioManager>().Play("Penguin");
+
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         currentHealth = maxHealth;
+
         index = Random.Range(0, positions.Length);
         stopPositions = positions[index];
-       
+
+        sr = GetComponent<SpriteRenderer>();
+        matRed = Resources.Load("RedFlash", typeof(Material)) as Material;
+        matDefault = sr.material;
     }
 
 
@@ -72,37 +79,62 @@ public class PenguinScript : MonoBehaviour
 
         
 
-        //Vector3 direction = Player.position - transform.position;
-        //direction.Normalize();
-        //float z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
-
-        //Quaternion rotation = Quaternion.Euler(0, 0, z);
-        //transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, roationspeed * Time.deltaTime);
+       
 
 
     }
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "PlayerSpell" || col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "PlayerSpell")
         {
+            sr.material = matRed;
             if (currentHealth == 1)
             {
                 ScoreScript.ScoreValue1 += 50;
             }
             currentHealth--;
-           
+
         }
-        if (col.gameObject.tag == "PlayerSpell2" || col.gameObject.tag == "Player")
+        else if (currentHealth <= 0)
         {
+            KillsItself();
+        }
+        else
+        {
+            Invoke("ResetMaterial", 0.3f);
+        }
+
+
+
+        if (col.gameObject.tag == "PlayerSpell2")
+        {
+            sr.material = matRed;
             if (currentHealth == 1)
             {
                 ScoreScript2.ScoreValue2 += 50;
             }
             currentHealth--;
 
+
+        }
+        else if (currentHealth <= 0)
+        {
+            KillsItself();
+        }
+        else
+        {
+            Invoke("ResetMaterial", 0.3f);
         }
 
     }
 
+    private void ResetMaterial()
+    {
+        sr.material = matDefault;
+    }
+    private void KillsItself()
+    {
+        Destroy(gameObject);
+    }
 }

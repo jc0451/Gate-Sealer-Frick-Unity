@@ -562,7 +562,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1274326421867150, guid: 7d919dd34f17b704abc93e6432a7671a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d919dd34f17b704abc93e6432a7671a, type: 2}
@@ -851,19 +851,19 @@ Prefab:
         type: 2}
       propertyPath: Spell4Mk1
       value: 
-      objectReference: {fileID: 1782493208487038, guid: 6decabfeaf4fc064ea8d840d91d5cc0d,
+      objectReference: {fileID: 1344080993203538, guid: 3b34e77227beb6246b7fb5bb629c9586,
         type: 2}
     - target: {fileID: 114881075016497458, guid: f86696099b13aed4fa6853ba7f30975c,
         type: 2}
       propertyPath: Spell4Mk2
       value: 
-      objectReference: {fileID: 1471633574258756, guid: c87f5936b8bc2cd42b380d1e077b7705,
+      objectReference: {fileID: 1754075372250606, guid: a6581601e452c404da2781e2b83012f7,
         type: 2}
     - target: {fileID: 114881075016497458, guid: f86696099b13aed4fa6853ba7f30975c,
         type: 2}
       propertyPath: Spell4Mk3
       value: 
-      objectReference: {fileID: 1239273449782798, guid: 355ceb81173a37e4ca7434ea54224db9,
+      objectReference: {fileID: 1644315832351714, guid: 10533855fb1f2f04382fbdb2db35afed,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f86696099b13aed4fa6853ba7f30975c, type: 2}

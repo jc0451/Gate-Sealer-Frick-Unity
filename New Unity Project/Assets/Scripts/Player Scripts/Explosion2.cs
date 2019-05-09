@@ -33,9 +33,5 @@ public class Explosion2 : MonoBehaviour {
            
         
     }
-    void activation(int nr)
-    {
-        transform.GetChild(nr).gameObject.SetActive(true);
-        currenttime = time;
-    }
+
 }

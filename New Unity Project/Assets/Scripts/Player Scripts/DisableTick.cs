@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class DisableTick : MonoBehaviour {
     public float time = 0.5f;
-    
+    public float elapsed;
     // Use this for initialization
     void Start () {
-		
+        elapsed = time;
 	}
 
     // Update is called once per frame
     void Update()
     {
-        time -= Time.deltaTime;
-        if (time <= 0.0f)
+        elapsed -= Time.deltaTime;
+        if (elapsed <= 0.0f)
         {
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            gameObject.GetComponent<Collider2D>().enabled = false;
+            elapsed = time;
+            gameObject.gameObject.SetActive(false);
+            
         }
     }
 }

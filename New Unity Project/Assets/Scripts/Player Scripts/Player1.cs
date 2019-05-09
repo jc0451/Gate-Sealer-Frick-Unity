@@ -11,10 +11,18 @@ public class Player1 : MonoBehaviour {
     public Slider spellsMeter; 
 
 
-    public GameObject Spell1;
-    public GameObject Spell2;
-    public GameObject Spell3;
-    public GameObject Spell4;
+    public GameObject Spell1Mk1;
+    public GameObject Spell1Mk2;
+    public GameObject Spell1Mk3;
+    public GameObject Spell2Mk1;
+    public GameObject Spell2Mk2;
+    public GameObject Spell2Mk3;
+    public GameObject Spell3Mk1;
+    public GameObject Spell3Mk2;
+    public GameObject Spell3Mk3;
+    public GameObject Spell4Mk1;
+    public GameObject Spell4Mk2;
+    public GameObject Spell4Mk3;
 
     public Rigidbody2D rb;
     public float speed;
@@ -99,7 +107,8 @@ public class Player1 : MonoBehaviour {
             decaydelay -= Time.deltaTime;
             if (decaydelay <= 0)
             {
-                spellsMeter.value -= 0.03f;
+                spellsMeter.value -= 1f;
+                decaydelay += 1f;
             }
         } 
         if (Mike2.Mic2Loudness > 0.0001&&urf==false)
@@ -118,58 +127,103 @@ public class Player1 : MonoBehaviour {
             urf = false;
         }
 
-        if (spellsMeter.value < 7 && spellsMeter.value >= 4 && urf == true)
+        if (spellsMeter.value < 2 && spellsMeter.value >= 1 && urf == true)
         {
-            GameObject SpellInstance = (GameObject)Instantiate(Spell1);
+            GameObject SpellInstance = (GameObject)Instantiate(Spell1Mk1);
+            SpellInstance.transform.position = transform.position;
+            
+            urf = false;
+            spellsMeter.value = 0; 
+        }
+        if (spellsMeter.value < 3 && spellsMeter.value >= 2 && urf == true)
+        {
+            GameObject SpellInstance = (GameObject)Instantiate(Spell1Mk2);
+            SpellInstance.transform.position = transform.position;
+           
+            urf = false;
+            spellsMeter.value = 0;
+        }
+        if (spellsMeter.value < 4 && spellsMeter.value >= 3 && urf == true)
+        {
+            GameObject SpellInstance = (GameObject)Instantiate(Spell1Mk3);
+            SpellInstance.transform.position = transform.position;
+           
+            urf = false;
+            spellsMeter.value = 0;
+        }
+        if (spellsMeter.value < 5 && spellsMeter.value >= 4 && urf == true)
+        {
+            GameObject SpellInstance = (GameObject)Instantiate(Spell2Mk1);
             SpellInstance.transform.position = transform.position;
             SpellInstance.transform.parent = gameObject.transform;
-            FindObjectOfType<AudioManager>().Play("SpellCast");
-            FindObjectOfType<AudioManager>().Play("IceBeam");
             urf = false;
-            spellsMeter.value = 0; 
-
-       
+            spellsMeter.value = 0;
         }
-        if (spellsMeter.value < 4 && spellsMeter.value>0 && urf == true)
+        if (spellsMeter.value < 6 && spellsMeter.value >= 5 && urf == true)
         {
-            FindObjectOfType<AudioManager>().Play("SpellCast");
-            FindObjectOfType<AudioManager>().Play("EarthQuake");
-            GameObject SpellInstance = (GameObject)Instantiate(Spell2);
+            GameObject SpellInstance = (GameObject)Instantiate(Spell2Mk2);
             SpellInstance.transform.position = transform.position;
-            urf = false; 
-            spellsMeter.value = 0; 
-
-   
-        }
-        if (spellsMeter.value < 10 && spellsMeter.value >= 7 && urf == true)
-        {
-            FindObjectOfType<AudioManager>().Play("SpellCast");
-            FindObjectOfType<AudioManager>().Play("Explosion");
-            Explosion();
+            SpellInstance.transform.parent = gameObject.transform;
             urf = false;
-            spellsMeter.value = 0; 
-
+            spellsMeter.value = 0;
         }
-        if (spellsMeter.value >=10 && urf == true)
+        if (spellsMeter.value < 7 && spellsMeter.value >= 6 && urf == true)
         {
-            FindObjectOfType<AudioManager>().Play("SpellCast");
-            FindObjectOfType<AudioManager>().Play("Lightning");
-            Storm();
+            GameObject SpellInstance = (GameObject)Instantiate(Spell2Mk3);
+            SpellInstance.transform.position = transform.position;
+            SpellInstance.transform.parent = gameObject.transform;
             urf = false;
-            spellsMeter.value = 0; 
-
+            spellsMeter.value = 0;
         }
+        if (spellsMeter.value < 8 && spellsMeter.value >= 7 && urf == true)
+        {
+            GameObject SpellInstance = (GameObject)Instantiate(Spell3Mk1);
+            SpellInstance.transform.position = transform.position;
+       
+            urf = false;
+            spellsMeter.value = 0;
+        }
+        if (spellsMeter.value < 9 && spellsMeter.value >= 8 && urf == true)
+        {
+            GameObject SpellInstance = (GameObject)Instantiate(Spell3Mk2);
+            SpellInstance.transform.position = transform.position;
+        
+            urf = false;
+            spellsMeter.value = 0;
+        }
+        if (spellsMeter.value < 10 && spellsMeter.value >= 9 && urf == true)
+        {
+            GameObject SpellInstance = (GameObject)Instantiate(Spell3Mk3);
+            SpellInstance.transform.position = transform.position;
+          
+            urf = false;
+            spellsMeter.value = 0;
+        }
+        if (spellsMeter.value < 11 && spellsMeter.value >= 10 && urf == true)
+        {
+            GameObject SpellInstance = (GameObject)Instantiate(Spell4Mk1);
+            SpellInstance.transform.position = transform.position;
+          
+            urf = false;
+            spellsMeter.value = 0;
+        }
+        if (spellsMeter.value < 12 && spellsMeter.value >= 11 && urf == true)
+        {
+            GameObject SpellInstance = (GameObject)Instantiate(Spell4Mk2);
+            SpellInstance.transform.position = transform.position;
+           
+            urf = false;
+            spellsMeter.value = 0;
+        }
+        if (spellsMeter.value < 13 && spellsMeter.value >= 12 && urf == true)
+        {
+            GameObject SpellInstance = (GameObject)Instantiate(Spell4Mk3);
+            SpellInstance.transform.position = transform.position;
+     
+            urf = false;
+            spellsMeter.value = 0;
+        }
+    }
 
-
-    }
-    void Explosion()
-    {
-        GameObject SpellInstance = (GameObject)Instantiate(Spell3);
-        SpellInstance.transform.position = transform.position;
-    }
-    void Storm()
-    {
-        GameObject SpellInstance = (GameObject)Instantiate(Spell4);
-        SpellInstance.transform.position = transform.position;
-    }
+ 
 }

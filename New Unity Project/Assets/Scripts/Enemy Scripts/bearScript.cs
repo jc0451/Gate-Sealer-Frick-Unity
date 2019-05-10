@@ -6,7 +6,7 @@ public class bearScript : MonoBehaviour
 {
 
     private float moveSpeed = 1f;
-    public float maxHealth = 10;
+    public float maxHealth = 6;
     private float currentHealth;
     private Transform BearPoint;
     //public GameObject deathAnimation;

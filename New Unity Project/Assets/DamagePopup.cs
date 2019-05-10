@@ -16,12 +16,14 @@ public class DamagePopup : MonoBehaviour {
         return damagePopup;
     }
     private static int sortingOrder;
-    private const float DisappearTimer_Max = 1;
+    private const float DisappearTimer_Max = 0.5f;
     private TextMeshPro textMesh;
     private float disappeartimer;
     private Color textColor;
-    private Vector3 floatingDir;
-
+    private Vector3 []floatingDir;
+    private Vector3 myDire;
+    float moveAmount = 1f;
+    float moveSpeed = 1f;
     private void Awake()
     {
         textMesh = transform.GetComponent<TextMeshPro>();
@@ -36,15 +38,17 @@ public class DamagePopup : MonoBehaviour {
         sortingOrder++;
         textMesh.sortingOrder = sortingOrder;
 
-        floatingDir = new Vector3(0.7f, 1) * 10f;
+        floatingDir = new[] { new Vector3(0.7f, 1f), new Vector3(-0.7f, -1f), new Vector3 (-1f, 0.9f)};
+        myDire = floatingDir[Random.Range(0, floatingDir.Length)];
+        // floatingDir = new Vector3(0.7f, 1f) * 6f;
     }
-
+      
+    
     private void Update()
     {
 
 
-        transform.position += floatingDir * Time.deltaTime;
-        floatingDir -= floatingDir * 8f * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + myDire, moveAmount * (moveSpeed * Time.deltaTime));
 
         if (disappeartimer > DisappearTimer_Max * 0.5f)
         {

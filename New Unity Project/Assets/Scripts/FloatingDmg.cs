@@ -5,23 +5,16 @@ using UnityEngine;
 public class FloatingDmg : MonoBehaviour
 {
     [SerializeField] private Transform floatingDamage;
-    Vector3 button;
-
-    void Start()
-    {
-
-        
-    }
+   
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            button = Input.mousePosition;
-            button.z = 2.0f;       // we want 2m away from the camera position
-            Vector3 objectPos = Camera.current.ScreenToWorldPoint(button);
-            
-            DamagePopup.Create(floatingDamage, objectPos, 300);
+            //button = Input.mousePosition;
+
+
+            DamagePopup.Create(floatingDamage, Vector3.zero, 300);
         }
     }
 }

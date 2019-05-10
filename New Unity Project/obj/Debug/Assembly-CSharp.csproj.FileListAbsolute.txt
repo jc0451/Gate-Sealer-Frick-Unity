@@ -130,3 +130,4 @@ C:\Users\Maher Jaber\Documents\GateSealers\Gate-Sealer-Frick-Unity\New Unity Pro
 C:\Users\Maher Jaber\Documents\GateSealers\Gate-Sealer-Frick-Unity\New Unity Project\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\Maher Jaber\Documents\GateSealers\Gate-Sealer-Frick-Unity\New Unity Project\obj\Debug\Assembly-CSharp.dll
 C:\Users\Maher Jaber\Documents\GateSealers\Gate-Sealer-Frick-Unity\New Unity Project\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Maher Jaber\Documents\GateSealers\Gate-Sealer-Frick-Unity\New Unity Project\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache

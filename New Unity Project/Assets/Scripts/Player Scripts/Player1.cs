@@ -131,7 +131,8 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1Mk1);
             SpellInstance.transform.position = transform.position;
-            
+            FindObjectOfType<AudioManager>().Play("EarthQuake");
+
             urf = false;
             spellsMeter.value = 0; 
         }
@@ -139,7 +140,8 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1Mk2);
             SpellInstance.transform.position = transform.position;
-           
+            FindObjectOfType<AudioManager>().Play("EarthQuake");
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -147,7 +149,8 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1Mk3);
             SpellInstance.transform.position = transform.position;
-           
+            FindObjectOfType<AudioManager>().Play("EarthQuake");
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -156,6 +159,8 @@ public class Player1 : MonoBehaviour {
             GameObject SpellInstance = (GameObject)Instantiate(Spell2Mk1);
             SpellInstance.transform.position = transform.position;
             SpellInstance.transform.parent = gameObject.transform;
+            FindObjectOfType<AudioManager>().Play("IceBeam");
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -164,6 +169,8 @@ public class Player1 : MonoBehaviour {
             GameObject SpellInstance = (GameObject)Instantiate(Spell2Mk2);
             SpellInstance.transform.position = transform.position;
             SpellInstance.transform.parent = gameObject.transform;
+            FindObjectOfType<AudioManager>().Play("IceBeam");
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -172,6 +179,8 @@ public class Player1 : MonoBehaviour {
             GameObject SpellInstance = (GameObject)Instantiate(Spell2Mk3);
             SpellInstance.transform.position = transform.position;
             SpellInstance.transform.parent = gameObject.transform;
+            FindObjectOfType<AudioManager>().Play("IceBeam");
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -179,7 +188,9 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell3Mk1);
             SpellInstance.transform.position = transform.position;
-       
+            FindObjectOfType<AudioManager>().Play("Explosion");
+
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -187,7 +198,8 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell3Mk2);
             SpellInstance.transform.position = transform.position;
-        
+            FindObjectOfType<AudioManager>().Play("Explosion");
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -195,7 +207,8 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell3Mk3);
             SpellInstance.transform.position = transform.position;
-          
+            FindObjectOfType<AudioManager>().Play("Explosion");
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -203,7 +216,8 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell4Mk1);
             SpellInstance.transform.position = transform.position;
-          
+            FindObjectOfType<AudioManager>().Play("Lightning");
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -211,15 +225,17 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell4Mk2);
             SpellInstance.transform.position = transform.position;
-           
+            FindObjectOfType<AudioManager>().Play("Lightning");
+
             urf = false;
             spellsMeter.value = 0;
         }
         if (spellsMeter.value < 13 && spellsMeter.value >= 12 && urf == true)
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell4Mk3);
-            SpellInstance.transform.position = transform.position;
-     
+            //SpellInstance.transform.position = transform.position;
+            FindObjectOfType<AudioManager>().Play("Lightning");
+
             urf = false;
             spellsMeter.value = 0;
         }

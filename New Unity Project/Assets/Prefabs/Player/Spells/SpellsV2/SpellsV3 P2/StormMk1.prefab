@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50456823470295158}
   - component: {fileID: 114998155801316580}
   - component: {fileID: 70612088398951482}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike (9)
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 50874903419825060}
   - component: {fileID: 114367469435745502}
   - component: {fileID: 70367858376005588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike (14)
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 50178290316773180}
   - component: {fileID: 114297319696056070}
   - component: {fileID: 70568053995385508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike (8)
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 50698968198313916}
   - component: {fileID: 114971511966090464}
   - component: {fileID: 70244284933281840}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike (3)
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4285202355975064}
   - component: {fileID: 114070446450165204}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StormMk1
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 50368650238817874}
   - component: {fileID: 114123910112441280}
   - component: {fileID: 70549315049076768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Strike (2)
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}

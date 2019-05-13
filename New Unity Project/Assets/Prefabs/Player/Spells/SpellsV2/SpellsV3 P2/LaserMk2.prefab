@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95419414720502308}
   - component: {fileID: 50248100531360856}
   - component: {fileID: 70938660896524528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114114410712333802}
   - component: {fileID: 50364191180520738}
   - component: {fileID: 114542988467675920}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LaserMk2
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114083278409249372}
   - component: {fileID: 212320268735645896}
   - component: {fileID: 58201521598563242}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Projectile
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114851013617186060}
   - component: {fileID: 212849870368371490}
   - component: {fileID: 58844410278592290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Projectile (2)
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 114594561034296314}
   - component: {fileID: 212147846959897086}
   - component: {fileID: 58096331138622422}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Projectile (1)
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4052572962447330}
   - component: {fileID: 114776257868869464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ProjectileMk3
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}

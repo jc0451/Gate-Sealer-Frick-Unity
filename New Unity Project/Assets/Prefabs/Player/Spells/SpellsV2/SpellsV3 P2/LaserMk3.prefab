@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95788319186564406}
   - component: {fileID: 50626698260983702}
   - component: {fileID: 70600312991239934}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser (2)
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 95442360070033684}
   - component: {fileID: 50001549675813072}
   - component: {fileID: 70579829669543848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser (1)
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 95696859309884660}
   - component: {fileID: 50257999044592842}
   - component: {fileID: 70923077372375814}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 114739333802134122}
   - component: {fileID: 50741518021749424}
   - component: {fileID: 114391352152198972}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LaserMk3
   m_TagString: PlayerSpell2
   m_Icon: {fileID: 0}

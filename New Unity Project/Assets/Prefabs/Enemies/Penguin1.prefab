@@ -119,8 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bulletprefab: {fileID: 1721734652678828, guid: 9fc67a8811883264883a478d7e125b2b,
     type: 2}
-  maxHealth: 200
-  currentHealth: 200
+  maxHealth: 2
+  currentHealth: 2
   positions:
   - {fileID: 1204949331957240, guid: 8baf0e2aa24d8a741934f4b70ad52ece, type: 2}
   - {fileID: 1469809224614076, guid: 896862cf80426314096b5f4f295c6400, type: 2}

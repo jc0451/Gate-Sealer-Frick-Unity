@@ -10,12 +10,10 @@ public class PenguinScript : MonoBehaviour
     private float cooldownTimer = 2.5f;
     public float maxHealth = 20;
     public float currentHealth;
-    public GameObject[] positions;
     public float moveSpeed = 3;
     float roationspeed = 160f;
-    GameObject stopPositions;
    //public GameObject deathAnimation;
-    private int index;
+    Vector2 randpos;
     private Material matRed;
     private Material matDefault;
     SpriteRenderer sr;
@@ -23,17 +21,18 @@ public class PenguinScript : MonoBehaviour
 
     private Transform Player;
     private Transform Player2;
+    private float x;
+    private float y;
 
 
     void Start()
     {
         FindObjectOfType<AudioManager>().Play("Penguin");
-
+        x = Random.Range(-12, 13);
+        y = Random.Range(-8, 5);
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         currentHealth = maxHealth;
-
-        index = Random.Range(0, positions.Length);
-        stopPositions = positions[index];
+        randpos = new Vector2(x, y);
 
         sr = GetComponent<SpriteRenderer>();
         matRed = Resources.Load("RedFlash", typeof(Material)) as Material;
@@ -53,7 +52,8 @@ public class PenguinScript : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Penguin");
 
         }
-        transform.position = Vector2.MoveTowards(transform.position, positions[index].transform.position, Time.deltaTime * moveSpeed);
+        transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+
         if (currentHealth <= 0)
         {
             //Instantiate(deathAnimation, transform.position, transform.rotation);

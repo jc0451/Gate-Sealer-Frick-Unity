@@ -16,8 +16,8 @@ public class SeaGhouls2 : MonoBehaviour {
     public GameObject R2N6;
     public GameObject R2N7;
 
-    public GameObject P1;
-    public GameObject P2;
+    private GameObject P1;
+    private GameObject P2;
 
     int rand1;
     int rand2;
@@ -31,7 +31,8 @@ public class SeaGhouls2 : MonoBehaviour {
     public float moveSpeed = 3;
     // Use this for initialization
     void Start () {
-       
+        P1 = GameObject.Find("Player1");
+        P2 = GameObject.Find("Player2");
         rand1 = Random.Range(1, 6);
         rand2 = Random.Range(1, 8);
         randP = Random.Range(1, 3);

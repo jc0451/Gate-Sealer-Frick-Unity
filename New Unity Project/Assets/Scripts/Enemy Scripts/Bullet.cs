@@ -7,16 +7,30 @@ public class Bullet : MonoBehaviour
     //private Vector2 target;
     //private Vector2 position;
     float moveSpeed = 8f;
-    float deleteTime = 2f;
+    float deleteTime = 10f;
     Rigidbody2D rb;
-    public Transform  target;
+  
+    private int coin;
     Vector2 direction;
+    public GameObject P1;
+    public GameObject P2;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        direction = (target.transform.position - transform.position).normalized * moveSpeed;
-        rb.velocity = new Vector2(direction.x, direction.y);
+      
+       P1 = GameObject.Find("Player1");
+       P2 = GameObject.Find("Player2");
+        coin = Random.Range(0, 2);
+     
+        if (coin == 1)
+        {
+            direction = (P1.transform.position - transform.position).normalized * moveSpeed;
+        }
+        else if (coin == 0)
+        {
+            direction = (P2.transform.position - transform.position).normalized * moveSpeed;
+        }
 
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -37,6 +51,7 @@ public class Bullet : MonoBehaviour
     }
     void Update()
     {
+        rb.velocity = new Vector2(direction.x, direction.y);
         //Vector3 pos = transform.position;
         //Vector3 Direction = new Vector3(0, moveSpeed * Time.deltaTime);
         //pos += transform.rotation * Direction;

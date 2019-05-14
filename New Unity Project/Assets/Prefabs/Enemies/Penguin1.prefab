@@ -121,10 +121,6 @@ MonoBehaviour:
     type: 2}
   maxHealth: 2
   currentHealth: 2
-  positions:
-  - {fileID: 1204949331957240, guid: 8baf0e2aa24d8a741934f4b70ad52ece, type: 2}
-  - {fileID: 1469809224614076, guid: 896862cf80426314096b5f4f295c6400, type: 2}
-  - {fileID: 1413362935023558, guid: 4f8e2fe28758fe14b9237e60b6bb8849, type: 2}
   moveSpeed: 3
 --- !u!212 &212047850492848120
 SpriteRenderer:

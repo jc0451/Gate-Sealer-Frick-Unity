@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 
 public class Player1 : MonoBehaviour {
-  
-    public bool urf = false;
-    public Slider spellsMeter; 
 
+    public bool urf = false;
+    public Slider spellsMeter;
+    public Slider stunMeter;
+    public bool meterswitch;
 
     public GameObject Spell1Mk1;
     public GameObject Spell1Mk2;
@@ -26,7 +27,7 @@ public class Player1 : MonoBehaviour {
 
     public Rigidbody2D rb;
     public float speed;
-    public static bool stun1=false;
+    public static bool stun1 = false;
     private bool shield = false;
     private float stuntime;
     private float shieldtime;
@@ -36,25 +37,39 @@ public class Player1 : MonoBehaviour {
     public float Decaydelay;
     private float decaydelay;
     public float decayvalue;
- 
+    public float damage;
+
     // Use this for initialization
 
-    void Start () {
-        
+    void Start() {
+
         spellsMeter.value = 0;
         stuntime = Stuntime;
         shieldtime = Shieldtime;
         decaydelay = Decaydelay;
-       
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+
+    // Update is called once per frame
+    void Update () {
+
+        if (stunMeter.value <= 0)
+        {
+            stun1 = true;
+            shield = false;
+        }
         if (stun1 == true && shield==false)
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
             spellsMeter.value = 0;
             stuntime -= Time.deltaTime;
+            if (stunMeter.value == 5)
+            {
+                rb.constraints = RigidbodyConstraints2D.None;
+                stun1 = false;
+                stuntime = Stuntime;
+            }
             if (stuntime <= 0)
             {
                 rb.constraints = RigidbodyConstraints2D.None;
@@ -98,20 +113,31 @@ public class Player1 : MonoBehaviour {
         
         if (Input.GetKeyUp(KeyCode.W))
         {
-            
-            spellsMeter.value += 1;
-            decaydelay = Decaydelay;
+            if (meterswitch == false)
+            {
+                spellsMeter.value += 1;
+                decaydelay = Decaydelay;
+            }
+            else if(meterswitch==true)
+            {
+                stunMeter.value += 1;
+                if(stunMeter.value>=5){
+                    meterswitch = false;
+               
+                }
+            }
             
         }
-        else 
+        /*else 
         {
-            decaydelay -= Time.deltaTime;
-            if (decaydelay <= 0)
-            {
-                spellsMeter.value -= 1;
-                decaydelay += 1;
-            }
-        } 
+             decaydelay -= Time.deltaTime;
+             if (decaydelay <= 0)
+             {
+                 spellsMeter.value -= 1;
+                 decaydelay += 1;
+             }
+        }
+        */
         if (Mike2.Mic2Loudness > 0.0001&&urf==false)
         {
             urf = true;
@@ -241,6 +267,29 @@ public class Player1 : MonoBehaviour {
             spellsMeter.value = 0;
         }
     }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "FireBall")
+        {
+            if (meterswitch == false)
+            {
 
- 
+                if (spellsMeter.value <= 0)
+                {
+                    meterswitch = true;
+                    stunMeter.value -= 1;
+                }
+                else if(spellsMeter.value>0)
+                {
+                    spellsMeter.value -= damage;
+                }
+            }
+            else if(meterswitch==true)
+            {
+                stunMeter.value -= damage;
+            }
+        }
+    }
+
+
 }

@@ -141,16 +141,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc4515a8f4b9f24d84b4335e69a5a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key1: 0
-  Key2: 0
-  KeysPressed: 0
-  FirstKey: 0
-  Spell1: {fileID: 1474610067455886, guid: 2d4da8a1474e03c489e8e4b3dfdce9f2, type: 2}
-  Spell2: {fileID: 1695243458792496, guid: ab16bba0f8fa86d4799c3cf4f864dd1e, type: 2}
-  Spell3: {fileID: 1076023690675386, guid: 9f2f8266483730f44a09f850d12d66f2, type: 2}
-  Spell4: {fileID: 1377979678175580, guid: 0cfaab0d8e6d39149b81d440ddbc80dc, type: 2}
+  urf: 0
+  spellsMeter: {fileID: 0}
+  Spell1Mk1: {fileID: 0}
+  Spell1Mk2: {fileID: 0}
+  Spell1Mk3: {fileID: 0}
+  Spell2Mk1: {fileID: 0}
+  Spell2Mk2: {fileID: 0}
+  Spell2Mk3: {fileID: 0}
+  Spell3Mk1: {fileID: 0}
+  Spell3Mk2: {fileID: 0}
+  Spell3Mk3: {fileID: 0}
+  Spell4Mk1: {fileID: 0}
+  Spell4Mk2: {fileID: 0}
+  Spell4Mk3: {fileID: 0}
   rb: {fileID: 50804673694678218}
   speed: 20
+  Stuntime: 0
+  Shieldtime: 0
+  Decaydelay: 0
 --- !u!212 &212487409506748712
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -35,8 +35,7 @@ public class RuneTimer : MonoBehaviour {
         {
             spriterenderer.sprite = sprites[0];
         }
-
-        if (timerScript.timer <= 60f)
+        else if (timerScript.timer <= 60f)
         {
             spriterenderer.sprite = sprites[1];
         }

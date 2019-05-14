@@ -225,6 +225,24 @@ Prefab:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114553294203710284, guid: 95d58dccef707ee428affc49e7ca5586,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 1bed7897afca92a47a0e125b3bf33948,
+        type: 3}
+    - target: {fileID: 114452225046806152, guid: 95d58dccef707ee428affc49e7ca5586,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 1bed7897afca92a47a0e125b3bf33948,
+        type: 3}
+    - target: {fileID: 114558064874372920, guid: 95d58dccef707ee428affc49e7ca5586,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 1bed7897afca92a47a0e125b3bf33948,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95d58dccef707ee428affc49e7ca5586, type: 2}
   m_IsPrefabParent: 0

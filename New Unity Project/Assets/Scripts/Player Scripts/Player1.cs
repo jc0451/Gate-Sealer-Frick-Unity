@@ -35,6 +35,7 @@ public class Player1 : MonoBehaviour {
 
     public float Decaydelay;
     private float decaydelay;
+    public float decayvalue;
  
     // Use this for initialization
 
@@ -107,8 +108,8 @@ public class Player1 : MonoBehaviour {
             decaydelay -= Time.deltaTime;
             if (decaydelay <= 0)
             {
-                spellsMeter.value -= 1f;
-                decaydelay += 1f;
+                spellsMeter.value -= 1;
+                decaydelay += 1;
             }
         } 
         if (Mike2.Mic2Loudness > 0.0001&&urf==false)

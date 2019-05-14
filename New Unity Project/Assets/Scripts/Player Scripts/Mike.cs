@@ -23,7 +23,7 @@ public class Mike : MonoBehaviour {
 
     void StopMicrophone()
     {
-        Microphone.End("VoiceMeeter Aux Output (VB-Audio VoiceMeeter AUX VAIO)");
+        Microphone.End(_device);
     }
 
 

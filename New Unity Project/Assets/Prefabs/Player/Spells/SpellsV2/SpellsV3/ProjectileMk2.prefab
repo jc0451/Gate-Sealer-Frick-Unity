@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114968632910622342}
   - component: {fileID: 212237993918625312}
   - component: {fileID: 58341680556180678}
+  - component: {fileID: 95651199566675120}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: PlayerSpell
@@ -44,6 +45,7 @@ GameObject:
   - component: {fileID: 114178872733583032}
   - component: {fileID: 212418959256650696}
   - component: {fileID: 58510413014760844}
+  - component: {fileID: 95660629923778260}
   m_Layer: 0
   m_Name: Projectile (2)
   m_TagString: PlayerSpell
@@ -80,6 +82,7 @@ GameObject:
   - component: {fileID: 114019469586797358}
   - component: {fileID: 212546133926819750}
   - component: {fileID: 58345660794524788}
+  - component: {fileID: 95488661110765538}
   m_Layer: 0
   m_Name: Projectile (1)
   m_TagString: PlayerSpell
@@ -95,7 +98,7 @@ Transform:
   m_GameObject: {fileID: 1370973664498674}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11.519, y: -7.681, z: -1}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4158658827877948}
   - {fileID: 4751132774958628}
@@ -247,6 +250,57 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.41
+--- !u!95 &95488661110765538
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1750031630978148}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 151c02b6c7902fb43833d0ff105e2e12, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95651199566675120
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1127756475832614}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 151c02b6c7902fb43833d0ff105e2e12, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95660629923778260
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1300066495897730}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 151c02b6c7902fb43833d0ff105e2e12, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114019469586797358
 MonoBehaviour:
   m_ObjectHideFlags: 1

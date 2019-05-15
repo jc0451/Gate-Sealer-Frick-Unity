@@ -12,26 +12,28 @@ public class player2anim : MonoBehaviour {
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.O))
         {
-            anim.SetBool("IsTrigger", true);
+            anim.SetBool("clappingRight", true);
         }
         else
         {
-            anim.SetBool("IsTrigger", false);
+            anim.SetBool("clappingRight", false);
         }
 
 
 
-        if (Input.GetKey(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            anim.SetBool("isRunning", true);
+            anim.SetBool("urfingRight", true);
         }
         else
         {
-            anim.SetBool("isRunning", false);
+            anim.SetBool("urfingRight", false);
         }
+
+        
     }
 }

@@ -88,13 +88,13 @@ public class Player2 : MonoBehaviour
         if (Input.GetKey(KeyCode.J))
         {
             rb.velocity = new Vector2(-speed, 0.0f);
-
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
         if (Input.GetKey(KeyCode.L))
         {
             rb.velocity = new Vector2(speed, 0.0f);
-
+            transform.eulerAngles = new Vector3(0, 180, 0);
 
         }
 

@@ -64,15 +64,15 @@ MonoBehaviour:
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: Explosion
-    audioClip: {fileID: 8300000, guid: a2002bb3fe6ca9a49b0dbb1ce6227e44, type: 3}
+  - audioName: ExplosionMK1
+    audioClip: {fileID: 8300000, guid: f351ac60c178f944f908331e7a4bd80e, type: 3}
     volume: 0.6
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
   - audioName: IceBeam
     audioClip: {fileID: 8300000, guid: c177c23172a54114496c1ecc23388c04, type: 3}
-    volume: 0.5
+    volume: 1
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
@@ -111,6 +111,60 @@ MonoBehaviour:
     volume: 0.5
     source: {fileID: 0}
     isLooping: 0
+    playOnAwake: 0
+  - audioName: BattleMusic
+    audioClip: {fileID: 8300000, guid: 21d4aa9f981a04c4ea432b53fa17ad6b, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 1
+    playOnAwake: 0
+  - audioName: SnowballHit
+    audioClip: {fileID: 8300000, guid: 77e85bdb7dcf03f41a70009947398e9d, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: SnowballMK1
+    audioClip: {fileID: 8300000, guid: 307e42cb030617844b988b249bb7bd2b, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: SnowballMK2
+    audioClip: {fileID: 8300000, guid: de5a784ec93fd834f94fc8b7527988b1, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: SnowballMK3
+    audioClip: {fileID: 8300000, guid: b5d9a874757abb94582e747c60545024, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: ExplosionMK2
+    audioClip: {fileID: 8300000, guid: 73bfcc912f09c704d981297ee9dbcd63, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: ExplosionMK3
+    audioClip: {fileID: 8300000, guid: 91f6384d20f5a074aaf11ab08444e2c7, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: Thunder
+    audioClip: {fileID: 8300000, guid: e533091f8476dc940bb86d668d307f39, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: BattleMusic
+    audioClip: {fileID: 8300000, guid: 21d4aa9f981a04c4ea432b53fa17ad6b, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 1
     playOnAwake: 0
   - audioName: BattleMusic
     audioClip: {fileID: 8300000, guid: 21d4aa9f981a04c4ea432b53fa17ad6b, type: 3}

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/speels v2.unity
+- path: Assets/scenes/main - Copy + main - Copy.unity
   isLoaded: 1
   isActive: 1

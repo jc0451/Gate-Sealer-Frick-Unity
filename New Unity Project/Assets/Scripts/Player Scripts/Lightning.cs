@@ -9,7 +9,7 @@ public class Lightning : MonoBehaviour {
     public int Strikes;
     public int struck;
     public int childs;
-    // Use this for initialization
+    
     void Start()
     {
         currenttime = time;
@@ -19,7 +19,7 @@ public class Lightning : MonoBehaviour {
         nr = Random.Range(0, childs);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
 

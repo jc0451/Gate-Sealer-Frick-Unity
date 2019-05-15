@@ -12,6 +12,7 @@ TagManager:
   - GullNodes2
   - GullNodes1
   - PlayerSpell2
+  - Penguin
   layers:
   - Default
   - TransparentFX

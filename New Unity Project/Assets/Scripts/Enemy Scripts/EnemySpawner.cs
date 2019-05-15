@@ -32,6 +32,17 @@ public class EnemySpawner : MonoBehaviour {
                 timeactual = spawndelay;
             }
         }
+        else if (spawned >= maxspawn)
+        {
+            timeactual -= Time.deltaTime;
+
+            if (timeactual <= 0.0f)
+            {
+                SpawnEnemy();
+                spawned++;
+                timeactual = spawndelay;
+            }
+        }
 
         if (GameObject.FindGameObjectWithTag("Enemy") == null)
         {

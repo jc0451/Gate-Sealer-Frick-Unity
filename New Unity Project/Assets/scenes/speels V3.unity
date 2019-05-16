@@ -853,15 +853,6 @@ Prefab:
       propertyPath: stunMeter
       value: 
       objectReference: {fileID: 1732049197}
-    - target: {fileID: 61196112798841104, guid: f86696099b13aed4fa6853ba7f30975c,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1217213678559852, guid: f86696099b13aed4fa6853ba7f30975c, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f86696099b13aed4fa6853ba7f30975c, type: 2}
   m_IsPrefabParent: 0

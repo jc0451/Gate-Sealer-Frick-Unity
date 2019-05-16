@@ -25,9 +25,13 @@ MonoBehaviour:
   m_MaxSize: {x: 22010, y: 10000}
   vertical: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   controlID: 120
 =======
   controlID: 5247
+>>>>>>> Stashed changes
+=======
+  controlID: 1160
 >>>>>>> Stashed changes
 --- !u!114 &2
 MonoBehaviour:
@@ -155,9 +159,13 @@ MonoBehaviour:
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   controlID: 78
 =======
   controlID: 5248
+>>>>>>> Stashed changes
+=======
+  controlID: 1161
 >>>>>>> Stashed changes
 --- !u!114 &4
 MonoBehaviour:
@@ -183,9 +191,13 @@ MonoBehaviour:
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   controlID: 79
 =======
   controlID: 5249
+>>>>>>> Stashed changes
+=======
+  controlID: 913
 >>>>>>> Stashed changes
 --- !u!114 &5
 MonoBehaviour:
@@ -206,11 +218,16 @@ MonoBehaviour:
 <<<<<<< Updated upstream
     width: 266
     height: 364
+<<<<<<< Updated upstream
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
 =======
     width: 698
     height: 724
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> Stashed changes
+=======
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
 >>>>>>> Stashed changes
@@ -250,9 +267,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4a19f7ff
-    m_LastClickedID: 0
-    m_ExpandedIDs: b62dfaff1cfaffff9cfbffff000000002e34000058340000
+    m_SelectedIDs: f4faffff
+    m_LastClickedID: -1292
+    m_ExpandedIDs: 9cfbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -293,8 +310,8 @@ MonoBehaviour:
     y: 0
     width: 817
     height: 364
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
@@ -474,8 +491,8 @@ MonoBehaviour:
     y: 364
     width: 1083
     height: 271
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 11}
 =======
     y: 724
@@ -773,15 +790,20 @@ MonoBehaviour:
     m_SearchArea: 0
     m_Folders:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - Assets/Prefabs
+=======
+    - Assets/Prefabs/Player/Spells/SpellsV2/SpellsV3
+>>>>>>> Stashed changes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Prefabs/Player/Spells/SpellsV2/SpellsV3
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Git\Gate-Sealer-Frick-Unity\New Unity Project
   m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< Updated upstream
     scrollPos: {x: 0, y: 87}
     m_SelectedIDs: 402d0000
     m_LastClickedID: 11584
@@ -801,6 +823,12 @@ MonoBehaviour:
     m_SelectedIDs: 182a0000
     m_LastClickedID: 10776
     m_ExpandedIDs: 00000000bc2800001e29000096290000d02a0000ba2b0000e22b0000b22c0000262d0000422d00006c2d0000ea2d0000ae300000b2300000ba300000103100002031000092310000
+>>>>>>> Stashed changes
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 38330000
+    m_LastClickedID: 13112
+    m_ExpandedIDs: 00000000ba2800001c290000ce2a0000b62b0000de2b0000ae2c0000b02c0000222d00003e2d0000682d0000e82d0000ae300000b2300000ba300000103100002031000092310000ec3200003833000000ca9a3bffffff7f
 >>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -830,9 +858,13 @@ MonoBehaviour:
     m_SelectedIDs: aefaffff
     m_LastClickedID: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_ExpandedIDs: 00000000ba2800001c290000ce2a0000b82b0000e02b0000b02c0000b22c0000242d0000402d00006a2d0000e82d0000ac300000b0300000b83000000e3100001e31000090310000ea32000036330000
 =======
     m_ExpandedIDs: 00000000bc2800001e29000096290000d02a0000ba2b0000e22b0000b22c0000262d0000422d00006c2d0000ea2d0000ae300000b2300000ba300000103100002031000092310000
+>>>>>>> Stashed changes
+=======
+    m_ExpandedIDs: 00000000ba2800001c290000ce2a0000b62b0000de2b0000ae2c0000b02c0000222d00003e2d0000682d0000e82d0000ae300000b2300000ba300000103100002031000092310000ec3200003833000000ca9a3bffffff7f
 >>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -859,6 +891,7 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_SelectedInstanceIDs: 4a19f7ff
     m_LastClickedInstanceID: -583350
     m_HadKeyboardFocusLastEvent: 1
@@ -868,6 +901,12 @@ MonoBehaviour:
     m_LastClickedInstanceID: -1362
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
+>>>>>>> Stashed changes
+=======
+    m_SelectedInstanceIDs: f4faffff
+    m_LastClickedInstanceID: -1292
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000445bfdfff22b0000
 >>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -979,7 +1018,7 @@ MonoBehaviour:
     width: 275
     height: 614
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_ScrollPosition: {x: 0, y: 326.95508}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160

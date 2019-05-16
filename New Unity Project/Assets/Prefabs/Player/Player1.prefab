@@ -40,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1217213678559852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.3, y: -8.75, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -8.3, y: -9.8, z: -1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -143,23 +143,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   urf: 0
   spellsMeter: {fileID: 0}
-  Spell1Mk1: {fileID: 0}
-  Spell1Mk2: {fileID: 0}
-  Spell1Mk3: {fileID: 0}
-  Spell2Mk1: {fileID: 0}
-  Spell2Mk2: {fileID: 0}
-  Spell2Mk3: {fileID: 0}
-  Spell3Mk1: {fileID: 0}
-  Spell3Mk2: {fileID: 0}
-  Spell3Mk3: {fileID: 0}
-  Spell4Mk1: {fileID: 0}
-  Spell4Mk2: {fileID: 0}
-  Spell4Mk3: {fileID: 0}
+  stunMeter: {fileID: 0}
+  meterswitch: 0
+  Spell1Mk1: {fileID: 1009430314374262, guid: a32ac55d4bc82ab4999db31538c0dad5, type: 2}
+  Spell1Mk2: {fileID: 1370973664498674, guid: 5dd77ed80c792bf4dac8ff89f62ed6db, type: 2}
+  Spell1Mk3: {fileID: 1966389750888960, guid: 0347f89d0ce600a44844636bb943c203, type: 2}
+  Spell2Mk1: {fileID: 1806299047211944, guid: 1fe453348cc99084ca1a9d21fe3b6c6f, type: 2}
+  Spell2Mk2: {fileID: 1668620423619968, guid: ee0f54a9c6a8f5348a6320fa26a4d6c1, type: 2}
+  Spell2Mk3: {fileID: 1855280637117244, guid: 1515b908a37392d4880909938efe3a7f, type: 2}
+  Spell3Mk1: {fileID: 1166644816599012, guid: f5deb78d5d16a8e4ebb2aeaabc63eed6, type: 2}
+  Spell3Mk2: {fileID: 1143523479969724, guid: 401f04db1b7a59b48ab145b9b76bf782, type: 2}
+  Spell3Mk3: {fileID: 1831446511672268, guid: a3e3880bb3519c442ad049395ebde2f1, type: 2}
+  Spell4Mk1: {fileID: 1754075372250606, guid: 8acfc37465c0b7b418a2bbb26889f395, type: 2}
+  Spell4Mk2: {fileID: 1611306502755212, guid: 96e19ef183ae864418c550b66b667402, type: 2}
+  Spell4Mk3: {fileID: 1644315832351714, guid: 10533855fb1f2f04382fbdb2db35afed, type: 2}
   rb: {fileID: 50804673694678218}
   speed: 20
-  Stuntime: 0
-  Shieldtime: 0
-  Decaydelay: 0
+  Shieldtime: 5
+  Decaydelay: 0.5
+  decayvalue: 1.5
+  damage: 4
+  resetswitch: 0
 --- !u!212 &212487409506748712
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -193,7 +197,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: c4bfeb5fb24990d429555c5b077b2a35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

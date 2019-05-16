@@ -39,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1612185518912182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.3, y: -8.75, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.3, y: -9.8, z: -1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -131,23 +131,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   urf: 0
   spellsMeter: {fileID: 0}
-  Spell1Mk1: {fileID: 0}
-  Spell1Mk2: {fileID: 0}
-  Spell1Mk3: {fileID: 0}
-  Spell2Mk1: {fileID: 0}
-  Spell2Mk2: {fileID: 0}
-  Spell2Mk3: {fileID: 0}
-  Spell3Mk1: {fileID: 0}
-  Spell3Mk2: {fileID: 0}
-  Spell3Mk3: {fileID: 0}
-  Spell4Mk1: {fileID: 0}
-  Spell4Mk2: {fileID: 0}
-  Spell4Mk3: {fileID: 0}
+  Spell1Mk1: {fileID: 1009430314374262, guid: 72ae7592c2828924bbe90b1abf00102e, type: 2}
+  Spell1Mk2: {fileID: 1370973664498674, guid: 9e3158684ac131e4fa75ed6a4c044d4b, type: 2}
+  Spell1Mk3: {fileID: 1966389750888960, guid: d917fda3f53191b4aa7d77d61f0beace, type: 2}
+  Spell2Mk1: {fileID: 1806299047211944, guid: eabdd12fc0f6a794b9be3920dc3b0c15, type: 2}
+  Spell2Mk2: {fileID: 1668620423619968, guid: d37cfb81e68a2c54c8fd85044906db17, type: 2}
+  Spell2Mk3: {fileID: 1855280637117244, guid: 64fc74a523fcd7143bfb685a066c2700, type: 2}
+  Spell3Mk1: {fileID: 1166644816599012, guid: 79c6bfca85b09214ba3520d69940d5c4, type: 2}
+  Spell3Mk2: {fileID: 1143523479969724, guid: c07550800da956c4eaffd6f3663a9351, type: 2}
+  Spell3Mk3: {fileID: 1831446511672268, guid: 54511aeed5df128418984b4eb99a8a2e, type: 2}
+  Spell4Mk1: {fileID: 1754075372250606, guid: 8acfc37465c0b7b418a2bbb26889f395, type: 2}
+  Spell4Mk2: {fileID: 1611306502755212, guid: 96e19ef183ae864418c550b66b667402, type: 2}
+  Spell4Mk3: {fileID: 1644315832351714, guid: dae663436c079ee47a2871c5f35a320b, type: 2}
   rb: {fileID: 50804760885563314}
   speed: 20
-  Stuntime: 0
-  Shieldtime: 0
-  Decaydelay: 0
+  Stuntime: 5
+  Shieldtime: 5
+  Decaydelay: 0.5
 --- !u!212 &212350792804280082
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: fe23d2323c1684b4c8e89695a0b6a64b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

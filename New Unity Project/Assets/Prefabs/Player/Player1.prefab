@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 50804673694678218}
   - component: {fileID: 95074352690647024}
   - component: {fileID: 114010379934200102}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.06591177, y: 0}
@@ -156,8 +156,8 @@ MonoBehaviour:
   Spell3Mk1: {fileID: 1166644816599012, guid: f5deb78d5d16a8e4ebb2aeaabc63eed6, type: 2}
   Spell3Mk2: {fileID: 1143523479969724, guid: 401f04db1b7a59b48ab145b9b76bf782, type: 2}
   Spell3Mk3: {fileID: 1831446511672268, guid: a3e3880bb3519c442ad049395ebde2f1, type: 2}
-  Spell4Mk1: {fileID: 1754075372250606, guid: 8acfc37465c0b7b418a2bbb26889f395, type: 2}
-  Spell4Mk2: {fileID: 1611306502755212, guid: 96e19ef183ae864418c550b66b667402, type: 2}
+  Spell4Mk1: {fileID: 1754075372250606, guid: a6581601e452c404da2781e2b83012f7, type: 2}
+  Spell4Mk2: {fileID: 1611306502755212, guid: 600296a2de739264aaaf33aa8d323b57, type: 2}
   Spell4Mk3: {fileID: 1644315832351714, guid: 10533855fb1f2f04382fbdb2db35afed, type: 2}
   rb: {fileID: 50804673694678218}
   speed: 20

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PenguinScript : MonoBehaviour
 {
+    public Transform floatingDamageP1;
+    public Transform floatingDamageP2;
     public GameObject Bulletprefab;
     public float shootingDelay = 2f;
     private float cooldownTimer = 2.5f;
@@ -93,6 +95,7 @@ public class PenguinScript : MonoBehaviour
             if (currentHealth == 1)
             {
                 ScoreScript.ScoreValue1 += 50;
+                DamagePopup.Create(floatingDamageP1, transform.position, 50);
             }
             currentHealth--;
 
@@ -114,6 +117,7 @@ public class PenguinScript : MonoBehaviour
             if (currentHealth == 1)
             {
                 ScoreScript2.ScoreValue2 += 50;
+                DamagePopup.Create(floatingDamageP2, transform.position, 50);
             }
             currentHealth--;
 

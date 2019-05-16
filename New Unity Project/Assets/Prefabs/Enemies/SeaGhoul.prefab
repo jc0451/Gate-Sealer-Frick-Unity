@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 212406712687161978}
   - component: {fileID: 60878608561752450}
   - component: {fileID: 114056350229451672}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SeaGhoul
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 517d00135ab030245a6177739f7325db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

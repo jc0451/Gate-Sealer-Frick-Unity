@@ -74,6 +74,7 @@ public class Player2 : MonoBehaviour
         }
         if (stun2 == true && shield == false)
         {
+            invincible = true;
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
             if (resetswitch == true)
             {
@@ -119,13 +120,14 @@ public class Player2 : MonoBehaviour
         if (Input.GetKey(KeyCode.J))
         {
             rb.velocity = new Vector2(-speed, 0.0f);
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
         if (Input.GetKey(KeyCode.L))
         {
             rb.velocity = new Vector2(speed, 0.0f);
-            transform.eulerAngles = new Vector3(0, 0, 0);
+          
+            transform.eulerAngles = new Vector3(0, 180, 0);
 
         }
 

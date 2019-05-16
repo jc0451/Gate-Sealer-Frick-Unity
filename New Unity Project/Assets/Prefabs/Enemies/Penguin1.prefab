@@ -63,7 +63,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61486793818137126
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -117,6 +117,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e997f75e7fa352b4cb8564731725e48a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floatingDamageP1: {fileID: 224696391906591526, guid: cb638eda5b0618740a4dfe9cfddf7ded,
+    type: 2}
+  floatingDamageP2: {fileID: 224588030612505716, guid: 7e67d3267e2423b4fb3aec309078e56f,
+    type: 2}
   Bulletprefab: {fileID: 1721734652678828, guid: 9fc67a8811883264883a478d7e125b2b,
     type: 2}
   shootingDelay: 4

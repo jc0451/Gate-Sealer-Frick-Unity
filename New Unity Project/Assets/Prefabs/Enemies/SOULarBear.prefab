@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  maxHealth: 20
+  maxHealth: 5
 --- !u!212 &212953841955392856
 SpriteRenderer:
   m_ObjectHideFlags: 1

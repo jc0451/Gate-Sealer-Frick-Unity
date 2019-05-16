@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114623749266031366}
   m_Layer: 0
   m_Name: ProjectileMk2
-  m_TagString: Untagged
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -146,7 +146,7 @@ public class SeaGhouls2 : MonoBehaviour {
         if (currentHealth <= 0)
         {
             //Instantiate(deathAnimation, transform.position, transform.rotation);
-
+            FindObjectOfType<AudioManager>().Play("Seagull");
             Destroy(gameObject);
         }
     }
@@ -165,7 +165,7 @@ public class SeaGhouls2 : MonoBehaviour {
         }
         else if (col.gameObject.tag == "Player")
         {
-            
+            FindObjectOfType<AudioManager>().Play("Seagull");
             Destroy(gameObject);
         }
 
@@ -180,7 +180,7 @@ public class SeaGhouls2 : MonoBehaviour {
         }
         else if (col.gameObject.tag == "Player2")
         {
-            
+            FindObjectOfType<AudioManager>().Play("Seagull");
             Destroy(gameObject);
         }
 

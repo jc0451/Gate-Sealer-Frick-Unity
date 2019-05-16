@@ -29,7 +29,7 @@ public class PenguinScript : MonoBehaviour
 
     void Start()
     {
-        FindObjectOfType<AudioManager>().Play("Penguin");
+       
         x = Random.Range(-12f, 13f);
         y = Random.Range(-8f, 5f);
         Player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -52,7 +52,7 @@ public class PenguinScript : MonoBehaviour
         {
             cooldownTimer = shootingDelay;
             GameObject bullet = (GameObject)Instantiate(Bulletprefab, transform.position, transform.rotation);
-            FindObjectOfType<AudioManager>().Play("Penguin");
+            
 
         }
         transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
@@ -60,7 +60,7 @@ public class PenguinScript : MonoBehaviour
         if (currentHealth <= 0)
         {
             //Instantiate(deathAnimation, transform.position, transform.rotation);
-            
+            FindObjectOfType<AudioManager>().Play("Penguin");
 
             Destroy(gameObject);
         }

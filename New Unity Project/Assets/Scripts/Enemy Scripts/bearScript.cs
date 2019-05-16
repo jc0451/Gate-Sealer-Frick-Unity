@@ -18,7 +18,7 @@ public class bearScript : MonoBehaviour
     void Start()
     {
       
-        FindObjectOfType<AudioManager>().Play("GhostBear");
+        FindObjectOfType<AudioManager>().Play("GhostBearSpawn");
         BearPoint = GameObject.FindGameObjectWithTag("BearPoint").GetComponent<Transform>();
         currentHealth = maxHealth;
         sr = GetComponent<SpriteRenderer>();
@@ -32,10 +32,12 @@ public class bearScript : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, BearPoint.position, moveSpeed * Time.deltaTime);
         if (currentHealth == 0)
         {
+            FindObjectOfType<AudioManager>().Play("BearDie");
             CommitDie();
         }
         if (transform.position.y <=-9)
         {
+            FindObjectOfType<AudioManager>().Play("BearAttack");
             print("gay");
             Player1.stun1 = true;
             Player2.stun2 = true;

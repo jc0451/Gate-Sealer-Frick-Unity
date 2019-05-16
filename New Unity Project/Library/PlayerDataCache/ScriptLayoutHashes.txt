@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Maher Jaber/Documents/GateSealers/gatesealers.exe
+C:/Users/Alex Bugnar/Desktop/GateSealers.exe
 SceneListBegin?
 Assets/scenes/speels v2.unity
 SceneListEnd?
@@ -25,6 +25,7 @@ df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.T
 47403e1b8e10341ab0e87348cd796870 Assembly-CSharp.dll:.AudioManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.player2anim
 7daca75ac97941c8f6f72a6135318cdd Assembly-CSharp.dll:.BoomBoom
+2d8da8ffa745e977c00f7fbcd83b7d91 Assembly-CSharp.dll:.SpawnerScriptV2
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -206,10 +207,10 @@ c96e4b0a502c437710c29f4882669b2a Assembly-CSharp.dll:.voiceinputtest
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.playeranim
 8a50d3d11bf0cc541f5c35347dd25633 Assembly-CSharp.dll:TMPro.Examples.ShaderPropAnimator
 28d914e2f1a006eb953f239e6565efb3 Assembly-CSharp.dll:.Mike2
-0ea7e3a1b65cd933d7a007e6774c4eaa Assembly-CSharp.dll:.Bullet
+dde7d0cb2d75a39617037307d7c7abb6 Assembly-CSharp.dll:.Bullet
 76015de5fcb247eeb8df66c001d5a22d Assembly-CSharp.dll:TMPro.Examples.TMP_FrameRateCounter
 b8f04bdad423045528c67dfa4c3dca0d Assembly-CSharp.dll:TMPro.Examples.VertexShakeA
-f74750d54d0aa77f3f735bacded9a488 Assembly-CSharp.dll:.bearScript
+4a31c8dcd83a0cf827a9e0b2f0e7bd91 Assembly-CSharp.dll:.bearScript
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -224,10 +225,10 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-337444930084a4aa74a05ea643744d37 Assembly-CSharp.dll:.Player1
+519479effc40c09b6915958bbfa6166a Assembly-CSharp.dll:.Player1
 7b2d2c2a55e04afd5272f2579a88a0b9 Assembly-CSharp.dll:.Fader
 62229a3e4d53ca59bec192e89627ed52 Assembly-CSharp.dll:TMPro.Examples.CameraController
-4b0cb441f3444405c0879b8d7737b076 Assembly-CSharp.dll:.SeaGhouls2
+65458f0e02197cc465d3ece1d3b208d9 Assembly-CSharp.dll:.SeaGhouls2
 d5be1ca94278aa7358c511834dede500 Assembly-CSharp.dll:.DeathTick
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 de4d9d052ba4d30c8e1d66d73b186762 UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
@@ -259,7 +260,7 @@ f4032f9161af929bc5353379e998cc7f Assembly-CSharp.dll:.Lightning
 75cd0c6c744b9733ef29aa6c59ece2b1 Assembly-CSharp.dll:TMPro.Examples.VertexShakeB
 6826e26f7cc718f870001971f13e79c7 Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.VertexColorCycler
-f6541e8d15d950bde72c4a2f8c557f2f Assembly-CSharp.dll:.PenguinScript
+b1c1be46c3b0d415275b5da8b7a4616f Assembly-CSharp.dll:.PenguinScript
 020550babdb991365f61c5bffe1f4f52 Assembly-CSharp.dll:TMPro.Examples.TextMeshSpawner
 29a05cef7d59f034cbb7c655939899c2 Assembly-CSharp.dll:.DmgFloatingControlller
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ScoreScript2

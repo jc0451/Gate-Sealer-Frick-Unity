@@ -29,22 +29,20 @@ public class Player1 : MonoBehaviour {
     public float speed;
     public static bool stun1 = false;
     private bool shield = false;
-    private float stuntime;
     private float shieldtime;
-    public float Stuntime;
     public float Shieldtime;
 
     public float Decaydelay;
     private float decaydelay;
     public float decayvalue;
     public float damage;
+    public bool resetswitch;
 
     // Use this for initialization
 
     void Start() {
-
+        resetswitch = true;
         spellsMeter.value = 0;
-        stuntime = Stuntime;
         shieldtime = Shieldtime;
         decaydelay = Decaydelay;
 
@@ -52,6 +50,7 @@ public class Player1 : MonoBehaviour {
 
 
     // Update is called once per frame
+
     void Update () {
 
         if (stunMeter.value <= 0)
@@ -62,21 +61,26 @@ public class Player1 : MonoBehaviour {
         if (stun1 == true && shield==false)
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
-            spellsMeter.value = 0;
-            stuntime -= Time.deltaTime;
-            if (stunMeter.value == 5)
+            if (resetswitch == true)
+            {
+                spellsMeter.value = 0;
+                stunMeter.value = 0;
+                meterswitch = true;
+                resetswitch = false;
+            }
+
+            if (stunMeter.value >= 5)
             {
                 rb.constraints = RigidbodyConstraints2D.None;
+            
+               // meterswitch = false;
                 stun1 = false;
-                stuntime = Stuntime;
+                
             }
-            if (stuntime <= 0)
-            {
-                rb.constraints = RigidbodyConstraints2D.None;
-                stun1 = false;
-                stuntime = Stuntime;
-            }
+         
         }
+        else
+            resetswitch = true;
         if (stun1 == true && shield == true)
         {
             stun1 = false;
@@ -115,6 +119,7 @@ public class Player1 : MonoBehaviour {
         {
             if (meterswitch == false)
             {
+               
                 spellsMeter.value += 1;
                 decaydelay = Decaydelay;
             }
@@ -123,7 +128,8 @@ public class Player1 : MonoBehaviour {
                 stunMeter.value += 1;
                 if(stunMeter.value>=5){
                     meterswitch = false;
-               
+                  
+
                 }
             }
             

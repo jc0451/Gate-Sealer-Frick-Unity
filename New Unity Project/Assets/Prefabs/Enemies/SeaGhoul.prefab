@@ -143,23 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8780738afbfc8db4ebcc3a523fd312d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  R1N1: {fileID: 1288748985924082, guid: 814cfe0970a83824c9de6365cf26a3eb, type: 2}
-  R1N2: {fileID: 1325284928201430, guid: 814cfe0970a83824c9de6365cf26a3eb, type: 2}
-  R1N3: {fileID: 1264722693972000, guid: 814cfe0970a83824c9de6365cf26a3eb, type: 2}
-  R1N4: {fileID: 1433633516948682, guid: 814cfe0970a83824c9de6365cf26a3eb, type: 2}
-  R1N5: {fileID: 1073671666652222, guid: 814cfe0970a83824c9de6365cf26a3eb, type: 2}
-  R2N1: {fileID: 1416269263459598, guid: e3371d47063bf834b83b0810c9d9dfc8, type: 2}
-  R2N2: {fileID: 1057161825332804, guid: e3371d47063bf834b83b0810c9d9dfc8, type: 2}
-  R2N3: {fileID: 1789741760541968, guid: e3371d47063bf834b83b0810c9d9dfc8, type: 2}
-  R2N4: {fileID: 1269834568675358, guid: e3371d47063bf834b83b0810c9d9dfc8, type: 2}
-  R2N5: {fileID: 1666722579141460, guid: e3371d47063bf834b83b0810c9d9dfc8, type: 2}
-  R2N6: {fileID: 1507725192530908, guid: e3371d47063bf834b83b0810c9d9dfc8, type: 2}
-  R2N7: {fileID: 1281493658381520, guid: e3371d47063bf834b83b0810c9d9dfc8, type: 2}
-  P1: {fileID: 1754771982285500, guid: 90e5808ecd31b8b47a682f313a1c7426, type: 2}
-  P2: {fileID: 1374951238495698, guid: 379b4aa24dd2e50488775dad898a378e, type: 2}
   maxHealth: 2
   currentHealth: 2
-  moveSpeed: 6
+  moveSpeed: 4
 --- !u!212 &212406712687161978
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -193,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 517d00135ab030245a6177739f7325db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

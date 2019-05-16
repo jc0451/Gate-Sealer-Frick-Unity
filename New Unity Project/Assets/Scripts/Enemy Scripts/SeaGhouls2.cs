@@ -3,18 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SeaGhouls2 : MonoBehaviour {
-    public GameObject R1N1;
-    public GameObject R1N2;
-    public GameObject R1N3;
-    public GameObject R1N4;
-    public GameObject R1N5;
-    public GameObject R2N1;
-    public GameObject R2N2;
-    public GameObject R2N3;
-    public GameObject R2N4;
-    public GameObject R2N5;
-    public GameObject R2N6;
-    public GameObject R2N7;
 
     private GameObject P1;
     private GameObject P2;
@@ -25,6 +13,18 @@ public class SeaGhouls2 : MonoBehaviour {
     bool row1 = true;
     bool row2 = false;
     bool row3 = false;
+    bool row4 = false;
+    bool row5 = false;
+
+    private float lx;
+    private float rx;
+    private float y1;
+    private float y2;
+    private float y3;
+    private float y4;
+    Vector2 randpos;
+    Vector2 currpos;
+    private int coin;
 
     public float maxHealth = 2;
     public float currentHealth;
@@ -36,77 +36,102 @@ public class SeaGhouls2 : MonoBehaviour {
         rand1 = Random.Range(1, 6);
         rand2 = Random.Range(1, 8);
         randP = Random.Range(1, 3);
+        coin = Random.Range(0, 2);
+        lx = Random.Range(-12f, 1f);
+        rx = Random.Range(0f, 13f);
+        y1 = Random.Range(0f, 3f);
+        y2 = Random.Range(-1f, 2f);
+        y3 = Random.Range(-2f, 1f);
+        y4 = Random.Range(-3f, 0f);
+
     }
 	
 	// Update is called once per frame
 	void Update () {
         if (row1 == true)
         {
-            if (rand1 == 1)
+            currpos = transform.position;
+            if (coin == 0)
             {
-                transform.position = Vector2.MoveTowards(transform.position, R1N1.transform.position, Time.deltaTime * moveSpeed);
-               
+                randpos = new Vector2(lx, y1);
+                transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
             }
-            if (rand1 == 2)
+            else if (coin == 1)
             {
-                transform.position = Vector2.MoveTowards(transform.position, R1N2.transform.position, Time.deltaTime * moveSpeed);
-               
+                randpos = new Vector2(rx, y1);
+                transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
             }
-            if (rand1 == 3)
+            if(currpos == randpos)
             {
-                transform.position = Vector2.MoveTowards(transform.position, R1N3.transform.position, Time.deltaTime * moveSpeed);
-               
-            }
-            if (rand1 == 4)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, R1N4.transform.position, Time.deltaTime * moveSpeed);
-               
-            }
-            if (rand1 == 5)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, R1N5.transform.position, Time.deltaTime * moveSpeed);
-               
+                row2 = true;
+                lx = Random.Range(-12f, 1f);
+                rx = Random.Range(0f, 13f);
+                row1 = false;
             }
         }
         if (row2 == true)
         {
-            if (rand2 == 1)
+            currpos = transform.position;
+            if (coin == 0)
             {
-                transform.position = Vector2.MoveTowards(transform.position, R2N1.transform.position, Time.deltaTime * moveSpeed);
-               
+                randpos = new Vector2(rx, y2);
+                transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
             }
-            if (rand2 == 2)
+            else if (coin == 1)
             {
-                transform.position = Vector2.MoveTowards(transform.position, R2N2.transform.position, Time.deltaTime * moveSpeed);
-                
+                randpos = new Vector2(lx, y2);
+                transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
             }
-            if (rand2 == 3)
+            if (currpos == randpos)
             {
-                transform.position = Vector2.MoveTowards(transform.position, R2N3.transform.position, Time.deltaTime * moveSpeed);
-                
-            }
-            if (rand2 == 4)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, R2N4.transform.position, Time.deltaTime * moveSpeed);
-               
-            }
-            if (rand2 == 5)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, R2N5.transform.position, Time.deltaTime * moveSpeed);
-                
-            }
-            if (rand2 == 6)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, R2N6.transform.position, Time.deltaTime * moveSpeed);
-                
-            }
-            if (rand2 == 7)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, R2N7.transform.position, Time.deltaTime * moveSpeed);
-               
+                row3 = true;
+                lx = Random.Range(-12f, 1f);
+                rx = Random.Range(0f, 13f);
+                row2 = false;
             }
         }
         if (row3 == true)
+        {
+            currpos = transform.position;
+            if (coin == 0)
+            {
+                randpos = new Vector2(lx, y3);
+                transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+            }
+            else if (coin == 1)
+            {
+                randpos = new Vector2(rx, y3);
+                transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+            }
+            if (currpos == randpos)
+            {
+                row4 = true;
+                lx = Random.Range(-12f, 1f);
+                rx = Random.Range(0f, 13f);
+                row3 = false;
+            }
+        }
+        if (row4 == true)
+        {
+            currpos = transform.position;
+            if (coin == 0)
+            {
+                randpos = new Vector2(rx, y4);
+                transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+            }
+            else if (coin == 1)
+            {
+                randpos = new Vector2(lx, y4);
+                transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+            }
+            if (currpos == randpos)
+            {
+                row5 = true;
+                row4 = false;
+            }
+        }
+
+        if (row5 == true)
         {
             if (randP == 1)
             {
@@ -128,18 +153,7 @@ public class SeaGhouls2 : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D col)
     {
        
-        if(col.gameObject.tag == "GullNodes1")
-        {
-            row1 = false;
-            row2 = true;
-            
-           
-        }
-        if(col.gameObject.tag == "GullNodes2")
-        {
-            row2 = false;
-            row3 = true;
-        }
+     
         if (col.gameObject.tag == "PlayerSpell" )
         {
             if (currentHealth == 1)
@@ -151,7 +165,7 @@ public class SeaGhouls2 : MonoBehaviour {
         }
         else if (col.gameObject.tag == "Player")
         {
-            ScoreScript.ScoreValue1 -= 15;
+            
             Destroy(gameObject);
         }
 
@@ -166,7 +180,7 @@ public class SeaGhouls2 : MonoBehaviour {
         }
         else if (col.gameObject.tag == "Player2")
         {
-            ScoreScript2.ScoreValue2 -= 15;
+            
             Destroy(gameObject);
         }
 

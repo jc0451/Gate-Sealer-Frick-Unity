@@ -5,7 +5,7 @@ using UnityEngine;
 public class bearScript : MonoBehaviour
 {
 
-    private float moveSpeed = 1f;
+    public float moveSpeed = 1f;
     public float maxHealth = 6;
     private float currentHealth;
     private Transform BearPoint;
@@ -14,8 +14,10 @@ public class bearScript : MonoBehaviour
     private Material matDefault;
     SpriteRenderer sr;
 
+
     void Start()
     {
+      
         FindObjectOfType<AudioManager>().Play("GhostBear");
         BearPoint = GameObject.FindGameObjectWithTag("BearPoint").GetComponent<Transform>();
         currentHealth = maxHealth;
@@ -28,7 +30,17 @@ public class bearScript : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, BearPoint.position, moveSpeed * Time.deltaTime);
-        
+        if (currentHealth == 0)
+        {
+            CommitDie();
+        }
+        if (transform.position.y <=-9)
+        {
+            print("gay");
+            Player1.stun1 = true;
+            Player2.stun2 = true;
+            CommitDie();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -42,11 +54,6 @@ public class bearScript : MonoBehaviour
             }
             currentHealth--;
 
-        }
-        else if (col.gameObject.tag == "Player")
-        {
-            ScoreScript.ScoreValue1 -= 15;
-            KillsItself();
         }
         else
         {
@@ -64,11 +71,6 @@ public class bearScript : MonoBehaviour
             currentHealth--;
 
         }
-        else if (col.gameObject.tag == "Player2")
-        {
-            ScoreScript2.ScoreValue2 -= 15;
-            KillsItself();
-        }
         else
         {
             Invoke("ResetMaterial", 0.3f);
@@ -81,7 +83,7 @@ public class bearScript : MonoBehaviour
         sr.material = matDefault;
     }
 
-    private void KillsItself()
+    private void CommitDie()
     {
         Destroy(gameObject);
     }

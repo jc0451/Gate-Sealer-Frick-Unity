@@ -6,7 +6,7 @@ using UnityEngine;
 public class PenguinScript : MonoBehaviour
 {
     public GameObject Bulletprefab;
-    private float shootingDelay = 2f;
+    public float shootingDelay = 2f;
     private float cooldownTimer = 2.5f;
     public float maxHealth = 20;
     public float currentHealth;
@@ -28,11 +28,12 @@ public class PenguinScript : MonoBehaviour
     void Start()
     {
         FindObjectOfType<AudioManager>().Play("Penguin");
-        x = Random.Range(-12, 13);
-        y = Random.Range(-8, 5);
+        x = Random.Range(-12f, 13f);
+        y = Random.Range(-8f, 5f);
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         currentHealth = maxHealth;
         randpos = new Vector2(x, y);
+        cooldownTimer = shootingDelay;
 
         sr = GetComponent<SpriteRenderer>();
         matRed = Resources.Load("RedFlash", typeof(Material)) as Material;

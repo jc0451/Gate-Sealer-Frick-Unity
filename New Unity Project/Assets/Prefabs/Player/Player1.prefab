@@ -82,8 +82,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.47, y: 4.34}
-    newSize: {x: 1.38, y: 1.54}
+    oldSize: {x: 5.32, y: 5.51}
+    newSize: {x: 5.32, y: 5.51}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -100,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 1217213678559852}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c8ea1536973b11643bff83851a3c7c17, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7504b81aa7adace4cac58c3df48a75f2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -145,6 +145,8 @@ MonoBehaviour:
   spellsMeter: {fileID: 0}
   stunMeter: {fileID: 0}
   meterswitch: 0
+  invincible: 0
+  Invtime: 2
   Spell1Mk1: {fileID: 1009430314374262, guid: a32ac55d4bc82ab4999db31538c0dad5, type: 2}
   Spell1Mk2: {fileID: 1370973664498674, guid: 5dd77ed80c792bf4dac8ff89f62ed6db, type: 2}
   Spell1Mk3: {fileID: 1966389750888960, guid: 0347f89d0ce600a44844636bb943c203, type: 2}
@@ -197,13 +199,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: c4bfeb5fb24990d429555c5b077b2a35, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: ab218ae8e69c5484384aebe1b07f9170, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.38, y: 1.54}
+  m_Size: {x: 5.32, y: 5.51}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

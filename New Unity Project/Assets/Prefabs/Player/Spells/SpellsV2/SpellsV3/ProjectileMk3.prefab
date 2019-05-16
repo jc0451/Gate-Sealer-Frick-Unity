@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 50344813496395230}
-  speed: 30
+  speed: 25
 --- !u!114 &114664953124870218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 50051241540457104}
-  speed: 30
+  speed: 25
 --- !u!114 &114776257868869464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -366,7 +366,7 @@ MonoBehaviour:
   Wave2: {fileID: 1578183956045900}
   Wave3: {fileID: 1537672795977432}
   currwave: 1
-  time: 0.1
+  time: 0.2
   currenttime: 0
 --- !u!114 &114851013617186060
 MonoBehaviour:
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 50199633864653784}
-  speed: 30
+  speed: 25
 --- !u!212 &212147846959897086
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -426,7 +426,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: caadbf1a32c24954a933d017fb0e8b02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -470,7 +470,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: caadbf1a32c24954a933d017fb0e8b02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -514,7 +514,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: caadbf1a32c24954a933d017fb0e8b02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

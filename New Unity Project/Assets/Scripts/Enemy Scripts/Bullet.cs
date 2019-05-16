@@ -6,8 +6,8 @@ public class Bullet : MonoBehaviour
 {
     //private Vector2 target;
     //private Vector2 position;
-    float moveSpeed = 8f;
-    float deleteTime = 10f;
+    public float moveSpeed = 8f;
+    public float deleteTime = 10f;
     Rigidbody2D rb;
   
     private int coin;

@@ -11,6 +11,9 @@ public class Player1 : MonoBehaviour {
     public Slider spellsMeter;
     public Slider stunMeter;
     public bool meterswitch;
+    public bool invincible = false;
+    public float Invtime;
+    private float invtime;
 
     public GameObject Spell1Mk1;
     public GameObject Spell1Mk2;
@@ -45,6 +48,7 @@ public class Player1 : MonoBehaviour {
         spellsMeter.value = 0;
         shieldtime = Shieldtime;
         decaydelay = Decaydelay;
+        invtime = Invtime;
 
     }
 
@@ -52,7 +56,15 @@ public class Player1 : MonoBehaviour {
     // Update is called once per frame
 
     void Update () {
-
+        if (invincible == true)
+        {
+            invtime -= Time.deltaTime;
+            if (invtime <= 0f)
+            {
+                invincible = false;
+                invtime = Invtime;
+            }
+        }
         if (stunMeter.value <= 0)
         {
             stun1 = true;
@@ -60,6 +72,7 @@ public class Player1 : MonoBehaviour {
         }
         if (stun1 == true && shield==false)
         {
+            invincible = true;
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
             if (resetswitch == true)
             {
@@ -144,7 +157,7 @@ public class Player1 : MonoBehaviour {
              }
         }
         */
-        if (Mike2.Mic2Loudness > 0.0001&&urf==false)
+        if (Mike.Mic1Loudness > 0.0001&&urf==false)
         {
             urf = true;
 
@@ -275,24 +288,27 @@ public class Player1 : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "FireBall")
+        if (invincible == false)
         {
-            if (meterswitch == false)
+            if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "FireBall")
             {
+                if (meterswitch == false)
+                {
 
-                if (spellsMeter.value <= 0)
-                {
-                    meterswitch = true;
-                    stunMeter.value -= 1;
+                    if (spellsMeter.value <= 0)
+                    {
+                        meterswitch = true;
+                        stunMeter.value -= 1;
+                    }
+                    else if (spellsMeter.value > 0)
+                    {
+                        spellsMeter.value -= damage;
+                    }
                 }
-                else if(spellsMeter.value>0)
+                else if (meterswitch == true)
                 {
-                    spellsMeter.value -= damage;
+                    stunMeter.value -= damage;
                 }
-            }
-            else if(meterswitch==true)
-            {
-                stunMeter.value -= damage;
             }
         }
     }

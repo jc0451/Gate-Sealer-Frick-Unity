@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114115153585441320}
   m_Layer: 8
   m_Name: Penguin1
-  m_TagString: Penguin
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.004780531, y: 0.00000011920929}
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bulletprefab: {fileID: 1721734652678828, guid: 9fc67a8811883264883a478d7e125b2b,
     type: 2}
+  shootingDelay: 4
   maxHealth: 2
   currentHealth: 2
   moveSpeed: 3

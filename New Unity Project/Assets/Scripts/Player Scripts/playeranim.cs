@@ -14,24 +14,32 @@ public class playeranim : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) )
-        {
-            anim.SetBool("IsTrigger", true);
-        }
-        else
-        {
-            anim.SetBool("IsTrigger", false);
-        }
+        
+        
+            
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                anim.SetBool("clappingleft", true);
+            }
+            else
+            {
+                anim.SetBool("clappingleft", false);
+            }
 
 
 
-        if (Input.GetKey(KeyCode.E) )
-        {
-            anim.SetBool("IsRunning", true);
-        }
-        else
-        {
-            anim.SetBool("IsRunning", false);
-        }
-	}
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                anim.SetBool("urfingleft", true);
+            }
+            else
+            {
+                anim.SetBool("urfingleft", false);
+            }
+        
+        
+        
+    }
+
 }

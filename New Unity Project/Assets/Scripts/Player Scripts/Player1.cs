@@ -105,14 +105,14 @@ public class Player1 : MonoBehaviour {
         if (Input.GetKey(KeyCode.A))
         {
             rb.velocity = new Vector2(-speed, 0.0f);
-           
+            transform.eulerAngles = new Vector3(0, 180, 0);
         }
  
         if (Input.GetKey(KeyCode.D))
         {
             rb.velocity = new Vector2(speed, 0.0f);
-          
-        
+            transform.eulerAngles = new Vector3(0, 0, 0);
+
         }
         
         if (Input.GetKeyUp(KeyCode.W))
@@ -164,7 +164,7 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1Mk1);
             SpellInstance.transform.position = transform.position;
-            FindObjectOfType<AudioManager>().Play("EarthQuake");
+            FindObjectOfType<AudioManager>().Play("SnowballMK1");
 
             urf = false;
             spellsMeter.value = 0; 
@@ -173,7 +173,7 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1Mk2);
             SpellInstance.transform.position = transform.position;
-            FindObjectOfType<AudioManager>().Play("EarthQuake");
+            FindObjectOfType<AudioManager>().Play("SnowballMK2");
 
             urf = false;
             spellsMeter.value = 0;
@@ -182,7 +182,7 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1Mk3);
             SpellInstance.transform.position = transform.position;
-            FindObjectOfType<AudioManager>().Play("EarthQuake");
+            FindObjectOfType<AudioManager>().Play("SnowballMK3");
 
             urf = false;
             spellsMeter.value = 0;
@@ -221,7 +221,7 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell3Mk1);
             SpellInstance.transform.position = transform.position;
-            FindObjectOfType<AudioManager>().Play("Explosion");
+            FindObjectOfType<AudioManager>().Play("ExplosionMK1");
 
 
             urf = false;
@@ -231,7 +231,7 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell3Mk2);
             SpellInstance.transform.position = transform.position;
-            FindObjectOfType<AudioManager>().Play("Explosion");
+            FindObjectOfType<AudioManager>().Play("ExplosionMK2");
 
             urf = false;
             spellsMeter.value = 0;
@@ -240,7 +240,7 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell3Mk3);
             SpellInstance.transform.position = transform.position;
-            FindObjectOfType<AudioManager>().Play("Explosion");
+            FindObjectOfType<AudioManager>().Play("ExplosionMK3");
 
             urf = false;
             spellsMeter.value = 0;
@@ -249,7 +249,7 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell4Mk1);
             SpellInstance.transform.position = transform.position;
-            FindObjectOfType<AudioManager>().Play("Lightning");
+            FindObjectOfType<AudioManager>().Play("Thunder");
 
             urf = false;
             spellsMeter.value = 0;
@@ -258,7 +258,7 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell4Mk2);
             SpellInstance.transform.position = transform.position;
-            FindObjectOfType<AudioManager>().Play("Lightning");
+            FindObjectOfType<AudioManager>().Play("Thunder");
 
             urf = false;
             spellsMeter.value = 0;
@@ -267,7 +267,7 @@ public class Player1 : MonoBehaviour {
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell4Mk3);
             //SpellInstance.transform.position = transform.position;
-            FindObjectOfType<AudioManager>().Play("Lightning");
+            FindObjectOfType<AudioManager>().Play("Thunder");
 
             urf = false;
             spellsMeter.value = 0;

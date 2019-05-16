@@ -57,13 +57,13 @@ public class PenguinScript : MonoBehaviour
         }
         transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
 
-        if (currentHealth <= 0)
-        {
-            //Instantiate(deathAnimation, transform.position, transform.rotation);
-            FindObjectOfType<AudioManager>().Play("Penguin");
+        //if (currentHealth <= 0)
+        //{
+        //    //Instantiate(deathAnimation, transform.position, transform.rotation);
+            
 
-            Destroy(gameObject);
-        }
+        //    Destroy(gameObject);
+        //}
 
         if (Player == null && Player2 == null)
         {
@@ -140,6 +140,7 @@ public class PenguinScript : MonoBehaviour
     }
     private void KillsItself()
     {
+        FindObjectOfType<AudioManager>().Play("Penguin");
         Destroy(gameObject);
     }
 }

@@ -2055,67 +2055,7 @@ Prefab:
         type: 2}
       propertyPath: audioFiles.Array.data[8].audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 71528d7604be4f644a546fec114d133e, type: 3}
-    - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
-        type: 2}
-      propertyPath: audioFiles.Array.data[8].isLooping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
-        type: 2}
-      propertyPath: audioFiles.Array.data[4].audioName
-      value: GhostBearSpawn
-      objectReference: {fileID: 0}
-    - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
-        type: 2}
-      propertyPath: audioFiles.Array.data[4].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cba26d6c6fbafeb4aa3f30e108919542, type: 3}
-    - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
-        type: 2}
-      propertyPath: audioFiles.Array.data[18].audioName
-      value: BearDie
-      objectReference: {fileID: 0}
-    - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
-        type: 2}
-      propertyPath: audioFiles.Array.data[18].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 4b8411071ea8a4a4c8fc0ede19d277e3, type: 3}
-    - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
-        type: 2}
-      propertyPath: audioFiles.Array.data[18].isLooping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
-        type: 2}
-      propertyPath: audioFiles.Array.data[19].isLooping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
-        type: 2}
-      propertyPath: audioFiles.Array.data[19].audioName
-      value: BearAttack
-      objectReference: {fileID: 0}
-    - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
-        type: 2}
-      propertyPath: audioFiles.Array.data[19].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: b5e093d3fca59e149ba445451063cb57, type: 3}
-    - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
-        type: 2}
-      propertyPath: audioFiles.Array.data[4].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
-        type: 2}
-      propertyPath: audioFiles.Array.data[18].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114226792133657904, guid: 8e71a224692477b47acf2772ac6e7af6,
-        type: 2}
-      propertyPath: audioFiles.Array.data[8].volume
-      value: 0.3
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: d70957f952f139d40ab903833fee5977, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e71a224692477b47acf2772ac6e7af6, type: 2}
   m_IsPrefabParent: 0

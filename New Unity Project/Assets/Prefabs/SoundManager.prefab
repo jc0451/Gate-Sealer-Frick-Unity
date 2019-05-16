@@ -76,9 +76,9 @@ MonoBehaviour:
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: GhostBear
-    audioClip: {fileID: 8300000, guid: 8471cab5a3bb47046a0c792e61eb8a79, type: 3}
-    volume: 0.5
+  - audioName: GhostBearSpawn
+    audioClip: {fileID: 8300000, guid: cba26d6c6fbafeb4aa3f30e108919542, type: 3}
+    volume: 1
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
@@ -96,15 +96,15 @@ MonoBehaviour:
     playOnAwake: 0
   - audioName: Penguin
     audioClip: {fileID: 8300000, guid: 44b47dd1416bb9341bd5f74c28020719, type: 3}
-    volume: 0.5
+    volume: 0.6
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
   - audioName: Seagull
-    audioClip: {fileID: 8300000, guid: 1c5d7fe28155ee449a217e9af9f938b9, type: 3}
-    volume: 0.5
+    audioClip: {fileID: 8300000, guid: 71528d7604be4f644a546fec114d133e, type: 3}
+    volume: 0.3
     source: {fileID: 0}
-    isLooping: 1
+    isLooping: 0
     playOnAwake: 0
   - audioName: SpellCast
     audioClip: {fileID: 8300000, guid: 214f8f18ea39c084b9387354ca6bf25f, type: 3}
@@ -160,16 +160,16 @@ MonoBehaviour:
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: BattleMusic
-    audioClip: {fileID: 8300000, guid: 21d4aa9f981a04c4ea432b53fa17ad6b, type: 3}
-    volume: 0.5
+  - audioName: BearDie
+    audioClip: {fileID: 8300000, guid: 4b8411071ea8a4a4c8fc0ede19d277e3, type: 3}
+    volume: 1
     source: {fileID: 0}
-    isLooping: 1
+    isLooping: 0
     playOnAwake: 0
-  - audioName: BattleMusic
-    audioClip: {fileID: 8300000, guid: 21d4aa9f981a04c4ea432b53fa17ad6b, type: 3}
+  - audioName: BearAttack
+    audioClip: {fileID: 8300000, guid: b5e093d3fca59e149ba445451063cb57, type: 3}
     volume: 0.5
     source: {fileID: 0}
-    isLooping: 1
+    isLooping: 0
     playOnAwake: 0
   Mixer: {fileID: 24100000, guid: d3cad5922afb63c4bb39c307762ba73a, type: 2}

@@ -99,6 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d56e19d3b12bb41b0da2b853696ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floatingDamageP1: {fileID: 224696391906591526, guid: cb638eda5b0618740a4dfe9cfddf7ded,
+    type: 2}
+  floatingDamageP2: {fileID: 224588030612505716, guid: 7e67d3267e2423b4fb3aec309078e56f,
+    type: 2}
   moveSpeed: 2
   maxHealth: 5
 --- !u!212 &212953841955392856

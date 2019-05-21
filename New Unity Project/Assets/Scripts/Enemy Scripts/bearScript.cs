@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class bearScript : MonoBehaviour
 {
-
+    public Transform floatingDamageP1;
+    public Transform floatingDamageP2;
     public float moveSpeed = 1f;
     public float maxHealth = 6;
     private float currentHealth;
@@ -52,7 +53,8 @@ public class bearScript : MonoBehaviour
             sr.material = matRed;
             if (currentHealth == 1)
             {
-                ScoreScript.ScoreValue1 += 50;
+                ScoreScript.ScoreValue1 += 100;
+                DamagePopup.Create(floatingDamageP1, transform.position, 100);
             }
             currentHealth--;
 
@@ -68,7 +70,8 @@ public class bearScript : MonoBehaviour
             sr.material = matRed;
             if (currentHealth == 1)
             {
-                ScoreScript2.ScoreValue2 += 50;
+                ScoreScript2.ScoreValue2 += 100;
+                DamagePopup.Create(floatingDamageP2, transform.position, 100);
             }
             currentHealth--;
 

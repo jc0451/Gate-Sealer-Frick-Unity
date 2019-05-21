@@ -7,6 +7,8 @@ public class SeaGhouls2 : MonoBehaviour {
     private GameObject P1;
     private GameObject P2;
 
+    public Transform floatingDamageP1;
+    public Transform floatingDamageP2;
     int rand1;
     int rand2;
     int randP;
@@ -159,6 +161,7 @@ public class SeaGhouls2 : MonoBehaviour {
             if (currentHealth == 1)
             {
                 ScoreScript.ScoreValue1 += 25;
+                DamagePopup.Create(floatingDamageP1, transform.position, 25);
             }
             currentHealth--;
 
@@ -174,6 +177,7 @@ public class SeaGhouls2 : MonoBehaviour {
             if (currentHealth == 1)
             {
                 ScoreScript2.ScoreValue2 += 25;
+                DamagePopup.Create(floatingDamageP2, transform.position, 25);
             }
             currentHealth--;
 

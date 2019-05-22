@@ -22,5 +22,10 @@ public class timerScript : MonoBehaviour {
             timer = 0;
 
         text.text = "Time left: " + Mathf.Round(timer);
+
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            timer = 300;
+        }
     }
 }

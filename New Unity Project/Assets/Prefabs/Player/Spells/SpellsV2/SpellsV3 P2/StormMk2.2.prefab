@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50224851228796410}
   - component: {fileID: 114156618282049988}
   - component: {fileID: 70185680926876032}
+  - component: {fileID: 114082148130696016}
   m_Layer: 9
   m_Name: Strike (9)
   m_TagString: PlayerSpell2
@@ -44,6 +45,7 @@ GameObject:
   - component: {fileID: 50196119163203038}
   - component: {fileID: 114549172269737526}
   - component: {fileID: 70262719752262280}
+  - component: {fileID: 114825788565118622}
   m_Layer: 9
   m_Name: Strike (8)
   m_TagString: PlayerSpell2
@@ -64,6 +66,7 @@ GameObject:
   - component: {fileID: 50991668283595104}
   - component: {fileID: 114005284819225826}
   - component: {fileID: 70174720435695570}
+  - component: {fileID: 114051796790674990}
   m_Layer: 9
   m_Name: Strike (13)
   m_TagString: PlayerSpell2
@@ -84,6 +87,7 @@ GameObject:
   - component: {fileID: 50937963831954260}
   - component: {fileID: 114615714657228554}
   - component: {fileID: 70823633107554660}
+  - component: {fileID: 114190521568809152}
   m_Layer: 9
   m_Name: Strike (5)
   m_TagString: PlayerSpell2
@@ -104,6 +108,7 @@ GameObject:
   - component: {fileID: 50050368261732210}
   - component: {fileID: 114494738490654726}
   - component: {fileID: 70690687207123534}
+  - component: {fileID: 114813181002337310}
   m_Layer: 9
   m_Name: Strike (1)
   m_TagString: PlayerSpell2
@@ -124,6 +129,7 @@ GameObject:
   - component: {fileID: 50141717429765712}
   - component: {fileID: 114790951494137928}
   - component: {fileID: 70826781094420418}
+  - component: {fileID: 114757750434356974}
   m_Layer: 9
   m_Name: Strike (6)
   m_TagString: PlayerSpell2
@@ -144,6 +150,7 @@ GameObject:
   - component: {fileID: 50745536227192500}
   - component: {fileID: 114357845100546748}
   - component: {fileID: 70109598364649342}
+  - component: {fileID: 114780551369072696}
   m_Layer: 9
   m_Name: Strike (4)
   m_TagString: PlayerSpell2
@@ -164,6 +171,7 @@ GameObject:
   - component: {fileID: 50673947332032170}
   - component: {fileID: 114245231727015388}
   - component: {fileID: 70365286117659476}
+  - component: {fileID: 114560993793231248}
   m_Layer: 9
   m_Name: Strike (2)
   m_TagString: PlayerSpell2
@@ -184,6 +192,7 @@ GameObject:
   - component: {fileID: 50126285786103590}
   - component: {fileID: 114141105011829682}
   - component: {fileID: 70993957584171620}
+  - component: {fileID: 114940087644857134}
   m_Layer: 9
   m_Name: Strike (7)
   m_TagString: PlayerSpell2
@@ -204,6 +213,7 @@ GameObject:
   - component: {fileID: 50566439402742072}
   - component: {fileID: 114305984819279492}
   - component: {fileID: 70113625966761952}
+  - component: {fileID: 114939890727514028}
   m_Layer: 9
   m_Name: Strike (3)
   m_TagString: PlayerSpell2
@@ -224,6 +234,7 @@ GameObject:
   - component: {fileID: 50701155455559590}
   - component: {fileID: 114326054785991882}
   - component: {fileID: 70290999302477464}
+  - component: {fileID: 114666944296623966}
   m_Layer: 9
   m_Name: Strike (10)
   m_TagString: PlayerSpell2
@@ -244,6 +255,7 @@ GameObject:
   - component: {fileID: 50578993334687326}
   - component: {fileID: 114660273334877782}
   - component: {fileID: 70831265413709210}
+  - component: {fileID: 114462091902679726}
   m_Layer: 9
   m_Name: Strike (15)
   m_TagString: PlayerSpell2
@@ -264,6 +276,7 @@ GameObject:
   - component: {fileID: 50257195158323126}
   - component: {fileID: 114810336889241384}
   - component: {fileID: 70347512818223630}
+  - component: {fileID: 114865806049920490}
   m_Layer: 9
   m_Name: Strike (14)
   m_TagString: PlayerSpell2
@@ -301,6 +314,7 @@ GameObject:
   - component: {fileID: 50079647176803298}
   - component: {fileID: 114365699431801056}
   - component: {fileID: 70310090190894492}
+  - component: {fileID: 114432337306006090}
   m_Layer: 9
   m_Name: Strike (12)
   m_TagString: PlayerSpell2
@@ -321,6 +335,7 @@ GameObject:
   - component: {fileID: 50977122231007680}
   - component: {fileID: 114698610808284372}
   - component: {fileID: 70493730647067980}
+  - component: {fileID: 114899190036837122}
   m_Layer: 9
   m_Name: Strike (11)
   m_TagString: PlayerSpell2
@@ -1361,6 +1376,34 @@ MonoBehaviour:
   Strikes: 25
   struck: 0
   childs: 0
+--- !u!114 &114051796790674990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317350055624396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  time: 0.5
+  elapsed: 0
+--- !u!114 &114082148130696016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1092752076917638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  time: 0.5
+  elapsed: 0
 --- !u!114 &114141105011829682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1385,6 +1428,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6d10a28b832e944b0eb99d00e0245d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0.5
+  elapsed: 0
+--- !u!114 &114190521568809152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1349862581694680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
   time: 0.5
   elapsed: 0
 --- !u!114 &114245231727015388
@@ -1452,6 +1509,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0.5
   elapsed: 0
+--- !u!114 &114432337306006090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1679647131671876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  time: 0.5
+  elapsed: 0
+--- !u!114 &114462091902679726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1589115245930622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  time: 0.5
+  elapsed: 0
 --- !u!114 &114494738490654726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1476,6 +1561,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6d10a28b832e944b0eb99d00e0245d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0.5
+  elapsed: 0
+--- !u!114 &114560993793231248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1503116937971664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
   time: 0.5
   elapsed: 0
 --- !u!114 &114615714657228554
@@ -1504,6 +1603,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0.5
   elapsed: 0
+--- !u!114 &114666944296623966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1557815496453792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  time: 0.5
+  elapsed: 0
 --- !u!114 &114698610808284372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1515,6 +1628,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6d10a28b832e944b0eb99d00e0245d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0.5
+  elapsed: 0
+--- !u!114 &114757750434356974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1486443431468696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  time: 0.5
+  elapsed: 0
+--- !u!114 &114780551369072696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501996314553122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
   time: 0.5
   elapsed: 0
 --- !u!114 &114790951494137928
@@ -1543,6 +1684,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0.5
   elapsed: 0
+--- !u!114 &114813181002337310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1384641325927966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  time: 0.5
+  elapsed: 0
+--- !u!114 &114825788565118622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1229335794734390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  time: 0.5
+  elapsed: 0
+--- !u!114 &114865806049920490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606863281162288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  time: 0.5
+  elapsed: 0
+--- !u!114 &114899190036837122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1924753113244904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  time: 0.5
+  elapsed: 0
 --- !u!114 &114931165608571302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1558,6 +1755,34 @@ MonoBehaviour:
   currenttime: 0
   nr: 0
   childs: 0
+--- !u!114 &114939890727514028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1551200817092866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  time: 0.5
+  elapsed: 0
+--- !u!114 &114940087644857134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1525273808116116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6c8f7476102fb40859eca53f059048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  time: 0.5
+  elapsed: 0
 --- !u!212 &212122315772536918
 SpriteRenderer:
   m_ObjectHideFlags: 1

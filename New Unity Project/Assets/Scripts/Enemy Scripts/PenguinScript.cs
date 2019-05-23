@@ -8,7 +8,10 @@ public class PenguinScript : MonoBehaviour
     public Transform floatingDamageP1;
     public Transform floatingDamageP2;
     public GameObject Bulletprefab;
-    public float shootingDelay = 2f;
+    public GameObject rangedisc;
+    public float shootingDelaymax = 2f;
+    public float shootingDelaymin = 2f;
+    private float shootingDelay = 2f;
     private float cooldownTimer = 2.5f;
     public float maxHealth = 20;
     public float currentHealth;
@@ -19,19 +22,24 @@ public class PenguinScript : MonoBehaviour
     private Material matRed;
     private Material matDefault;
     SpriteRenderer sr;
+    public int moveing;
 
 
     private Transform Player;
     private Transform Player2;
     private float x;
     private float y;
-
+    public Rigidbody2D rb;
+    Vector2 posit;
+    float randstop;
 
     void Start()
     {
-       
+
         x = Random.Range(-12f, 13f);
-        y = Random.Range(-8f, 5f);
+        y = Random.Range(-8f, 0f);
+        //x = Random.Range(-4f, 5f);
+       // y = Random.Range(-5f, -3f);
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         currentHealth = maxHealth;
         randpos = new Vector2(x, y);
@@ -40,55 +48,63 @@ public class PenguinScript : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         matRed = Resources.Load("RedFlash", typeof(Material)) as Material;
         matDefault = sr.material;
+        GameObject Stopdisc = (GameObject)Instantiate(rangedisc,new Vector3(x,y,0), Quaternion.identity);
+        posit = transform.position;
+        randstop = Random.Range(-5f, -1f);
+        shootingDelay = Random.Range(shootingDelaymin, shootingDelaymax);
     }
 
 
     void Update()
     {
         cooldownTimer -= Time.deltaTime;
-       
 
-        if (cooldownTimer <=0)
+        if(transform.position.y < randstop)
         {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = 0;
+        }
+        if (transform.position.x < -12f||transform.position.x>13f)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = 0;
+        }
+        if (cooldownTimer <= 0)
+        {
+            shootingDelay = Random.Range(shootingDelaymin, shootingDelaymax);
             cooldownTimer = shootingDelay;
             GameObject bullet = (GameObject)Instantiate(Bulletprefab, transform.position, transform.rotation);
-            
+
 
         }
-        transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
-
-        //if (currentHealth <= 0)
-        //{
-        //    //Instantiate(deathAnimation, transform.position, transform.rotation);
-            
-
-        //    Destroy(gameObject);
-        //}
-
-        if (Player == null && Player2 == null)
+        if (moveing == 0)
         {
-            GameObject go = GameObject.FindGameObjectWithTag("Player");
-            GameObject go2 = GameObject.FindGameObjectWithTag("Player2");
+            //transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
 
-            if (go != null && go2 !=null)
-            {
-                //Player = go.transform;
-                Player2 = go2.transform;
-            }
+
+
+            rb.AddForce((randpos - posit).normalized * moveSpeed);
         }
+        if (moveing >= 1)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = 0;
 
-        if (Player == null && Player2 == null)
-            return;
-
-        
-
-       
-
-
+        }
     }
-    
+
+
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.gameObject.tag == "PenguinPoint")
+        {
+            moveing =1;
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity =0;
+
+        }
+
+
         if (col.gameObject.tag == "PlayerSpell")
         {
             sr.material = matRed;

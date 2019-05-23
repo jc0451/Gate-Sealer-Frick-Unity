@@ -209,7 +209,7 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    //not for use ??
+    
     private IEnumerator IFadeOut(string name, float duration)
     {
 
@@ -341,6 +341,15 @@ public class AudioManager : MonoBehaviour
 
             timerIsSet = false;
 
+        }
+
+        if (GameControl.isPaused == true)
+        {
+            PauseMusic("BattleMusic");
+        }
+        else
+        {
+            UnPauseMusic("BattleMusic");
         }
 
     }

@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 1173030326191268, guid: 799a1bb2f4bcf614b82ffaa13020c971, type: 2}
+  Spawnflame: {fileID: 1773528130653780, guid: 7fa31090637c82c419fc6b5c6d0985b3, type: 2}
   spawndelay: 4
   maxspawn: 1
   timeactual: 5

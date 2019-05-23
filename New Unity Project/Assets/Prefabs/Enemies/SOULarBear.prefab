@@ -103,7 +103,7 @@ MonoBehaviour:
     type: 2}
   floatingDamageP2: {fileID: 224588030612505716, guid: 7e67d3267e2423b4fb3aec309078e56f,
     type: 2}
-  moveSpeed: 1.5
+  moveSpeed: 1.2
   maxHealth: 6
 --- !u!212 &212953841955392856
 SpriteRenderer:

@@ -6,22 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/scenes/main - Copy + main - Copy.unity
-    guid: 4ff60410e936d214ebda77329af2cfdc
-  - enabled: 0
-    path: Assets/scenes/HighScoreBoard.unity
-    guid: ac9f9e7a7baf0cb41ac69bf112f29cd8
-  - enabled: 0
     path: Assets/scenes/mainMenu.unity
     guid: d5663acc1086b004493c6ec50035ba2a
-  - enabled: 0
+  - enabled: 1
+    path: Assets/scenes/Main.unity
+    guid: 4ff60410e936d214ebda77329af2cfdc
+  - enabled: 1
+    path: Assets/scenes/HighScore.unity
+    guid: ac9f9e7a7baf0cb41ac69bf112f29cd8
+  - enabled: 1
     path: Assets/scenes/Player1WinScreen.unity
     guid: 8e575a6c0f703d4428852a569c5b7b35
-  - enabled: 0
+  - enabled: 1
     path: Assets/scenes/Player2WinScreen.unity
     guid: 5bd70d350447acb4c89440f6a02b82e7
-  - enabled: 0
-    path: Assets/scenes/WaitingRoom.unity
+  - enabled: 1
+    path: Assets/scenes/Credits.unity
     guid: bdf93d720b42b504cacb6c2bdaf53e38
   - enabled: 0
     path: Assets/scenes/speels v2.unity

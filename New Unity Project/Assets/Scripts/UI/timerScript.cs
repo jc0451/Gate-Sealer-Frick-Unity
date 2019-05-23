@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class timerScript : MonoBehaviour {
 
     Text text;
-    public static float timer = 300f;
+    [SerializeField]
+    public static float timer = 180;
 
 	void Start ()
     {
@@ -25,7 +26,7 @@ public class timerScript : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-            timer = 300;
+            timer = 180;
         }
     }
 }

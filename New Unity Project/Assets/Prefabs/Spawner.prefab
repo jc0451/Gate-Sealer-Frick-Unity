@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434af2e218e268441b61077ec8f942b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 1931817207458854, guid: 6c06b993e0ae4b6439926c3dc3124ccb, type: 2}
-  spawndelay: 4
-  maxspawn: 10
-  timeactual: 4
+  Enemy: {fileID: 1173030326191268, guid: 799a1bb2f4bcf614b82ffaa13020c971, type: 2}
+  spawndelay: 1
+  maxspawn: 5
+  timeactual: 5

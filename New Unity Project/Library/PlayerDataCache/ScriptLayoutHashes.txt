@@ -1,8 +1,13 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Maher Jaber/Documents/GateSealers game/GateSealers.exe
+C:/Users/Maher Jaber/Documents/GateSealers game/GateSealerss.exe
 SceneListBegin?
-Assets/scenes/main - Copy + main - Copy.unity
+Assets/scenes/mainMenu.unity
+Assets/scenes/Main.unity
+Assets/scenes/HighScore.unity
+Assets/scenes/Player1WinScreen.unity
+Assets/scenes/Player2WinScreen.unity
+Assets/scenes/Credits.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameAudio
 d5be1ca94278aa7358c511834dede500 Assembly-CSharp.dll:.DeleteExplosion
@@ -213,6 +218,7 @@ c96e4b0a502c437710c29f4882669b2a Assembly-CSharp.dll:.voiceinputtest
 76015de5fcb247eeb8df66c001d5a22d Assembly-CSharp.dll:TMPro.Examples.TMP_FrameRateCounter
 b8f04bdad423045528c67dfa4c3dca0d Assembly-CSharp.dll:TMPro.Examples.VertexShakeA
 4b2952562a75b68f6a1378b30efd67c4 Assembly-CSharp.dll:.bearScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameControl
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -228,7 +234,6 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 7ad9aef6f9e63bd7c394a8e904c09061 Assembly-CSharp.dll:.Player1
-7b2d2c2a55e04afd5272f2579a88a0b9 Assembly-CSharp.dll:.Fader
 62229a3e4d53ca59bec192e89627ed52 Assembly-CSharp.dll:TMPro.Examples.CameraController
 c98efe321ee13210205230a8316140b6 Assembly-CSharp.dll:.SeaGhouls2
 d5be1ca94278aa7358c511834dede500 Assembly-CSharp.dll:.DeathTick
@@ -273,4 +278,7 @@ af7666733efcc974926d7d470e1732a6 Assembly-CSharp.dll:TMPro.Examples.SkewTextExam
 2dd61170124060e15ba4a95b4abacedc Assembly-CSharp.dll:.FloatingDmg
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Restart
+cf8834d138a2359c852fb8d08076b69a Assembly-CSharp.dll:.SceneTransition
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MainMenuScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CreditsScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HighscoreScene

@@ -31,27 +31,27 @@ public class RuneTimer : MonoBehaviour {
 	
 	void Update ()
     {
-        if (timerScript.timer <= 59)
+        if (timerScript.timer <= 1f)
         {
             spriterenderer.sprite = sprites[0];
         }
-        else if (timerScript.timer <= 60f)
+        else if (timerScript.timer <= 36f)
         {
             spriterenderer.sprite = sprites[1];
         }
-        else if (timerScript.timer <= 120f)
+        else if (timerScript.timer <= 72f)
         {
             spriterenderer.sprite = sprites[2];
         }
-        else if (timerScript.timer <= 180f)
+        else if (timerScript.timer <= 108f)
         {
             spriterenderer.sprite = sprites[3];
         }
-        else if (timerScript.timer <= 240f)
+        else if (timerScript.timer <= 144f)
         {
             spriterenderer.sprite = sprites[4];
         }
-        else if (timerScript.timer <= 300f)
+        else if (timerScript.timer <= 180f)
         {
             spriterenderer.sprite = sprites[5];
         }

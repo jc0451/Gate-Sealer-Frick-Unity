@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/scenes/AlexScene.unity
+=======
+- path: Assets/scenes/Main.unity
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1

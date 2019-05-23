@@ -101,7 +101,7 @@ MonoBehaviour:
     isLooping: 0
     playOnAwake: 0
   - audioName: Seagull
-    audioClip: {fileID: 8300000, guid: 71528d7604be4f644a546fec114d133e, type: 3}
+    audioClip: {fileID: 8300000, guid: d70957f952f139d40ab903833fee5977, type: 3}
     volume: 0.3
     source: {fileID: 0}
     isLooping: 0

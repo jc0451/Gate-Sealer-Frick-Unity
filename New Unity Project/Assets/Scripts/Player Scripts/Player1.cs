@@ -14,8 +14,9 @@ public class Player1 : MonoBehaviour {
     public bool invincible = false;
     public float Invtime;
     private float invtime;
-
     
+    SpriteRenderer sr;
+
 
     public GameObject Spell1Mk1;
     public GameObject Spell1Mk2;
@@ -43,7 +44,9 @@ public class Player1 : MonoBehaviour {
     public float damage;
     public bool resetswitch;
 
-    // Use this for initialization
+    private bool active = false;
+    public float flashtime;
+    private float flashCounter;
 
     void Start() {
         resetswitch = true;
@@ -52,10 +55,11 @@ public class Player1 : MonoBehaviour {
         decaydelay = Decaydelay;
         invtime = Invtime;
 
+        sr = GetComponent<SpriteRenderer>();
     }
 
 
-    // Update is called once per frame
+   
 
     void Update () {
         if (invincible == true)
@@ -115,6 +119,29 @@ public class Player1 : MonoBehaviour {
                 shield = false;
                 shieldtime = Shieldtime;
             }
+        }
+
+        if (active == true)
+        {
+            if (flashCounter > flashtime * .40f)
+            {
+                sr.color = new Color(255, 28, 40, 255);
+
+            }
+            else if (flashCounter > flashtime * .25f)
+            {
+                sr.color = new Color(sr.color.r, sr.color.b, sr.color.g);
+            }
+            else if (flashCounter > flashtime * .10f)
+            {
+                sr.color = new Color(255, 28, 40, 255);
+            }
+            else if (flashCounter > 0f)
+            {
+                sr.color = new Color(sr.color.r, sr.color.b, sr.color.g);
+                active = false;
+            }
+            flashCounter -= Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.A))
@@ -297,6 +324,8 @@ public class Player1 : MonoBehaviour {
         {
             if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "FireBall")
             {
+                active = true;
+                flashCounter = flashtime;
                 if (meterswitch == false)
                 {
 
@@ -315,8 +344,11 @@ public class Player1 : MonoBehaviour {
                     stunMeter.value -= damage;
                 }
             }
+            
         }
+        
     }
+    
 
-
+    
 }

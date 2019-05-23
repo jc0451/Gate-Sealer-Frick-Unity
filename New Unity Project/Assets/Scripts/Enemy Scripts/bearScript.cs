@@ -39,7 +39,7 @@ public class bearScript : MonoBehaviour
         if (transform.position.y <=-9)
         {
             FindObjectOfType<AudioManager>().Play("BearAttack");
-            print("gay");
+            
             Player1.stun1 = true;
             Player2.stun2 = true;
             CommitDie();

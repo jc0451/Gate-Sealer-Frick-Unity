@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -334,7 +335,7 @@ public class AudioManager : MonoBehaviour
     private void Update()
     {
 
-        if(Time.time >= timeToReset && timerIsSet)
+        if (Time.time >= timeToReset && timerIsSet)
         {
 
             ResetVol();
@@ -352,6 +353,11 @@ public class AudioManager : MonoBehaviour
             UnPauseMusic("BattleMusic");
         }
 
+        if (SceneManager.GetActiveScene()== SceneManager.GetSceneByName("Player1WinScreen") || SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Player2WinScreen"))
+        {
+            StopMusic("BattleMusic");
+
+        }
     }
 
 

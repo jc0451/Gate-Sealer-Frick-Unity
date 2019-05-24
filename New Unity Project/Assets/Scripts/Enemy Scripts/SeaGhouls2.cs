@@ -7,6 +7,8 @@ public class SeaGhouls2 : MonoBehaviour {
     private GameObject P1;
     private GameObject P2;
 
+    public GameObject dieflame;
+
     public Transform floatingDamageP1;
     public Transform floatingDamageP2;
     int rand1;
@@ -149,6 +151,7 @@ public class SeaGhouls2 : MonoBehaviour {
         {
             //Instantiate(deathAnimation, transform.position, transform.rotation);
             FindObjectOfType<AudioManager>().Play("Seagull");
+            GameObject die = (GameObject)Instantiate(dieflame, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
@@ -169,6 +172,7 @@ public class SeaGhouls2 : MonoBehaviour {
         else if (col.gameObject.tag == "Player")
         {
             FindObjectOfType<AudioManager>().Play("Seagull");
+            GameObject die = (GameObject)Instantiate(dieflame, transform.position, transform.rotation);
             Destroy(gameObject);
         }
 
@@ -185,6 +189,7 @@ public class SeaGhouls2 : MonoBehaviour {
         else if (col.gameObject.tag == "Player2")
         {
             FindObjectOfType<AudioManager>().Play("Seagull");
+            GameObject die = (GameObject)Instantiate(dieflame, transform.position, transform.rotation);
             Destroy(gameObject);
         }
 

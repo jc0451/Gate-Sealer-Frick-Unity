@@ -9,6 +9,7 @@ public class PenguinScript : MonoBehaviour
     public Transform floatingDamageP2;
     public GameObject Bulletprefab;
     public GameObject rangedisc;
+    public GameObject dieflame;
     public float shootingDelaymax = 2f;
     public float shootingDelaymin = 2f;
     private float shootingDelay = 2f;
@@ -118,6 +119,7 @@ public class PenguinScript : MonoBehaviour
         }
         else if (currentHealth <= 0)
         {
+            
             KillsItself();
         }
         else
@@ -157,6 +159,7 @@ public class PenguinScript : MonoBehaviour
     private void KillsItself()
     {
         FindObjectOfType<AudioManager>().Play("Penguin");
+        GameObject die = (GameObject)Instantiate(dieflame, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }

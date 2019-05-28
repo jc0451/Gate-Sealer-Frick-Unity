@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/scenes/AlexScene.unity
-=======
-- path: Assets/scenes/mainMenu.unity
->>>>>>> master
+- path: Assets/scenes/Main.unity
   isLoaded: 1
   isActive: 1

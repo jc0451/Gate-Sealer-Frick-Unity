@@ -121,7 +121,7 @@ MonoBehaviour:
     type: 2}
   floatingDamageP2: {fileID: 224588030612505716, guid: 7e67d3267e2423b4fb3aec309078e56f,
     type: 2}
-  Bulletprefab: {fileID: 1721734652678828, guid: 9fc67a8811883264883a478d7e125b2b,
+  Bulletprefab: {fileID: 1478480164966996, guid: 030f8d1452076a844b1e82041fb866ce,
     type: 2}
   rangedisc: {fileID: 1893064049147310, guid: 35ce67bb4d35ec348924d05aa97692e9, type: 2}
   dieflame: {fileID: 1155089181416660, guid: 2f3b1e6ca1d252f418a854cacacd5c21, type: 2}

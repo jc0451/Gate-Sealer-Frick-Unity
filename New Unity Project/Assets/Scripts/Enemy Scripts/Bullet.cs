@@ -9,30 +9,49 @@ public class Bullet : MonoBehaviour
     public float moveSpeed = 8f;
     public float deleteTime = 10f;
     Rigidbody2D rb;
-  
+    float roationspeed = 160;
     private int coin;
     Vector2 direction;
+    Transform target;
     public GameObject P1;
     public GameObject P2;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-      
-       P1 = GameObject.Find("Player1");
-       P2 = GameObject.Find("Player2");
+
+        P1 = GameObject.Find("Player1");
+        P2 = GameObject.Find("Player2");
         coin = Random.Range(0, 2);
-     
+
+    }
+
+    void movetowards ()
+    {
+        
+
         if (coin == 1)
         {
+            
             direction = (P1.transform.position - transform.position).normalized * moveSpeed;
+            
+            float z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
+            Quaternion rotation = Quaternion.Euler(0, 0, z);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, roationspeed * Time.deltaTime);
+            
         }
         else if (coin == 0)
         {
-            direction = (P2.transform.position - transform.position).normalized * moveSpeed;
-        }
 
+            direction = (P2.transform.position - transform.position).normalized * moveSpeed;
+            
+            float z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
+            Quaternion rotation = Quaternion.Euler(0, 0, z);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, roationspeed * Time.deltaTime);
+           
+        }
     }
+     
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
@@ -52,11 +71,8 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(direction.x, direction.y);
-        //Vector3 pos = transform.position;
-        //Vector3 Direction = new Vector3(0, moveSpeed * Time.deltaTime);
-        //pos += transform.rotation * Direction;
-        //transform.position = pos;
-
+        
+        movetowards();
         deleteTime -= Time.deltaTime;
 
         if (deleteTime <= 0)

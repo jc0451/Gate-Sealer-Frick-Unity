@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        
         P1 = GameObject.Find("Player1");
         P2 = GameObject.Find("Player2");
         coin = Random.Range(0, 2);
@@ -32,8 +32,8 @@ public class Bullet : MonoBehaviour
 
         if (coin == 1)
         {
-            
-            direction = (P1.transform.position - transform.position).normalized * moveSpeed;
+
+            direction = new Vector2(P1.transform.position.x, P1.transform.position.y).normalized * moveSpeed;
             
             float z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
             Quaternion rotation = Quaternion.Euler(0, 0, z);
@@ -43,7 +43,7 @@ public class Bullet : MonoBehaviour
         else if (coin == 0)
         {
 
-            direction = (P2.transform.position - transform.position).normalized * moveSpeed;
+            direction = new Vector2(P2.transform.position.x, P2.transform.position.y).normalized * moveSpeed;
             
             float z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
             Quaternion rotation = Quaternion.Euler(0, 0, z);
@@ -71,7 +71,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(direction.x, direction.y);
-        
+
         movetowards();
         deleteTime -= Time.deltaTime;
 

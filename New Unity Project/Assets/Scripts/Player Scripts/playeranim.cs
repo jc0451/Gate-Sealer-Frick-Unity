@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class playeranim : MonoBehaviour {
 
     private Animator anim;
-    public Slider stunMeter;
+    
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -17,11 +17,11 @@ public class playeranim : MonoBehaviour {
     {
 
 
-        if (stunMeter.value == 5)
+        if (Player1.stun1 == false)
         {
             anim.SetBool("Stunned", false);
         }
-        else
+        else 
         {
             anim.SetBool("Stunned", true);
         }

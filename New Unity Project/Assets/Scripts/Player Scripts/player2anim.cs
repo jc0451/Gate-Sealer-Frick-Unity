@@ -16,7 +16,7 @@ public class player2anim : MonoBehaviour {
     void FixedUpdate()
     {
 
-        if (stunMeter.value == 5)
+        if (Player2.stun2 == false)
         {
             anim.SetBool("Stunned", false);
         }

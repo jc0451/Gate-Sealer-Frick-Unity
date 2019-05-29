@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 212406712687161978}
   - component: {fileID: 60878608561752450}
   - component: {fileID: 114056350229451672}
+  - component: {fileID: 95337053292825910}
   m_Layer: 12
   m_Name: SeaGhoul
   m_TagString: Enemy
@@ -132,6 +133,23 @@ PolygonCollider2D:
       - {x: -1, y: -0.42499998}
       - {x: -0.81, y: -0.255}
       - {x: -0.59999996, y: -0.095}
+--- !u!95 &95337053292825910
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1931817207458854}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c82e2c314312cd44bbe723238d1334c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114056350229451672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8780738afbfc8db4ebcc3a523fd312d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 95337053292825910}
   dieflame: {fileID: 1155089181416660, guid: 2f3b1e6ca1d252f418a854cacacd5c21, type: 2}
   floatingDamageP1: {fileID: 224696391906591526, guid: cb638eda5b0618740a4dfe9cfddf7ded,
     type: 2}

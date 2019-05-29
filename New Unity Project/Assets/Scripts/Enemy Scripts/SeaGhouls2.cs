@@ -6,7 +6,7 @@ public class SeaGhouls2 : MonoBehaviour {
 
     private GameObject P1;
     private GameObject P2;
-
+    public Animator anim;
     public GameObject dieflame;
 
     public Transform floatingDamageP1;
@@ -47,6 +47,7 @@ public class SeaGhouls2 : MonoBehaviour {
         y2 = Random.Range(-1f, 2f);
         y3 = Random.Range(-2f, 1f);
         y4 = Random.Range(-3f, 0f);
+        anim = GetComponent<Animator>();
 
     }
 	
@@ -59,11 +60,13 @@ public class SeaGhouls2 : MonoBehaviour {
             {
                 randpos = new Vector2(lx, y1);
                 transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+                anim.SetBool("Left", true);
             }
             else if (coin == 1)
             {
                 randpos = new Vector2(rx, y1);
                 transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+                anim.SetBool("Left", false);
             }
             if(currpos == randpos)
             {
@@ -80,11 +83,13 @@ public class SeaGhouls2 : MonoBehaviour {
             {
                 randpos = new Vector2(rx, y2);
                 transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+                anim.SetBool("Left", false);
             }
             else if (coin == 1)
             {
                 randpos = new Vector2(lx, y2);
                 transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+                anim.SetBool("Left", true);
             }
             if (currpos == randpos)
             {
@@ -101,11 +106,13 @@ public class SeaGhouls2 : MonoBehaviour {
             {
                 randpos = new Vector2(lx, y3);
                 transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+                anim.SetBool("Left", true);
             }
             else if (coin == 1)
             {
                 randpos = new Vector2(rx, y3);
                 transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+                anim.SetBool("Left", false);
             }
             if (currpos == randpos)
             {
@@ -122,11 +129,13 @@ public class SeaGhouls2 : MonoBehaviour {
             {
                 randpos = new Vector2(rx, y4);
                 transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+                anim.SetBool("Left", false);
             }
             else if (coin == 1)
             {
                 randpos = new Vector2(lx, y4);
                 transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+                anim.SetBool("Left", true);
             }
             if (currpos == randpos)
             {
@@ -140,10 +149,26 @@ public class SeaGhouls2 : MonoBehaviour {
             if (randP == 1)
             {
                 transform.position = Vector2.MoveTowards(transform.position, P1.transform.position, Time.deltaTime * moveSpeed);
+                if (P1.transform.position.x < 0)
+                {
+                    anim.SetBool("Left", true);
+                }
+                else
+                {
+                    anim.SetBool("Left", false);
+                }
             }
             if (randP == 2)
             {
                 transform.position = Vector2.MoveTowards(transform.position, P2.transform.position, Time.deltaTime * moveSpeed);
+                if (P2.transform.position.x < 0)
+                {
+                    anim.SetBool("Left", true);
+                }
+                else
+                {
+                    anim.SetBool("Left", false);
+                }
             }
 
         }

@@ -10,6 +10,7 @@ public class Player2 : MonoBehaviour
     public bool urf = false;
     public Slider spellsMeter;
     public Slider stunMeter;
+    public Slider stuncool;
     public bool meterswitch;
     public bool invincible = false;
     public float Invtime;
@@ -154,6 +155,7 @@ public class Player2 : MonoBehaviour
                 shieldbreak.transform.position = shieldpos;
                 shield = false;
                 cooldw2 = true;
+                stuncool.value = 0;
                 shieldtime = Shieldtime;
                 shieldcoldw = Shieldcoldw;
 
@@ -163,9 +165,11 @@ public class Player2 : MonoBehaviour
         if (cooldw2 == true)
         {
             shieldcoldw -= Time.deltaTime;
+            stuncool.value += Time.deltaTime;
             if (shieldcoldw <= 0)
             {
                 shieldup = false;
+                stuncool.value = Shieldcoldw;
                 shieldcoldw = Shieldcoldw;
                 cooldw2 = false;
             }

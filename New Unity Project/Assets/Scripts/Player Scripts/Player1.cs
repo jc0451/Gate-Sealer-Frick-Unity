@@ -120,6 +120,7 @@ public class Player1 : MonoBehaviour {
         {
             Player2.stun2 = true;
             spellsMeter.value = 0;
+            FindObjectOfType<AudioManager>().Play("Stun");
         }
         if (Input.GetKey(KeyCode.R))
         {
@@ -129,7 +130,7 @@ public class Player1 : MonoBehaviour {
                 shieldpos.y = -9;
                 invincible = true;
                 invtime = shieldtime;
-                
+                FindObjectOfType<AudioManager>().Play("ShieldCreate");
                 GameObject shieldd = (GameObject)Instantiate(Shield);
                 rb.constraints = RigidbodyConstraints2D.FreezePositionX;
                 shieldd.transform.position = shieldpos;
@@ -149,6 +150,7 @@ public class Player1 : MonoBehaviour {
             {
                 shieldpos = transform.position;
                 shieldpos.y = -9;
+                FindObjectOfType<AudioManager>().Play("Shieldshatter");
                 GameObject shieldbreak = (GameObject)Instantiate(Shieldbreak);
                 rb.constraints = RigidbodyConstraints2D.None;
                 shieldbreak.transform.position = shieldpos;
@@ -404,6 +406,8 @@ public class Player1 : MonoBehaviour {
                     Shake.shake1 = true;
                     Shake.time1 = 0.5f;
                 }
+
+               
             }
             
         }

@@ -113,7 +113,7 @@ MonoBehaviour:
     isLooping: 0
     playOnAwake: 0
   - audioName: BattleMusic
-    audioClip: {fileID: 8300000, guid: 21d4aa9f981a04c4ea432b53fa17ad6b, type: 3}
+    audioClip: {fileID: 8300000, guid: 1742470f954397f419f512b48fbc8ec4, type: 3}
     volume: 0.5
     source: {fileID: 0}
     isLooping: 1
@@ -167,6 +167,30 @@ MonoBehaviour:
     isLooping: 0
     playOnAwake: 0
   - audioName: BearAttack
+    audioClip: {fileID: 8300000, guid: b5e093d3fca59e149ba445451063cb57, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: Stun
+    audioClip: {fileID: 8300000, guid: b52fa9eea73207543a13369a9117643a, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: Shieldshatter
+    audioClip: {fileID: 8300000, guid: d2da584690363dd499835481b8296464, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: ShieldCreate
+    audioClip: {fileID: 8300000, guid: 87cf9815ee7e8ff40beb5cc1fc049e34, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: something
     audioClip: {fileID: 8300000, guid: b5e093d3fca59e149ba445451063cb57, type: 3}
     volume: 0.5
     source: {fileID: 0}

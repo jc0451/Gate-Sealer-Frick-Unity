@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class player2anim : MonoBehaviour {
 
     private Animator anim;
-
+    public Slider stunMeter;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -14,6 +15,17 @@ public class player2anim : MonoBehaviour {
 
     void FixedUpdate()
     {
+
+        if (stunMeter.value == 5)
+        {
+            anim.SetBool("Stunned", false);
+        }
+        else
+        {
+            anim.SetBool("Stunned", true);
+        }
+
+
         if (Input.GetKeyDown(KeyCode.O))
         {
             anim.SetBool("clappingRight", true);

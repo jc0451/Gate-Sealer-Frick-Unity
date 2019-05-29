@@ -2004,6 +2004,22 @@ Prefab:
       propertyPath: stuncool
       value: 
       objectReference: {fileID: 1528354156}
+    - target: {fileID: 114010379934200102, guid: f86696099b13aed4fa6853ba7f30975c,
+        type: 2}
+      propertyPath: stunMeter
+      value: 
+      objectReference: {fileID: 1732049197}
+    - target: {fileID: 212487409506748712, guid: f86696099b13aed4fa6853ba7f30975c,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e39c01f800917b64f8832677ccc1ef7d,
+        type: 3}
+    - target: {fileID: 212487409506748712, guid: f86696099b13aed4fa6853ba7f30975c,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f86696099b13aed4fa6853ba7f30975c, type: 2}
   m_IsPrefabParent: 0
@@ -3685,6 +3701,11 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114649304617474920, guid: d8a972fae7715c446a84b66eb26049f2,
+        type: 2}
+      propertyPath: stunMeter
+      value: 
+      objectReference: {fileID: 1723939998}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8a972fae7715c446a84b66eb26049f2, type: 2}
   m_IsPrefabParent: 0
@@ -3788,15 +3809,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f964fb2db9dc151459a53c1cd2f8ad8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSprites: []
-  laserSprites: []
-  explosionSprites: []
-  thunderSprites: []
-  projectiles: {fileID: 0}
-  lasers: {fileID: 0}
-  explosions: {fileID: 0}
-  thunders: {fileID: 0}
-  spellMeterP1: {fileID: 0}
+  projectileSprites:
+  - {fileID: 21300000, guid: 4995a20452f334a44bab541bdcf61f61, type: 3}
+  - {fileID: 21300000, guid: 93a4a418816d87847998450d3c1b1970, type: 3}
+  - {fileID: 21300000, guid: e69f643627836454b97c0412d9609c3f, type: 3}
+  laserSprites:
+  - {fileID: 21300000, guid: 2347aea3eb144a54980cc18a863c7c29, type: 3}
+  - {fileID: 21300000, guid: 5b7f57f35c37e1d479d393404d8289de, type: 3}
+  - {fileID: 21300000, guid: 70ab51f740abdc141bd5c97669507701, type: 3}
+  explosionSprites:
+  - {fileID: 21300000, guid: 1cc02437846605b4e8589098f97a4214, type: 3}
+  - {fileID: 21300000, guid: 4704d4eb8b88c50419b4f37340494fab, type: 3}
+  - {fileID: 21300000, guid: ebf21f9b168a3a94d960be653dc5d070, type: 3}
+  thunderSprites:
+  - {fileID: 21300000, guid: 24bce30eb211dbc48b39a24b72b5fe33, type: 3}
+  - {fileID: 21300000, guid: 3573b12f98b348d42b40b4fe9f8dd2fd, type: 3}
+  - {fileID: 21300000, guid: 6c4496da26b9cfb43aee13306fe03410, type: 3}
+  projectiles: {fileID: 1622906714}
+  lasers: {fileID: 997250336}
+  explosions: {fileID: 341039959}
+  thunders: {fileID: 850288182}
+  spellMeterP1: {fileID: 1108986986}
 --- !u!1 &1758903342
 GameObject:
   m_ObjectHideFlags: 0
@@ -4922,15 +4955,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e99896bc82d0346b25f774068dc3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSprites: []
-  laserSprites: []
-  explosionSprites: []
-  thunderSprites: []
-  projectiles: {fileID: 0}
-  lasers: {fileID: 0}
-  explosions: {fileID: 0}
-  thunders: {fileID: 0}
-  spellMeterP2: {fileID: 0}
+  projectileSprites:
+  - {fileID: 21300000, guid: 4995a20452f334a44bab541bdcf61f61, type: 3}
+  - {fileID: 21300000, guid: 93a4a418816d87847998450d3c1b1970, type: 3}
+  - {fileID: 21300000, guid: e69f643627836454b97c0412d9609c3f, type: 3}
+  laserSprites:
+  - {fileID: 21300000, guid: 2347aea3eb144a54980cc18a863c7c29, type: 3}
+  - {fileID: 21300000, guid: 5b7f57f35c37e1d479d393404d8289de, type: 3}
+  - {fileID: 21300000, guid: 70ab51f740abdc141bd5c97669507701, type: 3}
+  explosionSprites:
+  - {fileID: 21300000, guid: 1cc02437846605b4e8589098f97a4214, type: 3}
+  - {fileID: 21300000, guid: 4704d4eb8b88c50419b4f37340494fab, type: 3}
+  - {fileID: 21300000, guid: ebf21f9b168a3a94d960be653dc5d070, type: 3}
+  thunderSprites:
+  - {fileID: 21300000, guid: 24bce30eb211dbc48b39a24b72b5fe33, type: 3}
+  - {fileID: 21300000, guid: 3573b12f98b348d42b40b4fe9f8dd2fd, type: 3}
+  - {fileID: 21300000, guid: 6c4496da26b9cfb43aee13306fe03410, type: 3}
+  projectiles: {fileID: 1117484143}
+  lasers: {fileID: 1117435275}
+  explosions: {fileID: 1758903344}
+  thunders: {fileID: 760763498}
+  spellMeterP2: {fileID: 269262774}
 --- !u!1 &2137314345
 GameObject:
   m_ObjectHideFlags: 0

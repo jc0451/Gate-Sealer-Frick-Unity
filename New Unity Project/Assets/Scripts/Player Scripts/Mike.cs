@@ -8,18 +8,35 @@ public class Mike : MonoBehaviour {
 
     [SerializeField]
     public float loudness;
-    public int devicenr=1;
+    private int devicenr;
 
 
 
     private string _device;
+    int nr = 0;
+    int dnr;
+
 
     //mic initialization
     void InitMic()
     {
-        if (_device == null) _device = Microphone.devices[devicenr];
+        foreach (var device in Microphone.devices)
+        {
+            Debug.Log(nr + "Name: " + device);
+
+            if (device == "VoiceMeeter Output (VB-Audio VoiceMeeter VAIO)")
+            {
+
+                dnr = nr;
+            }
+
+
+            nr++;
+        }
+        if (_device == null) _device = Microphone.devices[dnr];
         _clipRecord = Microphone.Start(_device, true, 999, 44100);
     }
+   
 
     void StopMicrophone()
     {

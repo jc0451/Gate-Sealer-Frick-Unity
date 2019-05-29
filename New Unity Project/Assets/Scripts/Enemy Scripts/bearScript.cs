@@ -6,6 +6,7 @@ public class bearScript : MonoBehaviour
 {
     public Transform floatingDamageP1;
     public Transform floatingDamageP2;
+    public GameObject dieflame;
     public float moveSpeed = 1f;
     public float maxHealth = 6;
     private float currentHealth;
@@ -39,7 +40,9 @@ public class bearScript : MonoBehaviour
         if (transform.position.y <=-9)
         {
             FindObjectOfType<AudioManager>().Play("BearAttack");
-            
+            GameObject die = (GameObject)Instantiate(dieflame, transform.position, transform.rotation);
+            Shake.shakescreen = true;
+            Shake.time0 = 1f;
             Player1.stun1 = true;
             Player2.stun2 = true;
             CommitDie();

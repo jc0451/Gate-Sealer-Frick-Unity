@@ -31,6 +31,14 @@ public class Player1 : MonoBehaviour {
     public GameObject Spell4Mk2;
     public GameObject Spell4Mk3;
 
+    public GameObject Shield;
+    public GameObject Shieldbreak;
+    private bool shieldup = false;
+    Vector2 shieldpos;
+    private float shieldcoldw;
+    public float Shieldcoldw;
+    public static bool cooldw1 = false;
+
     public Rigidbody2D rb;
     public float speed;
     public static bool stun1 = false;
@@ -54,6 +62,7 @@ public class Player1 : MonoBehaviour {
         shieldtime = Shieldtime;
         decaydelay = Decaydelay;
         invtime = Invtime;
+        shieldcoldw = Shieldcoldw;
 
         sr = GetComponent<SpriteRenderer>();
     }
@@ -78,6 +87,8 @@ public class Player1 : MonoBehaviour {
         }
         if (stun1 == true && shield==false)
         {
+            Shake.shake1 = true;
+            Shake.time1 = 0.1f;
             invincible = true;
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
             if (resetswitch == true)
@@ -111,15 +122,55 @@ public class Player1 : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.R))
         {
-            shield = true;
-            spellsMeter.value = 0;
+            if (shieldup == false)
+            {
+                shieldpos = transform.position;
+                shieldpos.y = -9;
+                invincible = true;
+                invtime = shieldtime;
+                
+                GameObject shieldd = (GameObject)Instantiate(Shield);
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+                shieldd.transform.position = shieldpos;
+                shieldup = true;
+                shield = true;
+            }
+
+
+          
+        }
+
+        if (shield == true)
+        {
+            
             shieldtime -= Time.deltaTime;
             if (shieldtime <= 0)
             {
+                shieldpos = transform.position;
+                shieldpos.y = -9;
+                GameObject shieldbreak = (GameObject)Instantiate(Shieldbreak);
+                rb.constraints = RigidbodyConstraints2D.None;
+                shieldbreak.transform.position = shieldpos;
                 shield = false;
+                cooldw1 = true;
                 shieldtime = Shieldtime;
+
+
             }
         }
+        if (cooldw1 == true)
+        {
+            shieldcoldw -= Time.deltaTime;
+            if (shieldcoldw <= 0)
+            {
+                shieldup = false;
+                shieldcoldw = Shieldcoldw;
+                cooldw1 = false;
+            }
+
+        }
+
+
 
         if (active == true)
         {
@@ -333,15 +384,21 @@ public class Player1 : MonoBehaviour {
                     {
                         meterswitch = true;
                         stunMeter.value -= 1;
+                        Shake.shake1 = true;
+                        Shake.time1 = 0.5f;
                     }
                     else if (spellsMeter.value > 0)
                     {
                         spellsMeter.value -= damage;
+                        Shake.shake1 = true;
+                        Shake.time1 = 0.5f;
                     }
                 }
                 else if (meterswitch == true)
                 {
                     stunMeter.value -= damage;
+                    Shake.shake1 = true;
+                    Shake.time1 = 0.5f;
                 }
             }
             

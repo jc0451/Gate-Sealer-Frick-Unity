@@ -28,6 +28,14 @@ public class Player2 : MonoBehaviour
     public GameObject Spell4Mk2;
     public GameObject Spell4Mk3;
 
+    public GameObject Shield;
+    public GameObject Shieldbreak;
+    private bool shieldup = false;
+    Vector2 shieldpos;
+    private float shieldcoldw;
+    public float Shieldcoldw;
+    public static bool cooldw2=false;
+
     public Rigidbody2D rb;
     public float speed;
     public static bool stun2 = false;
@@ -49,6 +57,7 @@ public class Player2 : MonoBehaviour
         spellsMeter.value = 0;
         shieldtime = Shieldtime;
         decaydelay = Decaydelay;
+        shieldcoldw = Shieldcoldw;
 
     }
 
@@ -57,6 +66,7 @@ public class Player2 : MonoBehaviour
 
     void Update()
     {
+     
         if (invincible == true)
         {
             invtime -= Time.deltaTime;
@@ -74,6 +84,8 @@ public class Player2 : MonoBehaviour
         }
         if (stun2 == true && shield == false)
         {
+            Shake.shake2 = true;
+            Shake.time2 = 0.1f;
             invincible = true;
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
             if (resetswitch == true)
@@ -100,21 +112,64 @@ public class Player2 : MonoBehaviour
         {
             stun2 = false;
         }
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.U))
         {
             Player1.stun1 = true;
             spellsMeter.value = 0;
         }
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKey(KeyCode.I))
         {
-            shield = true;
-            spellsMeter.value = 0;
+               
+
+
+              if (shieldup == false)
+              {
+                shieldpos = transform.position;
+                shieldpos.y = -9;
+                invincible = true;
+                invtime = shieldtime;
+
+                GameObject shieldd = (GameObject)Instantiate(Shield);
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+                shieldd.transform.position = shieldpos;
+                shieldup = true;
+                shield = true;
+              }
+            
+
+
+            
+        }
+
+        if (shield == true)
+        {
+
             shieldtime -= Time.deltaTime;
             if (shieldtime <= 0)
             {
+                shieldpos = transform.position;
+                shieldpos.y = -9;
+                GameObject shieldbreak = (GameObject)Instantiate(Shieldbreak);
+                rb.constraints = RigidbodyConstraints2D.None;
+                shieldbreak.transform.position = shieldpos;
                 shield = false;
+                cooldw2 = true;
                 shieldtime = Shieldtime;
+                shieldcoldw = Shieldcoldw;
+
+
             }
+        }
+        if (cooldw2 == true)
+        {
+            shieldcoldw -= Time.deltaTime;
+            if (shieldcoldw <= 0)
+            {
+                shieldup = false;
+                shieldcoldw = Shieldcoldw;
+                cooldw2 = false;
+            }
+
         }
 
         if (Input.GetKey(KeyCode.J))
@@ -290,6 +345,7 @@ public class Player2 : MonoBehaviour
             spellsMeter.value = 0;
         }
     }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (invincible == false)
@@ -303,15 +359,21 @@ public class Player2 : MonoBehaviour
                     {
                         meterswitch = true;
                         stunMeter.value -= 1;
+                        Shake.shake2 = true;
+                        Shake.time2 = 0.5f;
                     }
                     else if (spellsMeter.value > 0)
                     {
                         spellsMeter.value -= damage;
+                        Shake.shake2 = true;
+                        Shake.time2 = 0.5f;
                     }
                 }
                 else if (meterswitch == true)
                 {
                     stunMeter.value -= damage;
+                    Shake.shake2 = true;
+                    Shake.time2 = 0.5f;
                 }
             }
         }

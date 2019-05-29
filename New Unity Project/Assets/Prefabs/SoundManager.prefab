@@ -88,8 +88,8 @@ MonoBehaviour:
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: MainMenu
-    audioClip: {fileID: 8300000, guid: a838394c4b7021e49944866e922aec72, type: 3}
+  - audioName: dsfs
+    audioClip: {fileID: 0}
     volume: 0.5
     source: {fileID: 0}
     isLooping: 1
@@ -190,10 +190,10 @@ MonoBehaviour:
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: something
-    audioClip: {fileID: 8300000, guid: b5e093d3fca59e149ba445451063cb57, type: 3}
+  - audioName: MainMenu
+    audioClip: {fileID: 8300000, guid: c48e1ffd09a233b49a43b79dbd659fb6, type: 3}
     volume: 0.5
     source: {fileID: 0}
-    isLooping: 0
+    isLooping: 1
     playOnAwake: 0
   Mixer: {fileID: 24100000, guid: d3cad5922afb63c4bb39c307762ba73a, type: 2}

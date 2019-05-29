@@ -225,6 +225,48 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 79a0437f9cde8aa4ebacb46d24bddd9a, type: 3}
   - {fileID: 21300000, guid: e3c5b299c680b8e4da9d424a0c686a78, type: 3}
   backgroundImage: {fileID: 1700460824}
+--- !u!1001 &526575435
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4642147089205172, guid: 8e71a224692477b47acf2772ac6e7af6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.2982286
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642147089205172, guid: 8e71a224692477b47acf2772ac6e7af6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.11154243
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642147089205172, guid: 8e71a224692477b47acf2772ac6e7af6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.14278571
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642147089205172, guid: 8e71a224692477b47acf2772ac6e7af6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642147089205172, guid: 8e71a224692477b47acf2772ac6e7af6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642147089205172, guid: 8e71a224692477b47acf2772ac6e7af6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642147089205172, guid: 8e71a224692477b47acf2772ac6e7af6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642147089205172, guid: 8e71a224692477b47acf2772ac6e7af6, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8e71a224692477b47acf2772ac6e7af6, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1377004385
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +357,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1377004385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78051170d2342db4e8f700548be15bfd, type: 3}
+  m_Script: {fileID: 11500000, guid: 910b25c5f5a4f864ea6a6cad6325278a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1700460822

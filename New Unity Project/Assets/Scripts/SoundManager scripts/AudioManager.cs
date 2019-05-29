@@ -344,7 +344,7 @@ public class AudioManager : MonoBehaviour
 
         }
 
-        if (GameControl.isPaused == true)
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main") && GameControl.isPaused == true)
         {
             PauseMusic("BattleMusic");
         }
@@ -353,12 +353,16 @@ public class AudioManager : MonoBehaviour
             UnPauseMusic("BattleMusic");
         }
 
-        if (SceneManager.GetActiveScene()== SceneManager.GetSceneByName("Player1WinScreen") || SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Player2WinScreen"))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Player1WinScreen") || SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Player2WinScreen"))
         {
             StopMusic("BattleMusic");
 
         }
+
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("mainMenu"))
+        {
+            StopMusic("MainMenu");
+        }
+
     }
-
-
 }

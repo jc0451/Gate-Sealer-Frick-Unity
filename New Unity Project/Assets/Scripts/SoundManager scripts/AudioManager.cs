@@ -364,5 +364,19 @@ public class AudioManager : MonoBehaviour
             StopMusic("MainMenu");
         }
 
+        if (Input.GetKey(KeyCode.V))
+        {
+            StopMusic("BattleMusic");
+        }
+
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Player1WinScreen"))
+        {
+            StopMusic("player1win");
+        }
+
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Player2WinScreen"))
+        {
+            StopMusic("player2win");
+        }
     }
 }

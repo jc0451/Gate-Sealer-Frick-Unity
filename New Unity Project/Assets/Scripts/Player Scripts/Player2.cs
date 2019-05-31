@@ -178,18 +178,29 @@ public class Player2 : MonoBehaviour
 
         }
 
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKey(KeyCode.J) == false && Input.GetKey(KeyCode.L) == false)
         {
-            rb.velocity = new Vector2(-speed, 0.0f);
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints2D.None;
         }
 
-        if (Input.GetKey(KeyCode.L))
+        
+
+        if (Input.GetKey(KeyCode.J) == false)
         {
             rb.velocity = new Vector2(speed, 0.0f);
           
             transform.eulerAngles = new Vector3(0, 180, 0);
 
+        }
+
+        if (Input.GetKey(KeyCode.L) == false)
+        {
+            rb.velocity = new Vector2(-speed, 0.0f);
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
         if (Input.GetKeyUp(KeyCode.O))

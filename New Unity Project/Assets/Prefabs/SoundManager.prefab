@@ -88,8 +88,8 @@ MonoBehaviour:
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: dsfs
-    audioClip: {fileID: 0}
+  - audioName: player1win
+    audioClip: {fileID: 8300000, guid: 292d25272e3f8444e91f12c8fa09efeb, type: 3}
     volume: 0.5
     source: {fileID: 0}
     isLooping: 1
@@ -113,7 +113,7 @@ MonoBehaviour:
     isLooping: 0
     playOnAwake: 0
   - audioName: BattleMusic
-    audioClip: {fileID: 8300000, guid: 1742470f954397f419f512b48fbc8ec4, type: 3}
+    audioClip: {fileID: 8300000, guid: a6888e5a44bc43143ad64b70a7a4b38b, type: 3}
     volume: 0.5
     source: {fileID: 0}
     isLooping: 1
@@ -192,6 +192,12 @@ MonoBehaviour:
     playOnAwake: 0
   - audioName: MainMenu
     audioClip: {fileID: 8300000, guid: c48e1ffd09a233b49a43b79dbd659fb6, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 1
+    playOnAwake: 0
+  - audioName: player2win
+    audioClip: {fileID: 8300000, guid: 62fb50dea1ebd40488b4bb85be13a188, type: 3}
     volume: 0.5
     source: {fileID: 0}
     isLooping: 1

@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameControl : MonoBehaviour {
 
     public static bool isPaused = false;
+    public string sceneName;
+    public static bool restart = false;
     void Start()
     {
         
@@ -14,8 +16,8 @@ public class GameControl : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.V))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
+            StartCoroutine(LoadScene());
+            restart = true;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -50,5 +52,12 @@ public class GameControl : MonoBehaviour {
         
         Time.timeScale = 0f;
         isPaused = true;
+    }
+    IEnumerator LoadScene()
+    {
+
+
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -17,7 +17,7 @@ public class Player1 : MonoBehaviour {
     private float invtime;
     
     SpriteRenderer sr;
-
+    
 
     public GameObject Spell1Mk1;
     public GameObject Spell1Mk2;
@@ -31,7 +31,7 @@ public class Player1 : MonoBehaviour {
     public GameObject Spell4Mk1;
     public GameObject Spell4Mk2;
     public GameObject Spell4Mk3;
-
+    
     public GameObject Shield;
     public GameObject Shieldbreak;
     private bool shieldup = false;
@@ -41,7 +41,7 @@ public class Player1 : MonoBehaviour {
     public static bool cooldw1 = false;
 
     public Rigidbody2D rb;
-    public float speed;
+    public float speed ;
     public static bool stun1 = false;
     private bool shield = false;
     private float shieldtime;
@@ -178,41 +178,35 @@ public class Player1 : MonoBehaviour {
 
 
 
-        if (active == true)
-        {
-            if (flashCounter > flashtime * .40f)
-            {
-                sr.color = new Color(255, 28, 40, 255);
+       
 
-            }
-            else if (flashCounter > flashtime * .25f)
-            {
-                sr.color = new Color(sr.color.r, sr.color.b, sr.color.g);
-            }
-            else if (flashCounter > flashtime * .10f)
-            {
-                sr.color = new Color(255, 28, 40, 255);
-            }
-            else if (flashCounter > 0f)
-            {
-                sr.color = new Color(sr.color.r, sr.color.b, sr.color.g);
-                active = false;
-            }
-            flashCounter -= Time.deltaTime;
+
+        if (Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.D) == false)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
         }
-
-        if (Input.GetKey(KeyCode.A))
+        else
         {
+            rb.constraints = RigidbodyConstraints2D.None;
+        }
+        
+
+        if (Input.GetKey(KeyCode.D) == false)
+        {
+            
             rb.velocity = new Vector2(-speed, 0.0f);
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
+        
  
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.A) == false)
         {
-            rb.velocity = new Vector2(speed, 0.0f);
+            
+            rb.velocity = new Vector2(+speed, 0.0f);
             transform.eulerAngles = new Vector3(0, 0, 0);
 
         }
+        
         
         if (Input.GetKeyUp(KeyCode.W))
         {

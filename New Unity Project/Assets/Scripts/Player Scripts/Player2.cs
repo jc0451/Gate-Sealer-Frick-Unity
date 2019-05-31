@@ -119,6 +119,16 @@ public class Player2 : MonoBehaviour
             Player1.stun1 = true;
             spellsMeter.value = 0;
         }
+
+        if (Player2.stun2 == true)
+        {
+            FindObjectOfType<AudioManager>().Play("Stunned");
+            if (Input.GetKey(KeyCode.P))
+            {
+                FindObjectOfType<AudioManager>().Play("Fail");
+            }
+        }
+
         if (Input.GetKey(KeyCode.I))
         {
                

@@ -112,6 +112,7 @@ public class Player1 : MonoBehaviour {
         }
         else
             resetswitch = true;
+
         if (stun1 == true && shield == true)
         {
             stun1 = false;
@@ -122,6 +123,16 @@ public class Player1 : MonoBehaviour {
             spellsMeter.value = 0;
             FindObjectOfType<AudioManager>().Play("Stun");
         }
+
+        if (Player1.stun1 == true)
+        {
+            FindObjectOfType<AudioManager>().Play("Stunned");
+            if (Input.GetKey(KeyCode.E))
+            {
+                FindObjectOfType<AudioManager>().Play("Fail");
+            }
+        }
+
         if (Input.GetKey(KeyCode.R))
         {
             if (shieldup == false)

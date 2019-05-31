@@ -114,7 +114,7 @@ MonoBehaviour:
     playOnAwake: 0
   - audioName: BattleMusic
     audioClip: {fileID: 8300000, guid: a6888e5a44bc43143ad64b70a7a4b38b, type: 3}
-    volume: 0.5
+    volume: 0.2
     source: {fileID: 0}
     isLooping: 1
     playOnAwake: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
     playOnAwake: 0
   - audioName: Stunned
     audioClip: {fileID: 8300000, guid: 23ebafff845e1c14282f603c64dc0c0c, type: 3}
-    volume: 0.5
+    volume: 0.683
     source: {fileID: 0}
     isLooping: 1
     playOnAwake: 0

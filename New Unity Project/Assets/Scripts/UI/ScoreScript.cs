@@ -18,6 +18,6 @@ public class ScoreScript : MonoBehaviour
 	void Update ()
     {
 
-        Score.text = "P1 Score: " + ScoreValue1;
+        Score.text = "" + ScoreValue1;
     }
 }

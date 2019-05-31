@@ -202,4 +202,16 @@ MonoBehaviour:
     source: {fileID: 0}
     isLooping: 1
     playOnAwake: 0
+  - audioName: Fail
+    audioClip: {fileID: 8300000, guid: 6ef90edb494a77a46b0db354bec5b9e2, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: Stunned
+    audioClip: {fileID: 8300000, guid: 23ebafff845e1c14282f603c64dc0c0c, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 1
+    playOnAwake: 0
   Mixer: {fileID: 24100000, guid: d3cad5922afb63c4bb39c307762ba73a, type: 2}

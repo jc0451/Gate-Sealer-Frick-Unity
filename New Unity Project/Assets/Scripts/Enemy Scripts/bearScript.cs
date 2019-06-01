@@ -7,6 +7,7 @@ public class bearScript : MonoBehaviour
     public Transform floatingDamageP1;
     public Transform floatingDamageP2;
     public GameObject dieflame;
+    public GameObject dieanim;
     public float moveSpeed = 1f;
     public float maxHealth = 6;
     private float currentHealth;
@@ -32,9 +33,10 @@ public class bearScript : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, BearPoint.position, moveSpeed * Time.deltaTime);
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             FindObjectOfType<AudioManager>().Play("BearDie");
+            GameObject die = (GameObject)Instantiate(dieanim, transform.position, transform.rotation);
             CommitDie();
         }
         if (transform.position.y <=-9)

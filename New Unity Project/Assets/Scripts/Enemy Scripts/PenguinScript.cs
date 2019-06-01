@@ -24,6 +24,7 @@ public class PenguinScript : MonoBehaviour
     private Material matDefault;
     SpriteRenderer sr;
     public int moveing;
+    public Animator anim;
 
 
     private Transform Player;
@@ -46,6 +47,8 @@ public class PenguinScript : MonoBehaviour
         randpos = new Vector2(x, y);
         cooldownTimer = shootingDelay;
 
+        anim = GetComponent<Animator>();
+
         sr = GetComponent<SpriteRenderer>();
         matRed = Resources.Load("RedFlash", typeof(Material)) as Material;
         matDefault = sr.material;
@@ -63,11 +66,13 @@ public class PenguinScript : MonoBehaviour
         if(transform.position.y < randstop)
         {
             rb.velocity = Vector3.zero;
+            anim.SetBool("walk", false);
             rb.angularVelocity = 0;
         }
         if (transform.position.x < -12f||transform.position.x>13f)
         {
             rb.velocity = Vector3.zero;
+            anim.SetBool("walk", false);
             rb.angularVelocity = 0;
         }
         if (cooldownTimer <= 0)
@@ -83,12 +88,13 @@ public class PenguinScript : MonoBehaviour
             //transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
 
 
-
+           
             rb.AddForce((randpos - posit).normalized * moveSpeed);
         }
         if (moveing >= 1)
         {
             rb.velocity = Vector3.zero;
+            anim.SetBool("walk", false);
             rb.angularVelocity = 0;
 
         }

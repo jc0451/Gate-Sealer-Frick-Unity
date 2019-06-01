@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 95337053292825910}
-  dieflame: {fileID: 1155089181416660, guid: 2f3b1e6ca1d252f418a854cacacd5c21, type: 2}
+  dieflame: {fileID: 1045871441059832, guid: 88bc4e418d04d5a46aa99b4a7543d1dd, type: 2}
   floatingDamageP1: {fileID: 224696391906591526, guid: cb638eda5b0618740a4dfe9cfddf7ded,
     type: 2}
   floatingDamageP2: {fileID: 224588030612505716, guid: 7e67d3267e2423b4fb3aec309078e56f,

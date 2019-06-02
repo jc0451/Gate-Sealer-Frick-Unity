@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player2 : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class Player2 : MonoBehaviour
     public GameObject Spell4Mk1;
     public GameObject Spell4Mk2;
     public GameObject Spell4Mk3;
-
+    public static float stunvalue;
     public GameObject Shield;
     public GameObject Shieldbreak;
     private bool shieldup = false;
@@ -59,6 +60,7 @@ public class Player2 : MonoBehaviour
         shieldtime = Shieldtime;
         decaydelay = Decaydelay;
         shieldcoldw = Shieldcoldw;
+        
 
     }
 
@@ -67,7 +69,12 @@ public class Player2 : MonoBehaviour
 
     void Update()
     {
-     
+        if (timerScript.timer >= 177)
+        {
+            stunMeter.value = 5;
+            spellsMeter.value = 0;
+        }
+
         if (invincible == true)
         {
             invtime -= Time.deltaTime;
@@ -85,6 +92,12 @@ public class Player2 : MonoBehaviour
         }
         if (stun2 == true && shield == false)
         {
+            FindObjectOfType<AudioManager>().Play("Stunned");
+            if (Input.GetKey(KeyCode.P))
+            {
+                FindObjectOfType<AudioManager>().Play("Fail");
+            }
+
             Shake.shake2 = true;
             Shake.time2 = 0.1f;
             invincible = true;
@@ -113,67 +126,68 @@ public class Player2 : MonoBehaviour
         {
             stun2 = false;
         }
-        if (Input.GetKey(KeyCode.U))
-        {
-            FindObjectOfType<AudioManager>().Play("Stun");
-            Player1.stun1 = true;
-            spellsMeter.value = 0;
-        }
+        //if (Input.GetKey(KeyCode.U))
+        //{
+        //    FindObjectOfType<AudioManager>().Play("Stun");
+        //    Player1.stun1 = true;
+        //    spellsMeter.value = 0;
+        //}
 
-        if (Player2.stun2 == true)
-        {
-            FindObjectOfType<AudioManager>().Play("Stunned");
+        
+        if (spellsMeter.value == 0 )
+            {
             if (Input.GetKey(KeyCode.P))
             {
                 FindObjectOfType<AudioManager>().Play("Fail");
             }
-        }
-
-        if (Input.GetKey(KeyCode.I))
-        {
+            
+            }
+            
+        //if (Input.GetKey(KeyCode.I))
+        //{
                
 
 
-              if (shieldup == false)
-              {
-                shieldpos = transform.position;
-                shieldpos.y = -9;
-                invincible = true;
-                invtime = shieldtime;
-                FindObjectOfType<AudioManager>().Play("ShieldCreate");
-                GameObject shieldd = (GameObject)Instantiate(Shield);
-                rb.constraints = RigidbodyConstraints2D.FreezePositionX;
-                shieldd.transform.position = shieldpos;
-                shieldup = true;
-                shield = true;
-              }
+        //      if (shieldup == false)
+        //      {
+        //        shieldpos = transform.position;
+        //        shieldpos.y = -9;
+        //        invincible = true;
+        //        invtime = shieldtime;
+        //        FindObjectOfType<AudioManager>().Play("ShieldCreate");
+        //        GameObject shieldd = (GameObject)Instantiate(Shield);
+        //        rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+        //        shieldd.transform.position = shieldpos;
+        //        shieldup = true;
+        //        shield = true;
+        //      }
             
 
 
             
-        }
+        //}
 
-        if (shield == true)
-        {
+        //if (shield == true)
+        //{
 
-            shieldtime -= Time.deltaTime;
-            if (shieldtime <= 0)
-            {
-                shieldpos = transform.position;
-                shieldpos.y = -9;
-                FindObjectOfType<AudioManager>().Play("Shieldshatter");
-                GameObject shieldbreak = (GameObject)Instantiate(Shieldbreak);
-                rb.constraints = RigidbodyConstraints2D.None;
-                shieldbreak.transform.position = shieldpos;
-                shield = false;
-                cooldw2 = true;
-                stuncool.value = 0;
-                shieldtime = Shieldtime;
-                shieldcoldw = Shieldcoldw;
+        //    shieldtime -= Time.deltaTime;
+        //    if (shieldtime <= 0)
+        //    {
+        //        shieldpos = transform.position;
+        //        shieldpos.y = -9;
+        //        FindObjectOfType<AudioManager>().Play("Shieldshatter");
+        //        GameObject shieldbreak = (GameObject)Instantiate(Shieldbreak);
+        //        rb.constraints = RigidbodyConstraints2D.None;
+        //        shieldbreak.transform.position = shieldpos;
+        //        shield = false;
+        //        cooldw2 = true;
+        //        stuncool.value = 0;
+        //        shieldtime = Shieldtime;
+        //        shieldcoldw = Shieldcoldw;
 
 
-            }
-        }
+        //    }
+        //}
         if (cooldw2 == true)
         {
             shieldcoldw -= Time.deltaTime;

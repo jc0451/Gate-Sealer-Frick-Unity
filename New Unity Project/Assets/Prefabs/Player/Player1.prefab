@@ -26,9 +26,26 @@ GameObject:
   - component: {fileID: 50804673694678218}
   - component: {fileID: 95074352690647024}
   - component: {fileID: 114010379934200102}
+  - component: {fileID: 114163169045686290}
   m_Layer: 11
   m_Name: Player1
   m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1904810995893368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4983873880087344}
+  - component: {fileID: 212188101950186490}
+  m_Layer: 0
+  m_Name: snowblockP1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,8 +59,22 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.3, y: -9.72, z: -1}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4983873880087344}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4983873880087344
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904810995893368}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.11666775, y: -1.3899994, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4545710822632770}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50804673694678218
@@ -65,7 +96,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &61196112798841104
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -119,6 +150,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92544348f807f634085c9b6ea58ba6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114163169045686290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217213678559852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114488566803418018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,9 +186,10 @@ MonoBehaviour:
   urf: 0
   spellsMeter: {fileID: 0}
   stunMeter: {fileID: 0}
+  stuncool: {fileID: 0}
   meterswitch: 0
   invincible: 0
-  Invtime: 2
+  Invtime: 5
   Spell1Mk1: {fileID: 1009430314374262, guid: a32ac55d4bc82ab4999db31538c0dad5, type: 2}
   Spell1Mk2: {fileID: 1370973664498674, guid: 5dd77ed80c792bf4dac8ff89f62ed6db, type: 2}
   Spell1Mk3: {fileID: 1966389750888960, guid: 0347f89d0ce600a44844636bb943c203, type: 2}
@@ -159,13 +202,62 @@ MonoBehaviour:
   Spell4Mk1: {fileID: 1754075372250606, guid: a6581601e452c404da2781e2b83012f7, type: 2}
   Spell4Mk2: {fileID: 1611306502755212, guid: 600296a2de739264aaaf33aa8d323b57, type: 2}
   Spell4Mk3: {fileID: 1644315832351714, guid: 10533855fb1f2f04382fbdb2db35afed, type: 2}
+  Shield: {fileID: 1469344054077646, guid: b3f80805ef064a84a9b4d875d19c1288, type: 2}
+  Shieldbreak: {fileID: 1326110823000326, guid: 06afa29172eb267468c7d48d03c2c1e3,
+    type: 2}
+  Shieldcoldw: 5
   rb: {fileID: 50804673694678218}
   speed: 20
-  Shieldtime: 5
-  Decaydelay: 0.5
-  decayvalue: 1.5
+  Shieldtime: 2
+  Decaydelay: 0
+  decayvalue: 0
   damage: 4
   resetswitch: 0
+  flashtime: 1
+--- !u!212 &212188101950186490
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904810995893368}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 9f4e4a5b548db4d4497af55432bd4938, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.49, y: 1.79}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212487409506748712
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -199,8 +291,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ab218ae8e69c5484384aebe1b07f9170, type: 3}
+  m_SortingOrder: 20
+  m_Sprite: {fileID: 21300000, guid: e39c01f800917b64f8832677ccc1ef7d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

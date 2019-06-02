@@ -35,14 +35,14 @@ public class SceneTransition : MonoBehaviour {
     {
         
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(sceneName);
     }
     IEnumerator LoadScene2()
     {
         
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(sceneName2);
     }
 }

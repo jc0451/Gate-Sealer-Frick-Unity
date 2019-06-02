@@ -52,16 +52,7 @@ public class SmolGate : MonoBehaviour {
             cap--;
 
         }
-        if (stagetime <= 0 && cap == 1)
-        {
-            transform.GetChild(6).gameObject.SetActive(false);
-            transform.GetChild(7).gameObject.SetActive(false);
-            transform.GetChild(8).gameObject.SetActive(true);
-            transform.GetChild(9).gameObject.SetActive(true);
-            stagetime = 36f;
-            cap--;
-
-        }
+   
 
     }
 }

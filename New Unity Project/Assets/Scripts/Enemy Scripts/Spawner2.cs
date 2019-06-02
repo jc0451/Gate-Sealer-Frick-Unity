@@ -7,56 +7,43 @@ public class Spawner2 : MonoBehaviour {
     public GameObject Enemy;
     public GameObject Spawnflame;
     public float spawndelay = 5.0f;
-    public int maxspawn = 1;
-    private int spawned = 0;
     public float timeactual = 5.0f;
     private float stagetime = 36f;
-    private int cap = 5;
-
+    public int pengucap = 5;
+    private GameObject[] getCount;
+    private int count= 0;
 
 
     void Start()
     {
         timeactual = spawndelay;
+        pengucap -= 1;
 
     }
 
     void Update()
     {
+        getCount = GameObject.FindGameObjectsWithTag("Penguin");
+        count = getCount.Length;
         stagetime -= Time.deltaTime;
-        if (stagetime <= 0 &&cap>0)
+        if (stagetime <= 0)
         {
             spawndelay = spawndelay - 0.5f;
             stagetime = 36f;
-            cap--;
+
 
         }
-        if (spawned < maxspawn)
+        if (count <= pengucap)
         {
             timeactual -= Time.deltaTime;
 
             if (timeactual <= 0.0f)
             {
-                SpawnEnemy();
-                spawned++;
-                timeactual = spawndelay;
+                    SpawnEnemy();
+                    
+                    timeactual = spawndelay;
             }
-        }
-        else if (spawned >= maxspawn)
-        {
-            timeactual -= Time.deltaTime;
-
-            if (timeactual <= 0.0f)
-            {
-                SpawnEnemy();
-                spawned++;
-                timeactual = spawndelay;
-            }
-        }
-
-        if (GameObject.FindGameObjectWithTag("Enemy") == null)
-        {
-            spawned = 0;
+            
         }
 
 

@@ -7,11 +7,7 @@ public class SecondaySpawner : MonoBehaviour {
     public GameObject Enemy;
     public GameObject Spawnflame;
     public float spawndelay = 5.0f;
-    public int maxspawn = 1;
-    private int spawned = 0;
     public float timeactual = 5.0f;
-    private float stagetime = 36f;
-    private int cap = 5;
 
 
 
@@ -23,35 +19,19 @@ public class SecondaySpawner : MonoBehaviour {
 
     void Update()
     {
-        stagetime -= Time.deltaTime;
-        if (stagetime <= 0 && cap > 0)
-        {
-            spawndelay = spawndelay - 0.5f;
-            stagetime = 36f;
-            cap--;
-
-        }
-        if (spawned < maxspawn)
-        {
+       
             timeactual -= Time.deltaTime;
 
             if (timeactual <= 0.0f)
             {
                 SpawnEnemy();
-                spawned++;
+               
                 timeactual = spawndelay;
             }
-        }
-        else if (spawned >= maxspawn)
-        {
-            spawned = 0;
-            SendMessageUpwards("disable");
-        }
+        
+    
 
-        if (GameObject.FindGameObjectWithTag("Enemy") == null)
-        {
-            spawned = 0;
-        }
+     
 
 
     }

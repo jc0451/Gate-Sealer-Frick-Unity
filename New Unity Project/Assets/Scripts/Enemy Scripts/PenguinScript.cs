@@ -34,12 +34,14 @@ public class PenguinScript : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 posit;
     float randstop;
+    bool ready = false;
+    float readycool = 2f;
 
     void Start()
     {
-
+        
         x = Random.Range(-12f, 13f);
-        y = Random.Range(-8f, 0f);
+        y = Random.Range(-3f, 2f);
         //x = Random.Range(-4f, 5f);
        // y = Random.Range(-5f, -3f);
         Player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -56,24 +58,28 @@ public class PenguinScript : MonoBehaviour
         posit = transform.position;
         randstop = Random.Range(-5f, -1f);
         shootingDelay = Random.Range(shootingDelaymin, shootingDelaymax);
+
+        
     }
 
 
     void Update()
     {
-        cooldownTimer -= Time.deltaTime;
+        readycool -= Time.deltaTime;
+        if (readycool <= 0)
+        {
+            ready = true;
+        }
 
         if(transform.position.y < randstop)
         {
-            rb.velocity = Vector3.zero;
-            anim.SetBool("walk", false);
-            rb.angularVelocity = 0;
+            
+            moveing++;
         }
         if (transform.position.x < -12f||transform.position.x>13f)
         {
-            rb.velocity = Vector3.zero;
-            anim.SetBool("walk", false);
-            rb.angularVelocity = 0;
+            
+            moveing++;
         }
         if (cooldownTimer <= 0)
         {
@@ -86,15 +92,29 @@ public class PenguinScript : MonoBehaviour
         if (moveing == 0)
         {
             //transform.position = Vector2.MoveTowards(transform.position, randpos, Time.deltaTime * moveSpeed);
+            Vector3 targ = randpos;
+            targ.z = 0f;
+
+            targ.x = targ.x - posit.x;
+            targ.y = targ.y - posit.y;
+
+            float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg +90;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
 
-           
+
             rb.AddForce((randpos - posit).normalized * moveSpeed);
         }
         if (moveing >= 1)
         {
+            cooldownTimer -= Time.deltaTime;
             rb.velocity = Vector3.zero;
+            
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY;
             anim.SetBool("walk", false);
+            float angle = 0f;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+           
             rb.angularVelocity = 0;
 
         }
@@ -103,14 +123,15 @@ public class PenguinScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "PenguinPoint")
+        if (ready == true)
         {
-            moveing =1;
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity =0;
+            if (col.gameObject.tag == "Penguin")
+            {
 
+                moveing++;
+
+            }
         }
-
 
         if (col.gameObject.tag == "PlayerSpell")
         {

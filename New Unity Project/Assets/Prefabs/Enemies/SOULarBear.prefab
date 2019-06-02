@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 95221256814823578}
   m_Layer: 12
   m_Name: SOULarBear
-  m_TagString: Enemy
+  m_TagString: Bear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,8 +123,8 @@ MonoBehaviour:
     type: 2}
   dieflame: {fileID: 1837235433438144, guid: 4a043d653a91ccf4e99b049c155a8903, type: 2}
   dieanim: {fileID: 1999867567427442, guid: 582d6f9ac983faa44813d50e2b2f2c92, type: 2}
-  moveSpeed: 2
-  maxHealth: 6
+  moveSpeed: 1.5
+  maxHealth: 8
 --- !u!212 &212953841955392856
 SpriteRenderer:
   m_ObjectHideFlags: 1

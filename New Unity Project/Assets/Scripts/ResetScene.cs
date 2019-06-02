@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ResetScene : MonoBehaviour {
 
     public string sceneName;
-    
+    public static bool backtomenu = false;
 
     void Start () {
 		
@@ -23,8 +23,9 @@ public class ResetScene : MonoBehaviour {
 
     IEnumerator LoadScene()
     {
-
-
+        timerScript.timer = 180;
+        backtomenu = true;
+        GameControl.restart = true;
         yield return new WaitForSeconds(8f);
         SceneManager.LoadScene(sceneName);
     }

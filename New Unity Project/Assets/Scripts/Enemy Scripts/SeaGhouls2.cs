@@ -33,7 +33,11 @@ public class SeaGhouls2 : MonoBehaviour {
     public float maxHealth = 2;
     public float currentHealth;
     public float moveSpeed = 3;
-    // Use this for initialization
+
+    private Material matRed;
+    private Material matDefault;
+    SpriteRenderer sr;
+
     void Start () {
         P1 = GameObject.Find("Player1");
         P2 = GameObject.Find("Player2");
@@ -49,6 +53,9 @@ public class SeaGhouls2 : MonoBehaviour {
         y4 = Random.Range(-3f, 0f);
         anim = GetComponent<Animator>();
 
+        sr = GetComponent<SpriteRenderer>();
+        matRed = Resources.Load("RedFlash", typeof(Material)) as Material;
+        matDefault = sr.material;
     }
 	
 	// Update is called once per frame
@@ -174,7 +181,7 @@ public class SeaGhouls2 : MonoBehaviour {
         }
         if (currentHealth <= 0)
         {
-            //Instantiate(deathAnimation, transform.position, transform.rotation);
+           
             FindObjectOfType<AudioManager>().Play("Seagull");
             GameObject die = (GameObject)Instantiate(dieflame, transform.position, transform.rotation);
             Destroy(gameObject);
@@ -186,6 +193,7 @@ public class SeaGhouls2 : MonoBehaviour {
      
         if (col.gameObject.tag == "PlayerSpell" )
         {
+            sr.material = matRed;
             if (currentHealth == 1)
             {
                 ScoreScript.ScoreValue1 += 25;
@@ -196,13 +204,19 @@ public class SeaGhouls2 : MonoBehaviour {
         }
         else if (col.gameObject.tag == "Player")
         {
+            sr.material = matRed;
             FindObjectOfType<AudioManager>().Play("Seagull");
             GameObject die = (GameObject)Instantiate(dieflame, transform.position, transform.rotation);
             Destroy(gameObject);
         }
+        else
+        {
+            Invoke("ResetMaterial", 0.3f);
+        }
 
         if (col.gameObject.tag == "PlayerSpell2")
         {
+            sr.material = matRed;
             if (currentHealth == 1)
             {
                 ScoreScript2.ScoreValue2 += 25;
@@ -213,10 +227,19 @@ public class SeaGhouls2 : MonoBehaviour {
         }
         else if (col.gameObject.tag == "Player2")
         {
+            sr.material = matRed;
             FindObjectOfType<AudioManager>().Play("Seagull");
             GameObject die = (GameObject)Instantiate(dieflame, transform.position, transform.rotation);
             Destroy(gameObject);
         }
+        else
+        {
+            Invoke("ResetMaterial", 0.3f);
+        }
 
+    }
+    void ResetMaterial()
+    {
+        sr.material = matDefault;
     }
 }

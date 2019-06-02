@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: P2wins
+  m_Name: P2Wins
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,9 +19,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 7c359a80334d7934bbdd06fb85c23005, type: 3}
+      value: {fileID: 21300000, guid: b361f246ff021804db915d1fc69375af, type: 3}
     - time: 0.083333336
-      value: {fileID: 21300000, guid: 0698b1c3186cf244c95044a9d97fcb8e, type: 3}
+      value: {fileID: 21300000, guid: b21b426b36eb6a44ca9f9921b5d68a3d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -41,8 +41,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 7c359a80334d7934bbdd06fb85c23005, type: 3}
-    - {fileID: 21300000, guid: 0698b1c3186cf244c95044a9d97fcb8e, type: 3}
+    - {fileID: 21300000, guid: b361f246ff021804db915d1fc69375af, type: 3}
+    - {fileID: 21300000, guid: b21b426b36eb6a44ca9f9921b5d68a3d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

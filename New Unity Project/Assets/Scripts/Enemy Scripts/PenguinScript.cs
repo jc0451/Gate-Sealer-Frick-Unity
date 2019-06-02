@@ -51,15 +51,17 @@ public class PenguinScript : MonoBehaviour
 
         anim = GetComponent<Animator>();
 
-        sr = GetComponent<SpriteRenderer>();
-        matRed = Resources.Load("RedFlash", typeof(Material)) as Material;
-        matDefault = sr.material;
+       
         GameObject Stopdisc = (GameObject)Instantiate(rangedisc,new Vector3(x,y,0), Quaternion.identity);
         posit = transform.position;
         randstop = Random.Range(-5f, -1f);
         shootingDelay = Random.Range(shootingDelaymin, shootingDelaymax);
 
-        
+        sr = GetComponent<SpriteRenderer>();
+        matRed = Resources.Load("RedFlash", typeof(Material)) as Material;
+        matDefault = sr.material;
+
+
     }
 
 

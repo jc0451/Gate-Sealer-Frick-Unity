@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class ScoreScript : MonoBehaviour
 {
     public static int ScoreValue1 = 0;
-     Text Score;
+    public Text P1Score;
 
 	void Start ()
     {
 
-        Score = GetComponent<Text>();
+        P1Score = GetComponent<Text>();
     }
 	
 	
 	void Update ()
     {
 
-        Score.text = "" + ScoreValue1;
+        P1Score.text = "" + ScoreValue1;
     }
 }

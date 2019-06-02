@@ -15,6 +15,7 @@ TagManager:
   - Penguin
   - PenguinPoint
   - Bear
+  - Score
   layers:
   - Default
   - TransparentFX

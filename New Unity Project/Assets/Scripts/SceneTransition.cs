@@ -25,6 +25,10 @@ public class SceneTransition : MonoBehaviour {
         {
             StartCoroutine(LoadScene2());
         }
+        else if (timerScript.timer == 0 && ScoreScript.ScoreValue1 == ScoreScript2.ScoreValue2)
+        {
+            timerScript.timer += 20;
+        }
     }
 
     IEnumerator LoadScene()

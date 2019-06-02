@@ -23,33 +23,17 @@ public class Bullet : MonoBehaviour
         P1 = GameObject.Find("Player1");
         P2 = GameObject.Find("Player2");
         coin = Random.Range(0, 2);
-
-    }
-
-    void movetowards ()
-    {
-        
-
         if (coin == 1)
         {
 
-            direction = new Vector2(P1.transform.position.x, P1.transform.position.y).normalized * moveSpeed;
-            
-            float z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
-            Quaternion rotation = Quaternion.Euler(0, 0, z);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, roationspeed * Time.deltaTime);
-            
+            direction = P1.transform.position;
         }
         else if (coin == 0)
         {
-
-            direction = new Vector2(P2.transform.position.x, P2.transform.position.y).normalized * moveSpeed;
-            
-            float z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
-            Quaternion rotation = Quaternion.Euler(0, 0, z);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, roationspeed * Time.deltaTime);
-           
+            direction = P2.transform.position;
         }
+        direction.y -=2f;
+
     }
      
     void OnTriggerEnter2D(Collider2D other)
@@ -70,9 +54,23 @@ public class Bullet : MonoBehaviour
     }
     void Update()
     {
-        rb.velocity = new Vector2(direction.x, direction.y);
+      
+        Vector2 posit = transform.position;
+        Vector3 targ = direction;
+        targ.z = 0f;
+        
+        targ.x = targ.x - posit.x;
+        targ.y = targ.y - posit.y;
 
-        movetowards();
+        rb.velocity = (direction - posit).normalized * moveSpeed;
+        if (posit == direction)
+        {
+            Destroy(gameObject);
+        }
+
+        float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg + 90;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        //rb.AddForce((direction - posit).normalized * moveSpeed);
         deleteTime -= Time.deltaTime;
 
         if (deleteTime <= 0)

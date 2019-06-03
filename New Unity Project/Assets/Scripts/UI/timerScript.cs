@@ -7,7 +7,7 @@ public class timerScript : MonoBehaviour {
 
     Text text;
     [SerializeField]
-    public static float timer = 20;
+    public static float timer = 180;
 
 	void Start ()
     {

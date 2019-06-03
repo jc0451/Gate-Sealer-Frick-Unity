@@ -129,7 +129,7 @@ MonoBehaviour:
   shootingDelaymin: 2
   maxHealth: 2
   currentHealth: 2
-  moveSpeed: 4
+  moveSpeed: 8
   moveing: 0
   anim: {fileID: 0}
   rb: {fileID: 50212959432612106}

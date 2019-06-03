@@ -8,15 +8,34 @@ public class Fade : MonoBehaviour {
     public float duration = 5.0f;
     private float startTime;
     public SpriteRenderer sprite;
+    public bool timer = false;
+    public float timertime;
+    private bool lever=false;
 
     // Use this for initialization
     void Start () {
         startTime = Time.time;
     }
-	
+	void timestart()
+    {
+        startTime = Time.time;
+    }
 	// Update is called once per frame
 	void Update () {
-        float t = (Time.time - startTime) / duration;
-        sprite.color = new Color(1f, 1f, 1f, Mathf.SmoothStep(maximum, minimum, t));
+        if (timer == false)
+        {
+            float t = (Time.time - startTime) / duration;
+            sprite.color = new Color(1f, 1f, 1f, Mathf.SmoothStep(maximum, minimum, t));
+        }
+        else if (timerScript.timer <= timertime && timer==true)
+        {
+            if (lever == false) {
+                timestart();
+                lever = true;
+            }
+           
+            float t = (Time.time - startTime) / duration;
+            sprite.color = new Color(1f, 1f, 1f, Mathf.SmoothStep(maximum, minimum, t));
+        }
     }
 }

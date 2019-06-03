@@ -214,4 +214,10 @@ MonoBehaviour:
     source: {fileID: 0}
     isLooping: 1
     playOnAwake: 0
+  - audioName: Count
+    audioClip: {fileID: 8300000, guid: 606fc6db9791b9b4e920e633c16c91a6, type: 3}
+    volume: 0.799
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
   Mixer: {fileID: 24100000, guid: d3cad5922afb63c4bb39c307762ba73a, type: 2}

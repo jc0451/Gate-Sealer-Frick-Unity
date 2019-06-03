@@ -34,7 +34,13 @@ public class GameControl : MonoBehaviour {
             }
         }
 
+        if (timerScript.timer >= 5f)
+        {
+            
+                FindObjectOfType<AudioManager>().Play("Count");
 
+            
+        }
 
 
 

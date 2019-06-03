@@ -21,7 +21,7 @@ public class SpellSwitchP1 : MonoBehaviour {
     public Image explosions;
     public Image thunders;
     public Image stun;
-    
+
 
     public Slider spellMeterP1;
     public static int currentstatus;
@@ -31,14 +31,14 @@ public class SpellSwitchP1 : MonoBehaviour {
     public static int currentLightning;
 
 
-    void Start ()
+    void Start()
     {
 
-        
+
     }
-	
-	
-	void Update ()
+
+
+    void Update()
     {
         if (spellMeterP1.value == 0)
         {
@@ -109,22 +109,35 @@ public class SpellSwitchP1 : MonoBehaviour {
         {
             currentLightning = 2;
         }
-    
 
 
-       projectiles.sprite = projectileSprites[currentProjectile];
-       lasers.sprite = laserSprites[currentBeam];
-       explosions.sprite = explosionSprites[currentExplosion];
-       thunders.sprite = thunderSprites[currentLightning];
+
+        projectiles.sprite = projectileSprites[currentProjectile];
+        lasers.sprite = laserSprites[currentBeam];
+        explosions.sprite = explosionSprites[currentExplosion];
+        thunders.sprite = thunderSprites[currentLightning];
         stun.sprite = Stunned[currentstatus];
+        if (Player1.stun1 == true)
+        {
+            StartCoroutine(stunanim());
+            
 
-       //if (Player1.stun1 == true)
-       // {
-       //    for (int i = 0; i < currentstatus; i++)
-       //     {
-       //         if 
-       //     }
-       // }
+        }
+        else
+        {
+            currentstatus = 0;
+        }
+        
+    }
+    IEnumerator stunanim()
+    {
+        for (int n = 0; n < 2; n++)
+        {
+            currentstatus = 0;
+            yield return new WaitForSeconds(0.4f);
 
+            currentstatus = 1;
+            yield return new WaitForSeconds(0.3f);
+        }
     }
 }

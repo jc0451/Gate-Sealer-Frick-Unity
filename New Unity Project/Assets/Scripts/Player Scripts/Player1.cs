@@ -115,7 +115,7 @@ public class Player1 : MonoBehaviour
         }
         if (stun1 == true)
         {
-            FindObjectOfType<AudioManager>().Play("Stunned");
+            
             if (Input.GetKey(KeyCode.E))
             {
                 FindObjectOfType<AudioManager>().Play("Fail");

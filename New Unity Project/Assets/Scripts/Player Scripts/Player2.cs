@@ -100,7 +100,7 @@ public class Player2 : MonoBehaviour
         }
         if (stun2 == true && shield == false)
         {
-            FindObjectOfType<AudioManager>().Play("Stunned");
+            
             if (Input.GetKey(KeyCode.P))
             {
                 FindObjectOfType<AudioManager>().Play("Fail");
@@ -404,7 +404,7 @@ public class Player2 : MonoBehaviour
             {
                 sr.material = matRed;
 
-                FindObjectOfType<AudioManager>().Play("Stun"); 
+                FindObjectOfType<AudioManager>().Play("StunSound"); 
                 if (meterswitch == false)
                 {
 

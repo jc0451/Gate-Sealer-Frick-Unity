@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class player2anim : MonoBehaviour {
 
     private Animator anim;
-    public Slider stunMeter;
+   
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -22,6 +22,7 @@ public class player2anim : MonoBehaviour {
         }
         else
         {
+            //FindObjectOfType<AudioManager>().Play("Stunned");
             anim.SetBool("Stunned", true);
         }
 

@@ -174,7 +174,7 @@ MonoBehaviour:
     playOnAwake: 0
   - audioName: Stun
     audioClip: {fileID: 8300000, guid: b52fa9eea73207543a13369a9117643a, type: 3}
-    volume: 0.5
+    volume: 0.2
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0

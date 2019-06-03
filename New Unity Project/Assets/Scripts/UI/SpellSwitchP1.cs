@@ -14,14 +14,17 @@ public class SpellSwitchP1 : MonoBehaviour {
 
     public Sprite[] thunderSprites;
 
+    public Sprite[] Stunned;
+
     public Image projectiles;
     public Image lasers;
     public Image explosions;
     public Image thunders;
-
+    public Image stun;
+    
 
     public Slider spellMeterP1;
-
+    public static int currentstatus;
     public static int currentProjectile;
     public static int currentBeam;
     public static int currentExplosion;
@@ -113,9 +116,15 @@ public class SpellSwitchP1 : MonoBehaviour {
        lasers.sprite = laserSprites[currentBeam];
        explosions.sprite = explosionSprites[currentExplosion];
        thunders.sprite = thunderSprites[currentLightning];
+        stun.sprite = Stunned[currentstatus];
 
-
-       
+       //if (Player1.stun1 == true)
+       // {
+       //    for (int i = 0; i < currentstatus; i++)
+       //     {
+       //         if 
+       //     }
+       // }
 
     }
 }

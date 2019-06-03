@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class player2finalScore : MonoBehaviour {
+public class Player2finalScore : MonoBehaviour {
 
     public static int ScorefinalValue2 = 0;
     public Text P2finalScore;

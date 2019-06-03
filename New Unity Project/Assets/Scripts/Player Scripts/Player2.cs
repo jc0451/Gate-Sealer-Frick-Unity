@@ -393,6 +393,7 @@ public class Player2 : MonoBehaviour
         {
             if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "FireBall")
             {
+                FindObjectOfType<AudioManager>().Play("Stun"); 
                 if (meterswitch == false)
                 {
 

@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4094757535148742}
   - component: {fileID: 114623749266031366}
+  - component: {fileID: 114568759127078352}
   m_Layer: 0
   m_Name: ProjectileMk2
   m_TagString: PlayerSpell
@@ -189,7 +190,7 @@ Animator:
   m_GameObject: {fileID: 1750031630978148}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 151c02b6c7902fb43833d0ff105e2e12, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4bb18561e73d7fe408c71578d76e00a2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -206,7 +207,7 @@ Animator:
   m_GameObject: {fileID: 1127756475832614}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 151c02b6c7902fb43833d0ff105e2e12, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4bb18561e73d7fe408c71578d76e00a2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -239,6 +240,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 50248970156866630}
   speed: 20
+--- !u!114 &114568759127078352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1370973664498674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2189eaa9c6626549a0f20cd39f6665d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 3
 --- !u!114 &114623749266031366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -323,7 +336,7 @@ SpriteRenderer:
   m_Size: {x: 0.82, y: 0.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212546133926819750
 SpriteRenderer:
@@ -367,5 +380,5 @@ SpriteRenderer:
   m_Size: {x: 0.82, y: 0.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0

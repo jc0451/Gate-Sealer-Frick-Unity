@@ -32,5 +32,9 @@ public class ProjectileSpell : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+        if (col.gameObject.tag == "Penguin")
+        {
+            Destroy(gameObject);
+        }
     }
 }

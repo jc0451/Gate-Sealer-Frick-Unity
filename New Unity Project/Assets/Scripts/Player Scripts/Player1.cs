@@ -426,7 +426,7 @@ public class Player1 : MonoBehaviour
             if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "FireBall")
             {
                 sr.material = matRed;
-                FindObjectOfType<AudioManager>().Play("Stun");
+                FindObjectOfType<AudioManager>().Play("StunSound");
                 active = true;
                 flashCounter = flashtime;
                 if (meterswitch == false)

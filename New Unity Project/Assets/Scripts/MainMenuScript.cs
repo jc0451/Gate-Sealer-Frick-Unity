@@ -12,6 +12,7 @@ public class MainMenuScript : MonoBehaviour
     
     public Sprite[] BackgroundSprites;
     public Image backgroundImage;
+    private float time;
     
 
 
@@ -20,7 +21,7 @@ public class MainMenuScript : MonoBehaviour
     void Start()
     {
         currentBackground = 0;
-        
+        time = 3f;
     }
     void Update()
     {
@@ -46,7 +47,17 @@ public class MainMenuScript : MonoBehaviour
         if (P1active == 1 && P2active == 1)
         {
             currentBackground = 3;
-            SceneManager.LoadScene("Main");
+            transform.GetChild(0).gameObject.SetActive(true);
+            time -= Time.deltaTime;
+            if (time <= 1f)
+            {
+                transform.GetChild(1).gameObject.SetActive(true);
+            }
+            if (time <= 0)
+            {
+                SceneManager.LoadScene("Main");
+            }
+            
            
         }
         

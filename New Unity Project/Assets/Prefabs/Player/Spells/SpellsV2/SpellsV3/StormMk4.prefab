@@ -5072,7 +5072,7 @@ MonoBehaviour:
   time: 0.01
   currenttime: 0
   nr: 0
-  Strikes: 25
+  Strikes: 50
   struck: 0
   childs: 0
 --- !u!114 &114561248573596556

@@ -34,10 +34,10 @@ public class GameControl : MonoBehaviour {
             }
         }
 
-        if (timerScript.timer >= 5f)
+        if (timerScript.timer >= 5f && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main"))
         {
             
-                FindObjectOfType<AudioManager>().Play("Count");
+                FindObjectOfType<AudioManager>().Play("CountingDown");
 
             
         }

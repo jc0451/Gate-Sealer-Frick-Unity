@@ -379,6 +379,9 @@ public class AudioManager : MonoBehaviour
             StopMusic("player2win");
         }
 
-       
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("main") && timerScript.timer <= 5f || GameControl.restart == true)
+        {
+            StopMusic("CountingDown");
+        }
     }
 }

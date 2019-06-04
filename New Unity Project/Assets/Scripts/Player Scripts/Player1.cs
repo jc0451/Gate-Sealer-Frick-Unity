@@ -6,7 +6,8 @@ using UnityEngine.Windows.Speech;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Player1 : MonoBehaviour {
+public class Player1 : MonoBehaviour
+{
 
     public bool urf = false;
     public Slider spellsMeter;
@@ -16,8 +17,9 @@ public class Player1 : MonoBehaviour {
     public bool invincible = false;
     public float Invtime;
     private float invtime;
-    
+
     SpriteRenderer sr;
+    
     
 
     public GameObject Spell1Mk1;
@@ -42,7 +44,7 @@ public class Player1 : MonoBehaviour {
     public static bool cooldw1 = false;
 
     public Rigidbody2D rb;
-    public float speed ;
+    public float speed;
     public static bool stun1 = false;
     private bool shield = false;
     private float shieldtime;
@@ -58,35 +60,50 @@ public class Player1 : MonoBehaviour {
     public float flashtime;
     private float flashCounter;
 
-    void Start() {
+    private Material matWhite;
+    private Material matDefault;
+    private Material matRed;
+
+
+    void Start()
+    {
         resetswitch = true;
         spellsMeter.value = 0;
         shieldtime = Shieldtime;
         decaydelay = Decaydelay;
         invtime = Invtime;
         shieldcoldw = Shieldcoldw;
-       
+
         sr = GetComponent<SpriteRenderer>();
+        matRed = Resources.Load("RedFlash", typeof(Material)) as Material;
+        matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
+        matDefault = sr.material;
 
         
+
+
     }
 
 
-   
 
-    void Update () {
+
+    void Update()
+    {
+        
 
         if (timerScript.timer >= 177)
         {
             stunMeter.value = 5;
             spellsMeter.value = 0;
         }
-        
+
         if (invincible == true)
         {
+            StartCoroutine(Flash());
             invtime -= Time.deltaTime;
             if (invtime <= 0f)
             {
+                
                 invincible = false;
                 invtime = Invtime;
             }
@@ -96,9 +113,9 @@ public class Player1 : MonoBehaviour {
             stun1 = true;
             shield = false;
         }
-        if (stun1 == true )
+        if (stun1 == true)
         {
-            FindObjectOfType<AudioManager>().Play("Stunned");
+            
             if (Input.GetKey(KeyCode.E))
             {
                 FindObjectOfType<AudioManager>().Play("Fail");
@@ -113,23 +130,23 @@ public class Player1 : MonoBehaviour {
                 stunMeter.value = 0;
                 meterswitch = true;
                 resetswitch = false;
-                
+
             }
 
             if (stunMeter.value >= 5)
             {
                 rb.constraints = RigidbodyConstraints2D.None;
-            
-               // meterswitch = false;
+
+                // meterswitch = false;
                 stun1 = false;
-                
+
             }
-         
+
         }
         else
             resetswitch = true;
 
-        
+
         //if (Input.GetKey(KeyCode.Q))
         //{
         //    Player2.stun2 = true;
@@ -139,8 +156,8 @@ public class Player1 : MonoBehaviour {
 
 
 
-       
-        
+
+
         if (spellsMeter.value == 0)
         {
             if (Input.GetKey(KeyCode.E))
@@ -150,7 +167,7 @@ public class Player1 : MonoBehaviour {
 
         }
 
-        
+
 
         //if (Input.GetKey(KeyCode.R))
         //{
@@ -208,7 +225,7 @@ public class Player1 : MonoBehaviour {
 
 
 
-       
+
 
 
         if (Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.D) == false)
@@ -219,43 +236,44 @@ public class Player1 : MonoBehaviour {
         {
             rb.constraints = RigidbodyConstraints2D.None;
         }
-        
+
 
         if (Input.GetKey(KeyCode.D) == false)
         {
-            
+
             rb.velocity = new Vector2(-speed, 0.0f);
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        
- 
+
+
         if (Input.GetKey(KeyCode.A) == false)
         {
-            
+
             rb.velocity = new Vector2(+speed, 0.0f);
             transform.eulerAngles = new Vector3(0, 0, 0);
 
         }
-        
-        
+
+
         if (Input.GetKeyUp(KeyCode.W))
         {
             if (meterswitch == false)
             {
-               
+
                 spellsMeter.value += 1;
                 decaydelay = Decaydelay;
             }
-            else if(meterswitch==true)
+            else if (meterswitch == true)
             {
                 stunMeter.value += 1;
-                if(stunMeter.value>=5){
+                if (stunMeter.value >= 5)
+                {
                     meterswitch = false;
-                  
+
 
                 }
             }
-            
+
         }
         /*else 
         {
@@ -267,7 +285,7 @@ public class Player1 : MonoBehaviour {
              }
         }
         */
-        if (Mike.Mic1Loudness > 0.0001&&urf==false)
+        if (Mike.Mic1Loudness > 0.0001 && urf == false)
         {
             urf = true;
 
@@ -288,17 +306,17 @@ public class Player1 : MonoBehaviour {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1Mk1);
             SpellInstance.transform.position = transform.position;
             FindObjectOfType<AudioManager>().Play("SnowballMK1");
-            
 
-    urf = false;
-            spellsMeter.value = 0; 
+
+            urf = false;
+            spellsMeter.value = 0;
         }
         if (spellsMeter.value < 3 && spellsMeter.value >= 2 && urf == true)
         {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1Mk2);
             SpellInstance.transform.position = transform.position;
             FindObjectOfType<AudioManager>().Play("SnowballMK2");
-            
+
 
             urf = false;
             spellsMeter.value = 0;
@@ -308,7 +326,7 @@ public class Player1 : MonoBehaviour {
             GameObject SpellInstance = (GameObject)Instantiate(Spell1Mk3);
             SpellInstance.transform.position = transform.position;
             FindObjectOfType<AudioManager>().Play("SnowballMK3");
-            
+
 
             urf = false;
             spellsMeter.value = 0;
@@ -319,7 +337,7 @@ public class Player1 : MonoBehaviour {
             SpellInstance.transform.position = transform.position;
             SpellInstance.transform.parent = gameObject.transform;
             FindObjectOfType<AudioManager>().Play("IceBeam");
-            
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -329,7 +347,7 @@ public class Player1 : MonoBehaviour {
             SpellInstance.transform.position = transform.position;
             SpellInstance.transform.parent = gameObject.transform;
             FindObjectOfType<AudioManager>().Play("IceBeam");
-            
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -339,7 +357,7 @@ public class Player1 : MonoBehaviour {
             SpellInstance.transform.position = transform.position;
             SpellInstance.transform.parent = gameObject.transform;
             FindObjectOfType<AudioManager>().Play("IceBeam");
-            
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -349,7 +367,7 @@ public class Player1 : MonoBehaviour {
             SpellInstance.transform.position = transform.position;
             FindObjectOfType<AudioManager>().Play("ExplosionMK1");
 
-            
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -358,7 +376,7 @@ public class Player1 : MonoBehaviour {
             GameObject SpellInstance = (GameObject)Instantiate(Spell3Mk2);
             SpellInstance.transform.position = transform.position;
             FindObjectOfType<AudioManager>().Play("ExplosionMK2");
-            
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -367,7 +385,7 @@ public class Player1 : MonoBehaviour {
             GameObject SpellInstance = (GameObject)Instantiate(Spell3Mk3);
             SpellInstance.transform.position = transform.position;
             FindObjectOfType<AudioManager>().Play("ExplosionMK3");
-            
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -376,7 +394,7 @@ public class Player1 : MonoBehaviour {
             GameObject SpellInstance = (GameObject)Instantiate(Spell4Mk1);
             SpellInstance.transform.position = transform.position;
             FindObjectOfType<AudioManager>().Play("Thunder");
-            
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -385,7 +403,7 @@ public class Player1 : MonoBehaviour {
             GameObject SpellInstance = (GameObject)Instantiate(Spell4Mk2);
             SpellInstance.transform.position = transform.position;
             FindObjectOfType<AudioManager>().Play("Thunder");
-            
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -394,7 +412,7 @@ public class Player1 : MonoBehaviour {
             GameObject SpellInstance = (GameObject)Instantiate(Spell4Mk3);
             //SpellInstance.transform.position = transform.position;
             FindObjectOfType<AudioManager>().Play("Thunder");
-            
+
             urf = false;
             spellsMeter.value = 0;
         }
@@ -403,9 +421,12 @@ public class Player1 : MonoBehaviour {
     {
         if (invincible == false)
         {
+            Invoke("resetMaterial", 0.2f);
+
             if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "FireBall")
             {
-                FindObjectOfType<AudioManager>().Play("Stun"); 
+                sr.material = matRed;
+                FindObjectOfType<AudioManager>().Play("Stun");
                 active = true;
                 flashCounter = flashtime;
                 if (meterswitch == false)
@@ -432,13 +453,36 @@ public class Player1 : MonoBehaviour {
                     Shake.time1 = 0.5f;
                 }
 
-               
+
+
+
             }
-            
+
         }
-        
+
     }
-    
+
+    void resetMaterial()
+    {
+        sr.material = matDefault;
+    }
 
     
+     IEnumerator Flash()
+    {
+        for (int n = 0; n <2; n++)
+        {
+            Renderer renderer = GetComponent<Renderer>();
+
+            renderer.material = matWhite;
+            yield return new WaitForSeconds(.5f);
+
+            renderer.material = matDefault;
+            yield return new WaitForSeconds(.5f);
+        }
+    }
+           
+
 }
+
+

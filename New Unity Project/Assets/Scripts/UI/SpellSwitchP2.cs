@@ -14,14 +14,17 @@ public class SpellSwitchP2 : MonoBehaviour {
 
     public Sprite[] thunderSprites;
 
+    public Sprite[] Stunned;
+
     public Image projectiles;
     public Image lasers;
     public Image explosions;
     public Image thunders;
+    public Image stun;
 
 
     public Slider spellMeterP2;
-
+    public static int currentstatus;
     public static int currentProjectile;
     public static int currentBeam;
     public static int currentExplosion;
@@ -113,9 +116,31 @@ public class SpellSwitchP2 : MonoBehaviour {
         lasers.sprite = laserSprites[currentBeam];
         explosions.sprite = explosionSprites[currentExplosion];
         thunders.sprite = thunderSprites[currentLightning];
+        stun.sprite = Stunned[currentstatus];
+        if (Player2.stun2 == true)
+        {
+            StartCoroutine(stunanim());
+
+
+        }
+        else
+        {
+            currentstatus = 0;
+        }
 
 
 
+    }
 
+    IEnumerator stunanim()
+    {
+        for (int n = 0; n < 2; n++)
+        {
+            currentstatus = 0;
+            yield return new WaitForSeconds(0.4f);
+
+            currentstatus = 1;
+            yield return new WaitForSeconds(0.3f);
+        }
     }
 }

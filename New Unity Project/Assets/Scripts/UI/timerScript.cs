@@ -28,5 +28,6 @@ public class timerScript : MonoBehaviour {
         {
             timer = 180;
         }
+
     }
 }

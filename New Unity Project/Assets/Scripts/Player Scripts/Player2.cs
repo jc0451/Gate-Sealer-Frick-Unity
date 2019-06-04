@@ -37,7 +37,7 @@ public class Player2 : MonoBehaviour
     private float shieldcoldw;
     public float Shieldcoldw;
     public static bool cooldw2=false;
-
+    SpriteRenderer sr;
     public Rigidbody2D rb;
     public float speed;
     public static bool stun2 = false;
@@ -51,6 +51,10 @@ public class Player2 : MonoBehaviour
     public float damage;
     public bool resetswitch;
 
+    private Material matWhite;
+    private Material matDefault;
+    private Material matRed;
+
     // Use this for initialization
 
     void Start()
@@ -60,8 +64,11 @@ public class Player2 : MonoBehaviour
         shieldtime = Shieldtime;
         decaydelay = Decaydelay;
         shieldcoldw = Shieldcoldw;
-        
 
+        sr = GetComponent<SpriteRenderer>();
+        matRed = Resources.Load("RedFlash", typeof(Material)) as Material;
+        matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
+        matDefault = sr.material;
     }
 
 
@@ -77,6 +84,7 @@ public class Player2 : MonoBehaviour
 
         if (invincible == true)
         {
+            StartCoroutine(Flash());
             invtime -= Time.deltaTime;
             if (invtime <= 0f)
             {
@@ -92,7 +100,7 @@ public class Player2 : MonoBehaviour
         }
         if (stun2 == true && shield == false)
         {
-            FindObjectOfType<AudioManager>().Play("Stunned");
+            
             if (Input.GetKey(KeyCode.P))
             {
                 FindObjectOfType<AudioManager>().Play("Fail");
@@ -391,9 +399,12 @@ public class Player2 : MonoBehaviour
     {
         if (invincible == false)
         {
+            Invoke("resetMaterial", 0.2f);
             if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "FireBall")
             {
-                FindObjectOfType<AudioManager>().Play("Stun"); 
+                sr.material = matRed;
+
+                FindObjectOfType<AudioManager>().Play("StunSound"); 
                 if (meterswitch == false)
                 {
 
@@ -421,5 +432,23 @@ public class Player2 : MonoBehaviour
         }
     }
 
+    void resetMaterial()
+    {
+        sr.material = matDefault;
+    }
+
+    IEnumerator Flash()
+    {
+        for (int n = 0; n < 2; n++)
+        {
+            Renderer renderer = GetComponent<Renderer>();
+
+            renderer.material = matWhite;
+            yield return new WaitForSeconds(.5f);
+
+            renderer.material = matDefault;
+            yield return new WaitForSeconds(.5f);
+        }
+    }
 
 }

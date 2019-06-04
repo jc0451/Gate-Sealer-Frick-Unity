@@ -23,6 +23,7 @@ public class playeranim : MonoBehaviour {
         }
         else 
         {
+           // FindObjectOfType<AudioManager>().Play("Stunned");
             anim.SetBool("Stunned", true);
         }
 

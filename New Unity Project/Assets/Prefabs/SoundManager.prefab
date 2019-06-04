@@ -172,20 +172,20 @@ MonoBehaviour:
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: Stun
+  - audioName: StunSound
     audioClip: {fileID: 8300000, guid: b52fa9eea73207543a13369a9117643a, type: 3}
     volume: 0.2
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
   - audioName: Shieldshatter
-    audioClip: {fileID: 8300000, guid: d2da584690363dd499835481b8296464, type: 3}
+    audioClip: {fileID: 0}
     volume: 0.5
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
   - audioName: ShieldCreate
-    audioClip: {fileID: 8300000, guid: 87cf9815ee7e8ff40beb5cc1fc049e34, type: 3}
+    audioClip: {fileID: 0}
     volume: 0.5
     source: {fileID: 0}
     isLooping: 0
@@ -209,9 +209,15 @@ MonoBehaviour:
     isLooping: 0
     playOnAwake: 0
   - audioName: Stunned
-    audioClip: {fileID: 8300000, guid: 23ebafff845e1c14282f603c64dc0c0c, type: 3}
+    audioClip: {fileID: 8300000, guid: 7d56515b1c301f34d837c64fa64cc5b7, type: 3}
     volume: 0.683
     source: {fileID: 0}
     isLooping: 1
+    playOnAwake: 0
+  - audioName: Count
+    audioClip: {fileID: 8300000, guid: 606fc6db9791b9b4e920e633c16c91a6, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
+    isLooping: 0
     playOnAwake: 0
   Mixer: {fileID: 24100000, guid: d3cad5922afb63c4bb39c307762ba73a, type: 2}

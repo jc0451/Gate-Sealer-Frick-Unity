@@ -76,7 +76,7 @@ public class Player2 : MonoBehaviour
 
     void Update()
     {
-        if (timerScript.timer >= 177)
+        if (timerScript.timer >= 179)
         {
             stunMeter.value = 5;
             spellsMeter.value = 0;

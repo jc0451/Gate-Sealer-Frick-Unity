@@ -91,7 +91,7 @@ public class Player1 : MonoBehaviour
     {
         
 
-        if (timerScript.timer >= 177)
+        if (timerScript.timer >= 179)
         {
             stunMeter.value = 5;
             spellsMeter.value = 0;

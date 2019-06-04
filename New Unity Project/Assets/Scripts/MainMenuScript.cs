@@ -21,7 +21,7 @@ public class MainMenuScript : MonoBehaviour
     void Start()
     {
         currentBackground = 0;
-        time = 3f;
+        time = 5f;
     }
     void Update()
     {
@@ -48,10 +48,17 @@ public class MainMenuScript : MonoBehaviour
         {
             currentBackground = 3;
             transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(3).gameObject.SetActive(false);
+            transform.GetChild(4).gameObject.SetActive(true);
             time -= Time.deltaTime;
+            if (time <= 3f)
+            {
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(true);
+            }
             if (time <= 1f)
             {
-                transform.GetChild(1).gameObject.SetActive(true);
+                transform.GetChild(2).gameObject.SetActive(true);
             }
             if (time <= 0)
             {

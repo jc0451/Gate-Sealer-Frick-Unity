@@ -11,6 +11,8 @@ public class Fade : MonoBehaviour {
     public bool timer = false;
     public float timertime;
     private bool lever=false;
+    public bool menutime = false;
+    private float menufadetime = 1.5f;
 
     // Use this for initialization
     void Start () {
@@ -36,6 +38,16 @@ public class Fade : MonoBehaviour {
            
             float t = (Time.time - startTime) / duration;
             sprite.color = new Color(1f, 1f, 1f, Mathf.SmoothStep(maximum, minimum, t));
+        }
+        else if (menutime == true)
+        {
+            menufadetime -= Time.deltaTime;
+            if (menufadetime <= 0f)
+            {
+                float t = (Time.time - startTime) / duration;
+                sprite.color = new Color(1f, 1f, 1f, Mathf.SmoothStep(maximum, minimum, t));
+            }
+          
         }
     }
 }
